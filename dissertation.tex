@@ -1,0 +1,107 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+
+\documentclass{Dissertate}
+\usepackage[italian]{babel}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{colortbl}
+\usepackage[justification=centering]{caption} % centra nella pagina le caption
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{siunitx}
+\usepackage{pgfplots} % carica anche tikz
+% Start of 'ignore natbib' hack
+\let\bibhang\relax
+\let\citename\relax
+\let\bibfont\relax
+\let\Citeauthor\relax
+\expandafter\let\csname ver@natbib.sty\endcsname\relax
+% End of 'ignore natbib' hack
+\usepackage[autostyle]{csquotes}
+\usepackage[backend=biber, sorting=none]{biblatex}
+\addbibresource{references.bib} 
+
+
+\begin{document}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\small,
+commentstyle=\color[RGB]{67,156,67},
+otherkeywords={self},             % Add keywords here
+keywordstyle=\color[RGB]{86,156,214},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color[RGB]{208,134,85},
+frame=tb,                         % Any extra options here
+showstringspaces=false            % 
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+% the front matter
+\input{frontmatter/personalize}
+%\maketitle
+% \copyrightpage
+\frontmatter
+\setstretch{\dnormalspacing}
+% \abstractpage
+%\tableofcontents
+% %\authorlist
+% \listoffigures
+%\dedicationpage
+% \acknowledgments
+
+% \doublespacing
+
+% include each chapter...
+\setcounter{chapter}{0}  % start chapter numbering at 1
+\setcounter{page}{1}
+\include{chapters/introduction}
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/conclusion}
+\include{chapters/conclusionDue}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliografia}
+%\bibliographystyle{unstr}	%{ieeetr}
+%\bibliography{references}
+\printbibliography
+
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Ringraziamenti}
+%\acknowledgments
+
+
+% \clearpage
+% \bibliography{references}
+% \addcontentsline{toc}{chapter}{References}
+% \bibliographystyle{apalike2}
+
+% \include{endmatter/colophon}
+
+\end{document}
