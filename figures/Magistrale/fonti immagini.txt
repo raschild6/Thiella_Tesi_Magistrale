@@ -1,0 +1,18 @@
+01 -
+https://www.learnopencv.com/neural-networks-a-30000-feet-view-for-beginners
+
+02 -
+http://slideplayer.com/slide/6816119
+
+03 - 
+https://builtin.com/data-science/disadvantages-neural-networks
+(immagine privata)
+https://abm-website-assets.s3.amazonaws.com/wirelessweek.com/s3fs-public/styles/content_body_image/public/embedded_image/2017/03/gpu%20fig%202.png?itok=T8Q8YSe-
+
+04 - 
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.233.1596&rep=rep1&type=pdf#:~:text=Here%20we%20propose%20one%20candidate,these%20different%20mechanisms%20must%20be
+
+05 -
+https://www.researchgate.net/publication/324055823_An_Overview_of_Vulnerabilities_of_Voice_Controlled_Systems
+
+06 -

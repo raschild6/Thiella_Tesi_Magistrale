@@ -1,11 +1,4 @@
 %!TEX root = ../dissertation.tex
 \chapter{Conclusione}
 \label{Conclusione}
-\section{Conclusione}
-
-In questo progetto è stata proposta un'architettura di rete profonda per il riconoscimento di gesti della mano da dati 3D. Sono stati usati diversi approcci, che progressivamente analizzavano i dati a risoluzione sempre inferiore fino ad ottenere un singolo risultato di classificazione per ciascuno. Per lo studio di tale problema le possibilità erano molte quindi si è voluto mirare ad avere un quadro complessimo più ampio, in modo da poter confrontare molti risultati. Cercando combinazioni differenti tra architetture single-branch e multi-branch e mescolando in vari modi i dati di input a disposizione si è ottenuta la Tabella \textbf{\ref{RisultatiTotali}}. Essa contiene un riassunto incrociato tra gli unidici gesti e i vari approcci utilizzati, così da ottenere un'ampia visione complessiva sia per ogni gesto in relazione a tutti gli approcci che per ogni approccio in funzione di tutti i gesti.
-Tutti gli approcci hanno ottenuto buoni risultati, partendo dal 4° e dal 5° che combinando più dati sono riusciti ad ottenere più informazioni ed imparare meglio. Fino al 1° approccio che, nonostante utilizzasse solo le depth map, ha comunque raggiunto l'85\%. Infine si vuole dare importanza anche ai risultati dei rimanenti approcci, essi potrebbero dimostrare la loro efficacia in altre situazioni in cui, ad esempio, i dati di input siano molto diversi rispetto a quelli contenuti in questo dataset.\\
-
-Ci sono ancora molti aspetti da analizzare meglio, ad esempio nel modo di pulire i dati di input cambiando da una soglia fissa ad una variabile cosicchè si possa ottenere una cancellazione dello sfondo più accurata. Oppure nella costruzione della rete neurale e nell'inizializzazione dei suoi parametri. Aggiungendo o rimuovendo layer, cambiando le dimensioni dei filtri, ecc.
-Ma, nonostante i problemi sopracitati, si può vedere come la rete abbia ottenuto buoni risultati pur in mancanza di ottimizzazioni molto più accurate. \\
 
