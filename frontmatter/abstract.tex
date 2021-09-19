@@ -1,5 +1,2 @@
 %!TEX root = ../dissertation.tex
 % the abstract
-
-Questo progetto propone diversi approcci per il riconoscimento dei gesti delle mani partendo da immagini e dati 3D che sfruttano tecniche di deep learning. L'algoritmo proposto inizia analizzando diversi tipi di dati: mappe di profondità, mappe di confidenza e mappe di colore (immagini RGB o Greyscale). Quindi i dati di input vengono inviati ad una Convolutional Neural Network, che per alcuni approcci è multi-branch mentre in altri single-branch. Ogni ramo della rete prende in input una delle mappe e produce un vettore di classificazione usando 4 strati convoluzionali di risoluzione progressivamente ridotta. Infine i vari vettori di classificazione passano attraverso un classificatore lineare che combina le uscite dei vari rami (nei casi multi-branch) e produce la classificazione finale.
-In conclusione vengono analizzati i risultati confrontando i vari approcci e le configurazioni della rete e dei dati di input. 

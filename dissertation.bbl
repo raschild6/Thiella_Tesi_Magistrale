@@ -1329,71 +1329,6 @@
       \field{title}{The hidden pattern : a patternist philosophy of mind}
       \field{year}{2006}
     \endentry
-    \entry{DBLP:series/atlantis/Rohde10}{book}{}
-      \name{author}{1}{}{%
-        {{hash=a8bbfffc29622163cb72ea0ff09977e7}{%
-           family={Rohde},
-           familyi={R\bibinitperiod},
-           given={Marieke},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {Atlantis Press}%
-      }
-      \strng{namehash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \strng{fullhash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \strng{bibnamehash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \strng{authorbibnamehash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \strng{authornamehash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \strng{authorfullhash}{a8bbfffc29622163cb72ea0ff09977e7}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{isbn}{978-94-91216-34-3}
-      \field{series}{Atlantis Thinking Machines}
-      \field{title}{Enaction, Embodiment, Evolutionary Robotics - Simulation Models for a Post-Cognitivist Science of Mind}
-      \field{volume}{1}
-      \field{year}{2010}
-      \verb{doi}
-      \verb 10.2991/978-94-91216-34-3
-      \endverb
-      \verb{urlraw}
-      \verb https://doi.org/10.2991/978-94-91216-34-3
-      \endverb
-      \verb{url}
-      \verb https://doi.org/10.2991/978-94-91216-34-3
-      \endverb
-    \endentry
-    \entry{inproceedings_SMEPH}{inproceedings}{}
-      \name{author}{1}{}{%
-        {{hash=73e14543442b76d612d65c4d5bb14386}{%
-           family={Goertzel},
-           familyi={G\bibinitperiod},
-           given={B.},
-           giveni={B\bibinitperiod}}}%
-      }
-      \strng{namehash}{73e14543442b76d612d65c4d5bb14386}
-      \strng{fullhash}{73e14543442b76d612d65c4d5bb14386}
-      \strng{bibnamehash}{73e14543442b76d612d65c4d5bb14386}
-      \strng{authorbibnamehash}{73e14543442b76d612d65c4d5bb14386}
-      \strng{authornamehash}{73e14543442b76d612d65c4d5bb14386}
-      \strng{authorfullhash}{73e14543442b76d612d65c4d5bb14386}
-      \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{IEEE World Congress on Computational Intelligence, Vancouver, BC, Canada}
-      \field{month}{01}
-      \field{title}{Patterns, Hypergraphs and Embodied General Intelligence}
-      \field{year}{2006}
-      \field{pages}{451\bibrangedash 458}
-      \range{pages}{8}
-      \verb{doi}
-      \verb 10.1109/IJCNN.2006.246716
-      \endverb
-    \endentry
     \entry{DBLP:series/atlantis/GoertzelPG14}{book}{}
       \name{author}{3}{}{%
         {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
@@ -1486,6 +1421,98 @@
       \endverb
       \verb{url}
       \verb https://doi.org/10.2991/978-94-6239-030-0
+      \endverb
+    \endentry
+    \entry{Vep20a}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=e4b4203adb33e0d3e3d6dc851c8f99f2}{%
+           family={Vepstas},
+           familyi={V\bibinitperiod},
+           given={Linas},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \strng{fullhash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \strng{bibnamehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \strng{authorbibnamehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \strng{authornamehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \strng{authorfullhash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Graphs, metagraphs, ram, cpu}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/w/File:Ram-cpu.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/w/File:Ram-cpu.pdf
+      \endverb
+    \endentry
+    \entry{metagraph_app}{book}{}
+      \name{author}{2}{}{%
+        {{hash=8b0c1a1cd4cfa5b59a85e3dda520d73e}{%
+           family={Basu},
+           familyi={B\bibinitperiod},
+           given={Amit},
+           giveni={A\bibinitperiod}}}%
+        {{hash=be89c38456e6f4dd57a2a67a9583c2f7}{%
+           family={Blanning},
+           familyi={B\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \strng{fullhash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \strng{bibnamehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \strng{authorbibnamehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \strng{authornamehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \strng{authorfullhash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-387-37233-4}
+      \field{month}{01}
+      \field{title}{Metagraphs and Their Applications}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1007/978-0-387-37234-1
+      \endverb
+    \endentry
+    \entry{DBLP:journals/corr/abs-2012-01759}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{fullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{bibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \field{extraname}{4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Folding and Unfolding on Metagraphs}
+      \field{volume}{abs/2012.01759}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2012.01759
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2012.01759
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2012.01759
       \endverb
     \endentry
   \enddatalist

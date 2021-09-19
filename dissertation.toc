@@ -15,14 +15,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Cognitive Synergy}{7}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}History}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.2}OpenCog Architecture}{9}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Atomspace}{10}{section.2.3}%
+\contentsline {subsection}{\numberline {2.2.1}Atomspace}{10}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Atomese}{10}{section.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.1.1}Metagraph: a Generalized Hypergraph}{10}{subsubsection.2.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Reasons}{10}{section.2.5}%
+\contentsline {subsection}{\numberline {2.2.2}Atomese}{14}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusione}{11}{chapter.3}%
+\contentsline {subsection}{\numberline {2.2.3}Reasons}{14}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{12}{section*.10}%
+\contentsline {chapter}{\numberline {3}Conclusione}{15}{chapter.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{16}{section*.16}%

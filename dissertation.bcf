@@ -2371,8 +2371,9 @@
     <bcf:citekey order="16">goertzel2006the</bcf:citekey>
     <bcf:citekey order="17">DBLP:series/atlantis/GoertzelPG14</bcf:citekey>
     <bcf:citekey order="17">DBLP:series/atlantis/GoertzelPG14a</bcf:citekey>
-    <bcf:citekey order="18">inproceedings_SMEPH</bcf:citekey>
-    <bcf:citekey order="19">DBLP:series/atlantis/Rohde10</bcf:citekey>
+    <bcf:citekey order="18">Vep20a</bcf:citekey>
+    <bcf:citekey order="18">metagraph_app</bcf:citekey>
+    <bcf:citekey order="19">DBLP:journals/corr/abs-2012-01759</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
