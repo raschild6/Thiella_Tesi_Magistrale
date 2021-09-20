@@ -274,7 +274,7 @@ In its current form, Atomese was primarily designed to allow the generalized man
 
 The use of the AtomSpace, and the operation and utility of Atomese, remains a topic of ongoing research (a re-evaluation of the OpenCog architecture is currently underway. A new OpenCog system called \enquote{Hyperon} is being studied \cite{goertzel_potapov_senna_singularitynet-opencog_team_2020}, introducing upgrades from Atomese to Atomese 2.0 \cite{DBLP:journals/corr/abs-2004-05267}, Distributed AtomSpace architecture \cite{distributed_2017, senna_2018, potapov_2020_1, potapov_2020_2} and much more) and design experimentation, as various AI and knowledge-processing subsystems are developed. These include machine learning, natural language processing, motion control and animation, deep-learning networks and vision processing, constraint solving and planning, pattern mining and data mining, question answering and common-sense systems, and emotional and behavioral psychological systems. Each of these impose sharply conflicting requirements on the AtomSpace architecture. The AtomSpace and Atomese are the current best-effort KR system for satisfying all these various needs in an integrated way.
 
-\subsection{Pattern Engine and Unified Rule Engine}\label{sec:pattern_ur_engine}
+\subsection{Pattern Engine, Unified Rule Engine and Relex2Logic}\label{sec:pattern_ur_engine}
 
 Three more components of the OpenCog architecture are now introduced: Pattern Matcher, Unified Rule Engine and Relex2Logic. \\
 Each of them is necessary for the following ones, in order of listing.
@@ -310,7 +310,32 @@ The strengths of the URE are:
 It was used as a first approach to solve the problem faced in this project (set out in Chapter [...]). It was later abandoned due to conceptual and practical problems in favour of a new approach, although, in the end, good ideas emerged that solved these problems. See related Section [...]. \\
 For these reasons, any other information related to URE is referred to \cite{geisweiller_2019} and the webpages linked to that.
 
+\subsubsection{Relex2Logic}\label{sec:r2l}
 
+This project handles a Natural Language Processing (NLP) module. Here, some components of OpenCog this module superficially uses to achieve a certain result, are very briefly presented. \\
+The component on the top is called Relex2Logic (R2L). \\
+R2L produces a certain form of predicate-argument structure for an English-language sentence. That structure roughly resembles classical propositional or predicate logic, thus the name. \\
+It is pointless to go into the details of this module because, first of all, it became obsolete because its java rule engine and representation scheme were inadequate and knowledge extraction was too far removed from the reasoning and anaphora components; secondly, because the predicate-argument structure is produced by applying a set of rules to the RelEx format (see below), using the forward chainer provided by URE, which require a very good knowledge of the topic in order to be understood. \\
+
+Thus, this module takes as input an English sentence and returns a relatively simple logical representation of it in Atomese. That is, a hypergraph composed of atoms that are associated with the words of the sentence and then structured to express the logic of it in the form of a hypergraph. The following example is used to better explain: \\
+\begin{python}
+	The English sentence: " The cat is an animal "
+
+	-------- Result:
+	MANCA 
+
+	(ConceptNode blablabla.....	<--
+	)
+\end{python}
+
+The Atoms highlighted by an arrow describe in order that `cat' and `animal' are concepts (ConceptNode), that `is' is the present simple tense forms of be referring to the cat and that `animal' is the direct object (thus both InheritanceLink) and much more. \\
+
+The processing pipeline for a sentence is: 
+\begin{enumerate}
+	\item Sentence $\Rightarrow$ Link-Grammar
+	\item Link-Grammar $\Rightarrow$ RelEx
+	\item RelEx $\Rightarrow$ Relex2Logic
+\end{enumerate}
 
 \subsection{Reasons}\label{sec:reasons}
 
