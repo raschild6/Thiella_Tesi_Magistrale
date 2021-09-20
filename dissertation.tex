@@ -26,6 +26,7 @@
 \usepackage{titlesec}
 \setcounter{tocdepth}{3}
 \setcounter{secnumdepth}{3}
+\renewcommand{\thefootnote}{\arabic{footnote}}
 
 \begin{document}
 
@@ -33,6 +34,7 @@
 \newcommand\pythonstyle{\lstset{
 language=Python,
 basicstyle=\small,
+backgroundcolor=\color[RGB]{224, 255, 255},
 commentstyle=\color[RGB]{67,156,67},
 otherkeywords={self},             % Add keywords here
 keywordstyle=\color[RGB]{86,156,214},
@@ -59,7 +61,6 @@ showstringspaces=false            %
 
 % Python for inline
 \newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
-
 
 % the front matter
 \input{frontmatter/personalize}

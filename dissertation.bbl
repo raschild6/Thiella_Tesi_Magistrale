@@ -1515,6 +1515,268 @@
       \verb https://arxiv.org/abs/2012.01759
       \endverb
     \endentry
+    \entry{goertzel_potapov_senna_singularitynet-opencog_team_2020}{misc}{}
+      \name{author}{4}{}{%
+        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+        {{hash=67e62ad273be6573a755f5a1fc704d81}{%
+           family={Potapov},
+           familyi={P\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+        {{hash=dca028172c56b9b6e4b2258834a60eee}{%
+           family={Senna},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+        {{hash=a850817d31476d68e6de4f0e840b6172}{%
+           family={∗},
+           familyi={∗\bibinitperiod},
+           given={SingularityNET-OpenCog\bibnamedelima Team},
+           giveni={S\bibinithyphendelim O\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \strng{namehash}{d2b1a795bebbb125aa7bcf266447f9c4}
+      \strng{fullhash}{4e6a5bbc0d3143c295de104a9ee70be7}
+      \strng{bibnamehash}{d2b1a795bebbb125aa7bcf266447f9c4}
+      \strng{authorbibnamehash}{d2b1a795bebbb125aa7bcf266447f9c4}
+      \strng{authornamehash}{d2b1a795bebbb125aa7bcf266447f9c4}
+      \strng{authorfullhash}{4e6a5bbc0d3143c295de104a9ee70be7}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Toward a New Improved OpenCog – Preliminary Design Ideas}
+      \field{month}{07}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/wikihome/images/7/77/OpenCog_Hyperon.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/wikihome/images/7/77/OpenCog_Hyperon.pdf
+      \endverb
+    \endentry
+    \entry{DBLP:journals/corr/abs-2004-05267}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{fullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{bibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{What Kind of Programming Language Best Suits Integrative AGI?}
+      \field{volume}{abs/2004.05267}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2004.05267
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2004.05267
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2004.05267
+      \endverb
+    \endentry
+    \entry{distributed_2017}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{journaltitle}{Distributed Atom Space - Requirements and Ideas}
+      \field{month}{07}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/wikihome/images/5/53/Distributed_Atom_Space_-_Requirements_and_Ideas_-_DRAFT.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/wikihome/images/5/53/Distributed_Atom_Space_-_Requirements_and_Ideas_-_DRAFT.pdf
+      \endverb
+    \endentry
+    \entry{senna_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=dca028172c56b9b6e4b2258834a60eee}{%
+           family={Senna},
+           familyi={S\bibinitperiod},
+           given={André},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{dca028172c56b9b6e4b2258834a60eee}
+      \strng{fullhash}{dca028172c56b9b6e4b2258834a60eee}
+      \strng{bibnamehash}{dca028172c56b9b6e4b2258834a60eee}
+      \strng{authorbibnamehash}{dca028172c56b9b6e4b2258834a60eee}
+      \strng{authornamehash}{dca028172c56b9b6e4b2258834a60eee}
+      \strng{authorfullhash}{dca028172c56b9b6e4b2258834a60eee}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Distributed Atom Space - Architecture}
+      \field{month}{08}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/wikihome/images/f/fd/Distributed_Atom_Space_-_Architecture.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/wikihome/images/f/fd/Distributed_Atom_Space_-_Architecture.pdf
+      \endverb
+    \endentry
+    \entry{potapov_2020_1}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=67e62ad273be6573a755f5a1fc704d81}{%
+           family={Potapov},
+           familyi={P\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{fullhash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{bibnamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authorbibnamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authornamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authorfullhash}{67e62ad273be6573a755f5a1fc704d81}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{AtomSpace 2.0 and graph DBs: differences}
+      \field{month}{03}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/wikihome/images/0/0d/Distributed_Atomspace_2.0_and_graph_DBs_differences.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/wikihome/images/0/0d/Distributed_Atomspace_2.0_and_graph_DBs_differences.pdf
+      \endverb
+    \endentry
+    \entry{potapov_2020_2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=67e62ad273be6573a755f5a1fc704d81}{%
+           family={Potapov},
+           familyi={P\bibinitperiod},
+           given={Alexey},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{fullhash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{bibnamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authorbibnamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authornamehash}{67e62ad273be6573a755f5a1fc704d81}
+      \strng{authorfullhash}{67e62ad273be6573a755f5a1fc704d81}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{journaltitle}{Pattern Mining, Indexing and Generalized Hypergraph Representation}
+      \field{month}{04}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/wikihome/images/a/ab/Pattern_Mining%2C_Indexing_and_Generalized_Hypergraph_Representation.pdf
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/wikihome/images/a/ab/Pattern_Mining%2C_Indexing_and_Generalized_Hypergraph_Representation.pdf
+      \endverb
+    \endentry
+    \entry{baader_nipkow_1998}{book}{}
+      \name{author}{2}{}{%
+        {{hash=099ae1911eaaba9fbc167fa92195392a}{%
+           family={Baader},
+           familyi={B\bibinitperiod},
+           given={Franz},
+           giveni={F\bibinitperiod}}}%
+        {{hash=a41b38c2580f5bb8c574d84f66e0856a}{%
+           family={Nipkow},
+           familyi={N\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{7c162a27477975bdbd4d5a893377eb14}
+      \strng{fullhash}{7c162a27477975bdbd4d5a893377eb14}
+      \strng{bibnamehash}{7c162a27477975bdbd4d5a893377eb14}
+      \strng{authorbibnamehash}{7c162a27477975bdbd4d5a893377eb14}
+      \strng{authornamehash}{7c162a27477975bdbd4d5a893377eb14}
+      \strng{authorfullhash}{7c162a27477975bdbd4d5a893377eb14}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Term Rewriting and All That}
+      \field{year}{1998}
+      \verb{doi}
+      \verb 10.1017/CBO9781139172752
+      \endverb
+    \endentry
+    \entry{geisweiller_2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6672240c8c6757a029975c2f947a068}{%
+           family={Geisweiller},
+           familyi={G\bibinitperiod},
+           given={Nil},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6672240c8c6757a029975c2f947a068}
+      \strng{fullhash}{b6672240c8c6757a029975c2f947a068}
+      \strng{bibnamehash}{b6672240c8c6757a029975c2f947a068}
+      \strng{authorbibnamehash}{b6672240c8c6757a029975c2f947a068}
+      \strng{authornamehash}{b6672240c8c6757a029975c2f947a068}
+      \strng{authorfullhash}{b6672240c8c6757a029975c2f947a068}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{OpenCog}
+      \field{month}{02}
+      \field{title}{Unified rule engine}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/w/Unified_rule_engine
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/w/Unified_rule_engine
+      \endverb
+    \endentry
+    \entry{goertzel2008probabilistic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{fullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{bibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \field{extraname}{6}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1441945785}
+      \field{title}{Probabilistic logic networks : a comprehensive framework for uncertain inference}
+      \field{year}{2008}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

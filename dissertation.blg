@@ -1,15 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'dissertation.blg'
-[125] biber-MSWIN64:340> INFO - === 
+[127] biber-MSWIN64:340> INFO - === 
 [163] Biber.pm:415> INFO - Reading 'dissertation.bcf'
-[288] Biber.pm:952> INFO - Found 30 citekeys in bib section 0
-[305] Biber.pm:4340> INFO - Processing section 0
-[318] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
-[381] bibtex.pm:1689> INFO - LaTeX decoding ...
-[457] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
-[754] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[754] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[754] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
-[754] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
-[781] bbl.pm:654> INFO - Writing 'dissertation.bbl' with encoding 'UTF-8'
-[820] bbl.pm:757> INFO - Output to dissertation.bbl
+[287] Biber.pm:952> INFO - Found 39 citekeys in bib section 0
+[303] Biber.pm:4340> INFO - Processing section 0
+[316] Biber.pm:4531> INFO - Looking for bibtex format file 'references.bib' for section 0
+[370] bibtex.pm:1689> INFO - LaTeX decoding ...
+[431] bibtex.pm:1494> INFO - Found BibTeX data source 'references.bib'
+[742] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[742] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[742] Biber.pm:4168> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'en-US'
+[742] Biber.pm:4174> INFO - No sort tailoring available for locale 'en-US'
+[775] bbl.pm:654> INFO - Writing 'dissertation.bbl' with encoding 'UTF-8'
+[818] bbl.pm:757> INFO - Output to dissertation.bbl
