@@ -337,6 +337,14 @@ The processing pipeline for a sentence is:
 	\item RelEx $\Rightarrow$ Relex2Logic
 \end{enumerate}
 
+Step 1 performs a syntactic parse of a sentence, using the Link Grammar (LG) parser. \\
+
+Step 2 converts the LG output into a dependency grammar (DG) format that is more closely aligned with de-facto DG standards. This includes the unpacking of some of the LG output into standard linguistic feature classifications, e.g. for person, number, tense, aspect, mood, voice. \\
+This converter is called RelEx, a Narrow-AI component of OpenCog. It is an English-language semantic dependency relationship extractor, built on the Carnegie-Mellon Link Grammar parser. It uses a series of graph rewriting rules to identify subject, object, indirect object and many other syntactic dependency relationships between words in a sentence. That is, it generates the dependency trees of a dependency grammar. \\
+Unlike other dependency parsers, RelEx attempts a greater degree of semantic normalization: for questions, comparatives, entities, and for modifying clauses, and sub-ordinate clauses. \\
+
+Step 3 extracts the predicate-argument logical structure, as shown above.
+
 \subsection{Reasons}\label{sec:reasons}
 
 % Distributed Atom Space - Architecture
