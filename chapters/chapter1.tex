@@ -50,7 +50,7 @@ The detailed argument explaining how the cognitive algorithm selection and integ
 
 \section{OpenCog Architecture}\label{sec:opencog_architecture}
 
-There are several components that make up the basic architecture of OpenCog. In the following sections, they will be described, more or less independently, and then concatenated and contextualized into the problem considered in this project. \\
+There are several components that make up the basic architecture of OpenCog. In the following sections, they will be described, more or less independently, before being concatenated and contextualized into the problem considered in this project. \\
 Currently, the OpenCog project is under strong development and some of the concepts presented here may be obsolete, improved or evolved, or being redesigned. However, much of the basic infrastructure and theory remains unchanged.  
 
 \subsection{Atomspace}\label{sec:atomspace}
@@ -212,7 +212,7 @@ In this case, the TruthValue associated to InheritanceLink should be 0, if it is
 
 	\item \textbf{PredicateNode}: it names the predicate of a relation. \\
 Predicates are functions that have arguments, and produce a truth value as output. Predicates in OpenCog roughly resemble the predicate of first-order logic, but more general. It is very similar to a characteristic function in probability theory, which helps assign a floating-point truth value to a declaration. Its usege will be understood at later points. \\
-Two interesting type of Atom that are derived from PredicateNode are the \textbf{DefinedPredicateNode} and the \textbf{GroundedPredicateNode}. \\
+Two interesting type of Atom that are derived from PredicateNode are \textbf{DefinedPredicateNode} and \textbf{GroundedPredicateNode}. \\
 The first is a single atom that is attached to a more complex definition. During the evaluation of the predicate, its definition (typically some formula or other complex expression, constituted entirely of Atoms) is looked up and is used during evaluation. \\
 The second specifies a predicate whose truth value is updated by the evaluation of a scheme, python or C++ code snippet. It is a \enquote{black box} from the point of view of logical inference and knowledge representation. It is impossible to reason with it, as opposed to DefinedPredicateNodes, which are \enquote{clear boxes} whose inner workings are visible to inference, learning and analysis algorithms.
 
@@ -242,20 +242,31 @@ Pratical example, $3 < 42$ is true:
 \end{python}
 \end{itemize}
 
-There are other atom types used here. A more general list of Opencog atom types, which can be divided into categories, is this one:
+There are other atom types used here. A more general list of Opencog atom types, which can be divided into categories, is the following:
 
 \begin{itemize}
 \item Arithmetic Atom Types: EqualLink, GreaterThanLink, NumberNode, IntervalLink, etc.
 \item Boolean Atom Types: AndLink, OrLink, NotLink, etc. 
 \item All atom types used for Natural Language Processing (NLP)
-\item Atom types for the OpenCog Probabilist Logic Network (PLN)
-\item Atom types to perform Pattern Matching (PresentLink, AbsentLink, VariableList/VariableSet/VariableNode, etc.) 
+\item Atom types for the OpenCog Probabilist Logic Network (PLN) [TODO: da introdurre nei Values]
+\item Atom types to perform Pattern Matching (PresentLink, AbsentLink, VariableList / VariableSet / VariableNode, etc.) 
 \item Atom types for the threading 
 \item Set-theoretical Atom Types: types having some form of set-theoretical signficance (MemberLink, SetLink, SubsetLink, etc.)
 \item Atom types to perform searches over the AtomSpace (JoinLink, QueryLink, MeetLink, etc.) 
 \end{itemize}
 
-In conclusion, there is a type system for working with atom types: that is, the type of an atom can itself be specified using other atoms, which also applies to the polymorphic types. The type system allows for basic error checking, such as with the type checker, and more generally, it allows type-logical reasoning and inference to be performed on atom signatures.
+There is a type system for working with atom types: that is, the type of an atom can itself be specified using other atoms, which also applies to the polymorphic types. The type system allows for basic error checking, such as with the type checker, and more generally, it allows type-logical reasoning and inference to be performed on atom signatures. \\
+
+In conclusion, the AtomSpace Explorer web tool can be used to display OpenCog data on screen. Atomese is fetched from the AtomSpace, then displayed as a two dimensional graph in the browser, Figure \ref{fig:atomspace_explorer} provides an example. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=1.0
+\textwidth]{figures/Magistrale/atomspace_explorer}
+\caption[AtomSpace Explorer ]{Atomspace example. By selecting an atom, you can get its unique ID, the type of atom (associated with an integer), incoming-set and outgoing-set, Strength and Confidence and much more.
+\label{fig:atomspace_explorer}}
+\end{figure}
+
 
 \subsection{Atomese}\label{sec:atomese}
 
@@ -288,7 +299,7 @@ OpenCog has a Pattern Matcher (PM), or Query Engine or Variable Unifier, that ca
 The PM can be used from C++, Scheme or Python. \\
 After specifying some (arbitrarily complex) arrangement of atoms, that is, a hypergraph consisting of Nodes and Links of several types, the PM can find all instances of that hypergraph in the AtomSpace. The pattern or template can have \enquote{holes} in it, locations that are variable, and so the pattern matcher can act to \enquote{fill in the blanks} when presented with a pattern that has blanks in it (better known by the expression: `grounding' a pattern). \\
 For example, the VariableNode type are used to indicate these \enquote{blank spots}. \\
-For a good introduction to these concepts see \cite{baader_nipkow_1998}. Although, the PM implementation is considerably more sophisticated: it unifies multiple terms at once, automatically handles unordered terms (terms that can be in any order) and provides support for quotation, execution and evaluation. \\
+For a good introduction to these concepts, see \cite{baader_nipkow_1998}. Although, the PM implementation is considerably more sophisticated: it unifies multiple terms at once, automatically handles unordered terms (terms that can be in any order) and provides support for quotation, execution and evaluation. \\
 
 For this project, patterns are specified using QueryLink type. \\
 One creates the pattern-template that one wishes to search for. The pattern can be specified as a collection of trees, containing the VariableNodes, making up the graph. 
