@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  20 SEP 2021 12:52
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  23 SEP 2021 11:46
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1574,7 +1574,8 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (dissertation.aux
 (chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
-(chapters/chapter3.aux) (chapters/conclusion.aux) (chapters/conclusionDue.aux))
+(chapters/chapter3.aux) (chapters/conclusion.aux) (chapters/conclusionDue.aux)
+(chapters/AppendixA.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1588,7 +1589,7 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
 1.
-(D:\Programmi\MiKTeX\tex/latex/base\ts1cmr.fd
+ (D:\Programmi\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 31.
@@ -2030,60 +2031,126 @@ oinLink, QueryLink, MeetLink,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--266
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+
+ []
+
+File: figures/Magistrale/atomspace_explorer.png Graphic file (type bmp)
+<figures/Magistrale/atomspace_explorer.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 273--277
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 267--270
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 271--272
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
 
  []
 
 [19]
-Overfull \hbox (27.28496pt too wide) in paragraph at lines 279--284
+Underfull \hbox (badness 10000) in paragraph at lines 282--283
+
+ []
+
+[20]
+Overfull \hbox (27.28496pt too wide) in paragraph at lines 290--295
 \TU/EBGaramond(2)/m/n/12 mostly built on top of the Pattern Matcher and it is a
 pplicable to rules written in a Scheme/Atomese
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--292
+Underfull \hbox (badness 10000) in paragraph at lines 298--303
 
  []
 
-[20]
-Overfull \hbox (0.24092pt too wide) in paragraph at lines 293--298
+
+Overfull \hbox (0.24092pt too wide) in paragraph at lines 304--309
 \TU/EBGaramond(2)/m/n/12 In Chapter [applicazione...], practical applications w
 ill be presented to help understand these
  []
 
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 326--330
 
-LaTeX Warning: Citation 'geisweiller_2019' on page 21 undefined on input line 3
-11.
+ []
 
-) [21] [22]
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 331--332
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+
+Overfull \hbox (8.00142pt too wide) in paragraph at lines 353--356
+\TU/EBGaramond(2)/m/n/12 This converter is called RelEx, a Narrow-AI component 
+of OpenCog. It is an English-language
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
+
+ []
+
+[23]) [24]
 \openout2 = `chapters/chapter2.aux'.
 
- (chapters/chapter2.tex)
+ (chapters/chapter2.tex
+Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--5
+[][][][][]$[][][][][] [] [] [] [][] [] [][][][][][][][][] [] [][][] [] [][][][]
+ [] [][][][][][] [] [][][][][][] [] [] [] [][][][] [] [][] [] [][][][][] [] [][
+][][][][][] [] [][][][][][] [] [][] []
+ []
+
+File: figures/Magistrale/env_1_temp.png Graphic file (type bmp)
+<figures/Magistrale/env_1_temp.png>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
+
+ []
+
+[25
+
+
+
+
+]
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
+(Font)              scaled to size 12.0pt on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--41
+
+ []
+
+[26]) [27]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex)
 \openout2 = `chapters/conclusion.aux'.
 
-
-(chapters/conclusion.tex)
+ (chapters/conclusion.tex)
 \openout2 = `chapters/conclusionDue.aux'.
 
- (chapters/conclusionDue.tex
-Chapter 3.
-) [23
 
-
-
+(chapters/conclusionDue.tex
+Chapter 4.
+) [28
 
 
 
@@ -2095,12 +2162,24 @@ Chapter 3.
 
 
 ]
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 95.
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 9.99994pt on input line 95.
+\openout2 = `chapters/AppendixA.aux'.
 
-Overfull \hbox (5.38664pt too wide) in paragraph at lines 96--96
+ (chapters/AppendixA.tex
+Chapter 5.
+[29
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30])
+[31]
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 9.99994pt on input line 96.
+
+Overfull \hbox (5.38664pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Lawtomated. \TU/EBGaramond(2)/m/it/12 AI for Legal: 
 Ani, AGI and ASI\TU/EBGaramond(2)/m/n/12 . Feb. 2020. \TU/EBGaramond(2)/m/sc/12
  url\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][][][][][][][] []
@@ -2108,40 +2187,40 @@ Ani, AGI and ASI\TU/EBGaramond(2)/m/n/12 . Feb. 2020. \TU/EBGaramond(2)/m/sc/12
  []
 
 
-Overfull \hbox (0.96407pt too wide) in paragraph at lines 96--96
+Overfull \hbox (0.96407pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Astute Solutions. \TU/EBGaramond(2)/m/it/12 Artifici
 al narrow intelligence and the customer experience\TU/EBGaramond(2)/m/n/12 . No
 v. 2020.
  []
 
 
-Overfull \hbox (15.97092pt too wide) in paragraph at lines 96--96
+Overfull \hbox (15.97092pt too wide) in paragraph at lines 97--97
 \TU/EBGaramond(2)/m/sc/12 url\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [
 ] [][][][][][][][][][][][][][][] [] [][][] [] [][][] [] [][][][][][][][][][] []
 [] [][][][][][] [][] [][][][][][][][][][][][]$[][]. 
  []
 
 
-Overfull \hbox (17.90956pt too wide) in paragraph at lines 96--96
+Overfull \hbox (17.90956pt too wide) in paragraph at lines 97--97
 \TU/EBGaramond(2)/m/n/12 Jan. 2018. \TU/EBGaramond(2)/m/sc/12 url\TU/EBGaramond
 (2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][][][][][][][][][][][][][][] [] [][
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[24
+[32
 
 
 
 
 ]
-Overfull \hbox (23.10403pt too wide) in paragraph at lines 96--96
+Overfull \hbox (23.10403pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Tom B. Brown et al. “  Language Models are Few-Shot 
 Learners”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/2005
 .14165
  []
 
 
-Overfull \hbox (56.32639pt too wide) in paragraph at lines 96--96
+Overfull \hbox (56.32639pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Alberto Romero. \TU/EBGaramond(2)/m/it/12 GPT-3 - a 
 complete overview\TU/EBGaramond(2)/m/n/12 . May 2021. \TU/EBGaramond(2)/m/sc/12
  url\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][][][][][][][][][
@@ -2149,7 +2228,7 @@ complete overview\TU/EBGaramond(2)/m/n/12 . May 2021. \TU/EBGaramond(2)/m/sc/12
  []
 
 
-Overfull \hbox (32.11475pt too wide) in paragraph at lines 96--96
+Overfull \hbox (32.11475pt too wide) in paragraph at lines 97--97
 \TU/EBGaramond(2)/m/n/12 p. 226. \TU/EBGaramond(2)/m/sc/12 doi\TU/EBGaramond(2)
 /m/n/12 : [][]$[][] [] [][][][] [] [][][][][] [] [][][][] [] [][][][][][]$[][].
  \TU/EBGaramond(2)/m/sc/12 url\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] 
@@ -2157,82 +2236,71 @@ Overfull \hbox (32.11475pt too wide) in paragraph at lines 96--96
  []
 
 
-Overfull \hbox (2.80168pt too wide) in paragraph at lines 96--96
+Overfull \hbox (2.80168pt too wide) in paragraph at lines 97--97
 \TU/EBGaramond(2)/m/n/12 In: \TU/EBGaramond(2)/m/it/12 2016 IEEE European Sympo
 sium on Security and Privacy (EuroS P)\TU/EBGaramond(2)/m/n/12 . 2016, pp. 372–
 
  []
 
 
-Overfull \hbox (40.65767pt too wide) in paragraph at lines 96--96
+Overfull \hbox (40.65767pt too wide) in paragraph at lines 97--97
 \TU/EBGaramond(2)/m/n/12 Black Box Deep Neural Networks for Computer Vision: A 
 Survey”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.1
 2116
  []
 
-[25]
-Overfull \hbox (0.57768pt too wide) in paragraph at lines 96--96
+[33]
+Overfull \hbox (0.57768pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Yuan Gong and Christian Poellabauer. “  An Overview 
 of Vulnerabilities of Voice Con-
  []
 
 
-Overfull \hbox (3.63443pt too wide) in paragraph at lines 96--96
+Overfull \hbox (3.63443pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Ben Goertzel. \TU/EBGaramond(2)/m/it/12 The hidden p
 attern : a patternist philosophy of mind\TU/EBGaramond(2)/m/n/12 . Boca Raton: 
 Brown-
  []
 
 
-Overfull \hbox (0.94882pt too wide) in paragraph at lines 96--96
+Overfull \hbox (0.94882pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Amit Basu and Robert Blanning. \TU/EBGaramond(2)/m/i
 t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
 /EBGaramond(2)/m/sc/12 isbn\TU/EBGaramond(2)/m/n/12 :
  []
 
-[26]
-Overfull \hbox (1.64275pt too wide) in paragraph at lines 96--96
+[34]
+Overfull \hbox (1.64275pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 André Senna. Aug. 2018. \TU/EBGaramond(2)/m/sc/12 ur
 l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
  [] [][][] [] [][][][][][][][] [] [][][][][][] []
  []
 
 
-Overfull \hbox (13.70285pt too wide) in paragraph at lines 96--96
+Overfull \hbox (13.70285pt too wide) in paragraph at lines 97--97
 [][][][][][] [] [] [] [][] [] [][][][][][][] [] [][][][][][] [] [][] [] [][][][
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[27] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[35] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/conclusion.aux)
-(chapters/conclusionDue.aux))
+(chapters/conclusionDue.aux) (chapters/AppendixA.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: BB595956FB7B89284B6E4781926BACC9;2467.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                dissertation
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: D18510E41E4AF0FD179E13364C1AD705;3305.
 Package logreq Info: Writing requests to 'dissertation.run.xml'.
 \openout1 = `dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52044 strings out of 411335
- 1187464 string characters out of 2837817
- 2119898 words of memory out of 3000000
- 71554 multiletter control sequences out of 15000+600000
+ 52202 strings out of 411335
+ 1190568 string characters out of 2837817
+ 2142880 words of memory out of 3000000
+ 71703 multiletter control sequences out of 15000+600000
  410734 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,8n,133p,1252b,5421s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,8n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (35 pages).
+Output written on dissertation.pdf (43 pages).

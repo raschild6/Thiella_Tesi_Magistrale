@@ -1748,34 +1748,62 @@
       \verb https://wiki.opencog.org/w/Unified_rule_engine
       \endverb
     \endentry
-    \entry{goertzel2008probabilistic}{book}{}
+    \entry{olson2011tags}{inproceedings}{}
       \name{author}{1}{}{%
-        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
-           family={Goertzel},
-           familyi={G\bibinitperiod},
-           given={Ben},
-           giveni={B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {New York, NY}%
+        {{hash=8f743eebb2f64f75592e54ba06f94320}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
       }
       \list{publisher}{1}{%
-        {Springer}%
+        {IEEE}%
       }
-      \strng{namehash}{d00baed2f90b47ae52840783b7ac55e4}
-      \strng{fullhash}{d00baed2f90b47ae52840783b7ac55e4}
-      \strng{bibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
-      \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
-      \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
-      \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
-      \field{extraname}{6}
+      \strng{namehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{fullhash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{bibnamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authorbibnamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authornamehash}{8f743eebb2f64f75592e54ba06f94320}
+      \strng{authorfullhash}{8f743eebb2f64f75592e54ba06f94320}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{isbn}{978-1441945785}
-      \field{title}{Probabilistic logic networks : a comprehensive framework for uncertain inference}
-      \field{year}{2008}
+      \field{booktitle}{Proceedings of the {IEEE} International Conference on Robotics and Automation ({ICRA})}
+      \field{month}{05}
+      \field{title}{{AprilTag}: A robust and flexible visual fiducial system}
+      \field{year}{2011}
+      \field{pages}{3400\bibrangedash 3407}
+      \range{pages}{8}
+      \keyw{Robot navigation,SLAM,Visual Fiducial,ARToolkit}
+    \endentry
+    \entry{wang2016iros}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=91b0ceddefe1df2be88f9c70c4507e4b}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=8f743eebb2f64f75592e54ba06f94320}{%
+           family={Olson},
+           familyi={O\bibinitperiod},
+           given={Edwin},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \strng{fullhash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \strng{bibnamehash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \strng{authorbibnamehash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \strng{authornamehash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \strng{authorfullhash}{8f9eb108db0b2c60537d5a530b64d28a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the {IEEE/RSJ} International Conference on Intelligent Robots and Systems {(IROS)}}
+      \field{month}{10}
+      \field{title}{{AprilTag} 2: Efficient and robust fiducial detection}
+      \field{year}{2016}
     \endentry
   \enddatalist
 \endrefsection

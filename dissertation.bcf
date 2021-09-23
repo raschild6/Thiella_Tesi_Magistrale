@@ -2382,7 +2382,8 @@
     <bcf:citekey order="22">potapov_2020_2</bcf:citekey>
     <bcf:citekey order="23">baader_nipkow_1998</bcf:citekey>
     <bcf:citekey order="24">geisweiller_2019</bcf:citekey>
-    <bcf:citekey order="25">goertzel2008probabilistic</bcf:citekey>
+    <bcf:citekey order="25">olson2011tags</bcf:citekey>
+    <bcf:citekey order="25">wang2016iros</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

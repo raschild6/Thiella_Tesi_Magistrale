@@ -25,14 +25,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.2}Atomese}{19}{subsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.3}Pattern Engine and Unified Rule Engine}{20}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.3}Pattern Engine, Unified Rule Engine and Relex2Logic}{21}{subsection.2.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3.1}Pattern Matcher}{20}{subsubsection.2.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.2.3.1}Pattern Matcher}{21}{subsubsection.2.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3.2}Unified Rule Engine}{21}{subsubsection.2.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.2.3.2}Unified Rule Engine}{22}{subsubsection.2.2.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.4}Reasons}{22}{subsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.3.3}Relex2Logic}{22}{subsubsection.2.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Conclusione}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Problem Description}{25}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{24}{section*.16}%
+\contentsline {section}{\numberline {3.1}Environment in Atomese}{27}{section.3.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}Actions in Atomese}{27}{section.3.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Conclusione}{28}{chapter.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Appendix A}{29}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}PDDL Problem and Domain}{29}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{32}{section*.18}%
