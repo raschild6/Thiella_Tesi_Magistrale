@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  23 SEP 2021 11:46
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  24 SEP 2021 10:46
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -2138,7 +2138,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
-[26]) [27]
+[26]
+File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
+<figures/Magistrale/blocks_example.png>
+LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
+(Font)              scaled to size 7.89734pt on input line 47.
+
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+
+ []
+
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 68--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--77
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+) [29]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex)
@@ -2150,7 +2190,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
 (chapters/conclusionDue.tex
 Chapter 4.
-) [28
+) [30
 
 
 
@@ -2166,7 +2206,7 @@ Chapter 4.
 
  (chapters/AppendixA.tex
 Chapter 5.
-[29
+[31
 
 
 
@@ -2174,8 +2214,8 @@ Chapter 5.
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30])
-[31]
+ [32])
+[33]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.99994pt on input line 96.
 
@@ -2207,7 +2247,7 @@ Overfull \hbox (17.90956pt too wide) in paragraph at lines 97--97
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[32
+[34
 
 
 
@@ -2249,7 +2289,7 @@ Survey”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.
 2116
  []
 
-[33]
+[35]
 Overfull \hbox (0.57768pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 Yuan Gong and Christian Poellabauer. “  An Overview 
 of Vulnerabilities of Voice Con-
@@ -2269,7 +2309,7 @@ t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
 /EBGaramond(2)/m/sc/12 isbn\TU/EBGaramond(2)/m/n/12 :
  []
 
-[34]
+[36]
 Overfull \hbox (1.64275pt too wide) in paragraph at lines 97--97
 []\TU/EBGaramond(2)/m/n/12 André Senna. Aug. 2018. \TU/EBGaramond(2)/m/sc/12 ur
 l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
@@ -2282,25 +2322,25 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 97--97
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[35] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[37] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/conclusion.aux)
 (chapters/conclusionDue.aux) (chapters/AppendixA.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: D18510E41E4AF0FD179E13364C1AD705;3305.
+(rerunfilecheck)             Checksum: DADA9274E968CF43A9E51C9BE04D5882;3323.
 Package logreq Info: Writing requests to 'dissertation.run.xml'.
 \openout1 = `dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52202 strings out of 411335
- 1190568 string characters out of 2837817
- 2142880 words of memory out of 3000000
- 71703 multiletter control sequences out of 15000+600000
- 410734 words of font info for 129 fonts, out of 8000000 for 9000
+ 52228 strings out of 411335
+ 1191487 string characters out of 2837817
+ 2142941 words of memory out of 3000000
+ 71727 multiletter control sequences out of 15000+600000
+ 410742 words of font info for 130 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,8n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (43 pages).
+Output written on dissertation.pdf (45 pages).

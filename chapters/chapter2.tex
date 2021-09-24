@@ -73,6 +73,39 @@ In that code, the \textit{apple} has been defined as an \textit{object} and the 
 ConceptNodes were used to refer to \enquote{concepts} and InheritanceLinks to connect two ConceptNodes with an \enquote{inheritance} meaning. This way, when the robot searches for which objects it can move, it will limit the pattern matching only to Atoms that are objects (thus, only to the apple). \\
 As each atom is unique, it is not necessary to first define objects (i.e., \textit{apple} and \textit{table}) and concepts (i.e., \textit{object} and \textit{fixed-object}) and then, link them. Within the same AtomSpace, once an Atom is defined, whether independently or within any hypergraph, it will remain unique and the creation of other hypergraphs containing that Atom will not create a new one, but rather it will be shared between the various hypergraphs, in a sense, connecting them. \\
 
+In addition, by construction of pattern matching rules, it is necessary to explicitly define the \enquote{non-equality} between all the various pairs of objects. Therefore, for example, given three objects such as \textit{apple}, \textit{tray} and \textit{table}, there will be Atoms like these: \\
+\begin{python}
+	(NotLink (EqualLink 
+		(ConceptNode "apple") (ConceptNode "tray")))
+
+	(NotLink (EqualLink 
+		(ConceptNode "apple") (ConceptNode "table")))
+
+	(NotLink (EqualLink 
+		(ConceptNode "tray") (ConceptNode "table")))
+\end{python}
+They correspond to all possible simple combinations (without repetition) that can be constructed from the set of all objects (fixed ones included) taken two at a time. \\
+
+Finally, now that the objects have been constructed, inherited and differentiated, one or more states must be associated with them. The best way to represent the state of an object is via an EvaluationLink, which associates a PredicateNode with one or more objects (their relative Atoms). The possible states of an object are: \textit{clear}, \textit{in-hand}, \textit{on}. Thus, for example: \\
+\begin{python}
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "tray"))
+	
+	(EvaluationLink
+		(PredicateNode "in-hand")
+		(ConceptNode "apple"))
+	
+	(EvaluationLink
+		(PredicateNode "on")
+		(ListLink
+			(ConceptNode "tray")
+			(ConceptNode "table")))
+\end{python}
+
+In Appendix A, Section \ref{sec:KB_examples}, complete examples have been added.
+
+
 \section{Actions in Atomese}\label{sec:domain_atomese}
 
 
