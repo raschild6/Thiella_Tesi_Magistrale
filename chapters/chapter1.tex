@@ -189,7 +189,8 @@ Its TruthValue, composed of at least a strength and a confidence value, has the 
 \\
 For example, imagine an empty AtomSpace and a newborn agent that begins observing the world for the first time. If the first two things it sees are a man and a cat, it may define the following concepts:
 
-\begin{footnotesize}\textbf{Code in Scheme programming language notation:} ConceptNode example.\end{footnotesize}
+\begin{footnotesize}\textbf{Code in Scheme Programming Language notation:} \\
+ConceptNode example.\end{footnotesize}
 \begin{python}
 	ConceptNode "man" (stv 0.5 0.001)
 	ConceptNode "cat" (stv 0.5 0.001)
@@ -201,7 +202,9 @@ Because the agent has not made a lot of observations yet, it may assign a low Co
 	\item \textbf{InheritanceLink}: a Link specify is-a relationships. \\
 In the OpenCog system, basic InheritanceLinks are used to specify both intensional (is-a) and extensional (is-an-instance-of) relationships.
 
-\begin{footnotesize}\textbf{Code in Scheme programming language notation:} InheritanceLink example, which specifies that a cat is an animal.\end{footnotesize}
+\begin{footnotesize}\textbf{Code in Scheme notation:} \\
+InheritanceLink example, which specifies that a cat is an animal.
+\end{footnotesize}
 \begin{python}
 	InheritanceLink
 		ConceptNode "cat"
@@ -214,7 +217,7 @@ In this case, the TruthValue associated to InheritanceLink should be 0, if it is
 Predicates are functions that have arguments, and produce a truth value as output. Predicates in OpenCog roughly resemble the predicate of first-order logic, but more general. It is very similar to a characteristic function in probability theory, which helps assign a floating-point truth value to a declaration. Its usege will be understood at later points. \\
 Two interesting type of Atom that are derived from PredicateNode are \textbf{DefinedPredicateNode} and \textbf{GroundedPredicateNode}. \\
 The first is a single atom that is attached to a more complex definition. During the evaluation of the predicate, its definition (typically some formula or other complex expression, constituted entirely of Atoms) is looked up and is used during evaluation. \\
-The second specifies a predicate whose truth value is updated by the evaluation of a scheme, python or C++ code snippet. It is a \enquote{black box} from the point of view of logical inference and knowledge representation. It is impossible to reason with it, as opposed to DefinedPredicateNodes, which are \enquote{clear boxes} whose inner workings are visible to inference, learning and analysis algorithms.
+The second specifies a predicate whose truth value is updated by the evaluation of a scheme, python or C++ code snippet. It is a \enquote{black box} from the point of view of logical inference and knowledge representation and it is used to interface to external data systems, for example, to robot motor control systems, or to sensory input systems. It is impossible to reason with it, as opposed to DefinedPredicateNodes, which are \enquote{clear boxes} whose inner workings are visible to inference, learning and analysis algorithms.
 
 	\item \textbf{ListLink}: a Link used for grouping Atoms for some purpose, typically to specify a set of arguments to some function or relation. \\
 The ListLink is best understood as a Cartesian product\footnotemark{}, because all of its uses involve passing an ordered sequence of arguments to some function or predicate. Ordered sequences can be naturally understood as Cartesian products, which is extremely general, cutting across all branches of mathematics.
@@ -223,7 +226,9 @@ The ListLink is best understood as a Cartesian product\footnotemark{}, because a
 	\item \textbf{EvaluationLink}: provides a way for specifying the truth value of a predicate on a set of arguments. \\
 The EvaluationLink is the most central and important atom type in OpenCog, as it is how OpenCog implements knowledge representation.
 
-\begin{footnotesize}\textbf{Code in Scheme programming language notation:} EvaluationLink general structure, followed by a pratical example.\end{footnotesize}
+\begin{footnotesize}\textbf{Code in Scheme notation:} \\
+EvaluationLink general structure, followed by a pratical example.
+\end{footnotesize}
 \begin{python}
 	EvaluationLink <tv>
    		PredicateNode some_p
@@ -240,6 +245,8 @@ Pratical example, $3 < 42$ is true:
 			NumberNode 3
 			NumberNode 42
 \end{python}
+
+	\item \textbf{QueryLink}: TODO: MANCA QUESTO, SPIEGALO IN MODO GENERICO QUI \\
 \end{itemize}
 
 There are other atom types used here. A more general list of Opencog atom types, which can be divided into categories, is the following:

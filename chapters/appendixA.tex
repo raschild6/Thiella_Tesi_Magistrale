@@ -1,10 +1,84 @@
 %!TEX root = ../dissertation.tex
 \chapter{Appendix A} \label{AppendixA}
 
+\section{Knowledge Base Examples}\label{sec:KB_examples} 
+
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+Starting with the simplest arrangement of objects: there is a table and there is an apple, a banana and a tray on it. Then, first the objects and their inheritances are defined, next the objects are differentiated, and finally, as they are all on top of the table, the \textit{clear} status is associated with each of them. \\
+\end{footnotesize}
+
+\begin{python}
+	(InheritanceLink
+		(ConceptNode "apple")
+		(ConceptNode "object"))
+	(InheritanceLink
+		(ConceptNode "banana")
+		(ConceptNode "object"))
+	(InheritanceLink
+		(ConceptNode "tray")
+		(ConceptNode "object"))
+	(InheritanceLink
+		(ConceptNode "table")
+		(ConceptNode "fixed-object"))
+
+	(NotLink (EqualLink 
+		(ConceptNode "apple") (ConceptNode "banana")))
+	(NotLink (EqualLink 
+		(ConceptNode "apple") (ConceptNode "tray")))
+	(NotLink (EqualLink 
+		(ConceptNode "apple") (ConceptNode "table")))
+	(NotLink (EqualLink 
+		(ConceptNode "banana") (ConceptNode "tray")))
+	(NotLink (EqualLink 
+		(ConceptNode "banana") (ConceptNode "table")))
+	(NotLink (EqualLink 
+		(ConceptNode "tray") (ConceptNode "table")))
+	
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "apple"))
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "banana"))
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "tray"))
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "table"))
+\end{python}
+
+Fixed objects do not lose their \textit{clear} state when an object is placed on top of them, as is the case of the other objects. However, this state is maintained as long as there is room to place a new object, otherwise it is removed and the fixed object will result completely busy. \\
+Furthermore, notice how there are no states related to the fact that the objects are on top of the table. This is because the actions of \textit{Pickup} and \textit{Putdown} have been maintained. The table is considered as the main working plane, so these actions will be executed within the objects above it. \\
+In general, these actions can be used on objects that are on top of fixed objects in the initial situation, so for example, \textit{Pickup} will not require to know what is under the object to pick up, it will just pick it up. \textit{Putdown}, on the other hand, is used to put down an object in a generic position, it is not important where. This action is rarely used. \\
+However, all four actions are maintained and used to speed up the first actions and simplify the initial knowledge base.\\
+
+To conclude, suppose now that the apple is on the tray and the banana is in the hand. InheritanceLinks and NotLinks are the same as the code above and will always remain unchanged once created, within each execution of the algorithm, thus they are omitted below. The last part of the knowledge base will become as follows: \\
+
+\begin{python}	
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "apple"))
+	(EvaluationLink
+		(PredicateNode "in-hand")
+		(ConceptNode "banana"))
+	(EvaluationLink
+		(PredicateNode "on")
+		(ListLink
+			(ConceptNode "apple")
+			(ConceptNode "tray"))
+	(EvaluationLink
+		(PredicateNode "clear")
+		(ConceptNode "table"))
+\end{python}
+
+
 \section{PDDL Problem and Domain}\label{sec:PDDL} 
 
 \begin{footnotesize}
-\textbf{Code in PDDL notation:} Description of the problem as a definition of the domain, objects, initial state (INIT) and goal. \\
+\textbf{Code in PDDL notation:} \\
+Description of the problem as a definition of the domain, objects, initial state (INIT) and goal. \\
 In this example: four blocks (A, B, C, D) are arranged independently on the table and the robot's hand is free. The goal is a stack formed by the four blocks placed in reverse alphabetical order (D on C on B on A).
 \end{footnotesize}
 
@@ -22,7 +96,8 @@ In this example: four blocks (A, B, C, D) are arranged independently on the tabl
 \bigskip
 
 \begin{footnotesize}
-\textbf{Code in PDDL notation:} Description of the domain, concerning the problem above, as all possible actions and \enquote{predicates} available. \\
+\textbf{Code in PDDL notation:} \\
+Description of the domain, concerning the problem above, as all possible actions and \enquote{predicates} available. \\
 Predicates are the \enquote{states} in which one or more objects can be. Actions, takeable by the robot, are described as input parameters, preconditions for performing that action and effects once the action is completed. 
 \end{footnotesize}
 
@@ -77,74 +152,279 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 \end{python}
 
 
-\section{Knowledge Base examples}\label{sec:KB_examples} 
+\section{Action Rules}\label{sec:action_atomese}
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-Starting with the simplest arrangement of objects: there is a table and there is an apple, a banana and a tray on it. Then, first the objects and their inheritances are defined, next the objects are differentiated, and finally, as they are all on top of the table, the \textit{clear} status is associated with each of them. \\
+\textit{Putdown} action rule.
 \end{footnotesize}
 
 \begin{python}
-	(InheritanceLink
-		(ConceptNode "apple")
-		(ConceptNode "object"))
-	(InheritanceLink
-		(ConceptNode "banana")
-		(ConceptNode "object"))
-	(InheritanceLink
-		(ConceptNode "tray")
-		(ConceptNode "object"))
-	(InheritanceLink
-		(ConceptNode "table")
-		(ConceptNode "fixed-object"))
-
-	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "banana")))
-	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "tray")))
-	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "table")))
-	(NotLink (EqualLink 
-		(ConceptNode "banana") (ConceptNode "tray")))
-	(NotLink (EqualLink 
-		(ConceptNode "banana") (ConceptNode "table")))
-	(NotLink (EqualLink 
-		(ConceptNode "tray") (ConceptNode "table")))
-	
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "apple"))
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "banana"))
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "tray"))
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "table"))
+(define (pickup args)
+  (let 
+    ((rule
+      (if (equal? args `())
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (EqualLink
+              (VariableNode "?ob")
+              args
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+      )
+    ))
+    rule
+  )
+)
 \end{python}
 
-Fixed objects do not lose their \textit{clear} state when an object is placed on top of them, as is the case of the other objects. However, this state is maintained as long as there is room to place a new object, otherwise it is removed and the fixed object will result completely busy. \\
-Furthermore, notice how there are no states related to the fact that the objects are on top of the table. This is because the actions of \textit{Pickup} and \textit{Putdown} have been maintained. The table is considered as the main working plane, so these actions will be executed within the objects above it. \\
-In general, these actions can be used on objects that are on top of fixed objects in the initial situation, so for example, \textit{Pickup} will not require to know what is under the object to pick up, it will just pick it up. \textit{Putdown}, on the other hand, is used to put down an object in a generic position, it is not important where. This action is rarely used. \\
-However, all four actions are maintained and used to speed up the first actions and simplify the initial knowledge base.\\
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+\textit{Stack} action rule.
+\end{footnotesize}
 
-To conclude, suppose now that the apple is on the tray and the banana is in the hand. InheritanceLinks and NotLinks are the same as the code above and will always remain unchanged once created, within each execution of the algorithm, thus they are omitted below. The knowledge base will become as follows: \\
-
-\begin{python}	
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "apple"))
-	(EvaluationLink
-		(PredicateNode "in-hand")
-		(ConceptNode "banana"))
-	(EvaluationLink
-		(PredicateNode "on")
-		(ListLink
-			(ConceptNode "apple")
-			(ConceptNode "tray"))
-	(EvaluationLink
-		(PredicateNode "clear")
-		(ConceptNode "table"))
+\begin{python}
+(define (pickup args)
+  (let 
+    ((rule
+      (if (equal? args `())
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (EqualLink
+              (VariableNode "?ob")
+              args
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+      )
+    ))
+    rule
+  )
+)
 \end{python}
+
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+\textit{Unstack} action rule.
+\end{footnotesize}
+
+\begin{python}
+(define (pickup args)
+  (let 
+    ((rule
+      (if (equal? args `())
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+        (QueryLink
+          (VariableList
+            (TypedVariableLink 
+              (VariableNode "?ob") 
+              (TypeNode "ConceptNode"))
+          ) ; parameters
+          (AndLink
+            (PresentLink
+              (InheritanceLink
+                (VariableNode "?ob")
+                (ConceptNode "object"))
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+            (EqualLink
+              (VariableNode "?ob")
+              args
+            )
+            (AbsentLink
+              (EvaluationLink
+                (PredicateNode "stacked")
+                (VariableNode "?ob"))
+            )
+          )
+          (ExecutionOutputLink
+            (GroundedSchemaNode "scm: pickup-action")
+            (ListLink
+              ; effect
+              (EvaluationLink
+                (PredicateNode "in_hand")
+                (VariableNode "?ob"))
+              ; precondition
+              (EvaluationLink
+                (PredicateNode "clear")
+                (VariableNode "?ob"))
+            )
+          )
+        )
+      )
+    ))
+    rule
+  )
+)
+\end{python}
+ 
+
