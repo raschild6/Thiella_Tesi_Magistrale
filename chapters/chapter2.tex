@@ -110,12 +110,78 @@ In Appendix A, Section \ref{sec:KB_examples}, a complete examples have been adde
 Once the Atoms relative to the objects have been defined, the robot's actions must also be defined as hypergraphs. 
 From this point on in the paper, these actions will also be called \enquote{rules}, being called rules the ones that are executed within AtomSpace for pattern matching. \\
 Before exposing them, Section \ref{sec:PDDL} in Appendix A, provides the domain and problem in Planning Domain Definition Language (PDDL) notation of the standard block world problem.
-Automated planning and scheduling problems are usually described in the PDDL notation, which is an AI planning language for symbolic manipulation tasks. \\
-Starting from those definitions of the various actions, one can better understand how they are created in Atomese. 
+Automated planning and scheduling problems are usually described in the PDDL notation, which is an AI planning language for symbolic manipulation tasks.
+Starting from those definitions of the various actions, one can better understand how they are created in Atomese. \\
+
+Each action used in this project, as in the PDDL notation, requires preconditions and applies effects. Below is a list of these, for each of them:
+
+\begin{itemize}
+
+	\item \textbf{Pickup} a block from the intial fixed object. \\
+Preconditions:
+	\begin{itemize}
+		\item block must be clear
+		\item block must be an object
+		\item block must not be \enquote{stacked}
+	\end{itemize}
+Effects:
+	\begin{itemize}
+		\item block no longer clear
+		\item block is in hand
+	\end{itemize}
+
+	\item \textbf{Putdown} a block from the hand to a fixed object. \\
+Preconditions:
+	\begin{itemize}
+		\item block must be in hand
+		\item block must be an object
+	\end{itemize}
+Effects:
+	\begin{itemize}
+		\item block is clear
+		\item block no longer in hand
+	\end{itemize}
+
+	\item \textbf{Stack} block A on top of the block B. \\
+Preconditions:
+	\begin{itemize}
+		\item block A must be different from block B
+		\item block A must be an object
+		\item block A must be in hand
+		\item block B must be a clear object or must be a fixed object
+	\end{itemize}
+Effects:
+	\begin{itemize}
+		\item block A is on top of block B
+		\item block A is \enquote{stacked}
+		\item block A no longer in hand
+		\item block A is clear
+		\item block B no longer clear (if it is an object)
+	\end{itemize}
+
+	\item \textbf{Unstack} block A from the top of block B. \\
+Preconditions:
+	\begin{itemize}
+		\item block A must be different from block B
+		\item block A must be an object
+		\item block A must be clear
+		\item block A must be on top of block B
+		\item block B must be an object or a fixed object
+	\end{itemize}
+Effects:
+	\begin{itemize}
+		\item block A is in hand
+		\item block A no longer clear
+		\item block A no longer on top of block B
+		\item block A no longer \enquote{stacked}
+		\item block B is clear
+	\end{itemize}
+\end{itemize}
+
 Only the \textit{Pickup} rule is presented and explained here, as an example, whereas the code of the other three can be found in Appendix A, Section \ref{sec:action_atomese}. \bigskip \\
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-\textit{Pickup} action rule. 
+\textit{Pickup} action rule. [AGGIUNGI BREVE DESCRIZIONE]
 \end{footnotesize}
 
 \begin{python}
@@ -231,10 +297,11 @@ Finally, AbsentLink checks for the absence of that atom in AtomSpace: if the obj
 In this case, it verifies that the object (parameterized) is indeed an \textit{object} and that it is also \textit{clear}, from the definitions of the Pickup action.
 \end{itemize}
 
-The last part of the code (lines 33-45) is relative to the graph re-write and uses an ExecutionOutputLink atom to execute a GroundedSchemaNode. The GroundedSchemaNode behaves like the GroundedPredicateNode described in the previous section, but it is not associated with an EvaluationLink, it simply executes a Schema or Python code or Combo procedure. GroundedSchemaNode's preference, over GroundedPredicateNode, was a design choice to pursue the PDDL definition of the various actions. \\
+The last part of the code (lines 33-45) is relative to the graph re-write and uses an ExecutionOutputLink atom to execute a GroundedSchemaNode. The GroundedSchemaNode type atom behaves like the GroundedPredicateNode described in the previous section, but it is not associated with an EvaluationLink, it simply executes a Schema or Python code or Combo procedure. GroundedSchemaNode's preference, over GroundedPredicateNode, is a design choice to pursue the PDDL definition of the various actions. \\
 In this project, it was decided to use a Schema code (line 34, `scm' stands for Schema) that executes the \textit{pickup-action} function, with a list of arguments provided by the ExecutionOutputLink. \\
-This list of arguments (line 35) is made up of the effect and precondition of the Pickup rule. Therefore, the rule wants the object (parameterized) to be \textit{clear}, as a precondition, and the effect corresponds to the atom describing the state of the object \textit{in-hand}. \\
-The \textit{pickup-action} function called (lines 1-6) takes these two atoms as arguments, removes from the AtomSpace the one corresponding to the precondition and finally, applies the effect, creating the relative atom in the AtomSpace. This is how the action takes place inside the AtomSpace: states that would no longer be "valid" after the action is executed are removed (such as the state of \textit{clear}, because the object (parameterized) will be in hand, thus no longer \textit{clear}) and those created due to the action are added (such as the state of \textit{in-hand}). \\
+This list of arguments (line 35) is made up of the effect and precondition of the Pickup rule. Therefore, the rule wants the object (parameterized) to be \textit{clear}, as a precondition, and the effect corresponds to the atom describing the state of the object \textit{in-hand}. 
+For the architecture of the GroundedSchemaNode, only one atom each is accepted as an effect and precondition. Consequently, the function called must add or remove the remaining effects and preconditions that were not considered. \\
+The \textit{pickup-action} function called (lines 1-6) takes these two atoms as arguments, removes from the AtomSpace the one corresponding to the precondition and finally, applies the effect, creating the relative atom in the AtomSpace (some other functions add more effects and remove more preconditions). This is how the action takes place inside the AtomSpace: states that would no longer be \enquote{valid} after the action is executed are removed (such as the state of \textit{clear}, because the object (parameterized) will be in hand, thus no longer \textit{clear}) and those created due to the action are added (such as the state of \textit{in-hand}). \\
 
 Now that the first QueryLink has been explained, the second behaves the same way, but with an additional constraint in the conditional part. \\
 That constraint is the EqualLink in line 62 and it is used to limit the parameter (the VariabileNode) to coincide with the \textit{args} argument, which will be an atom corresponding to the object to be picked up, effectively restricting the pattern matching to that single atom. \\
