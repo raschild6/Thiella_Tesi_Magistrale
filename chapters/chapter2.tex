@@ -181,7 +181,7 @@ Effects:
 Only the \textit{Pickup} rule is presented and explained here, as an example, whereas the code of the other three can be found in Appendix A, Section \ref{sec:action_atomese}. \bigskip \\
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-\textit{Pickup} action rule. [AGGIUNGI BREVE DESCRIZIONE]
+\textit{Pickup} action rule.
 \end{footnotesize}
 
 \begin{python}
@@ -280,32 +280,34 @@ Only the \textit{Pickup} rule is presented and explained here, as an example, wh
 The code is divided into two functions: \textit{(pickup-action . args)} and \textit{(pickup args)}. \\
 The main rule (or action or function) is the second one, called \textit{pickup} (line 8), which describes the action of picking up some object.
 It is composed of two large QueryLink atoms (lines 12 and 47), as for all other actions. \\
-Only one of the two Atoms is used for each call of this function, via the conditional construct `if' (line 11). It checks whether the function has an argument \textit{args} other than empty \textit{'()}. 
+Only one of the two atoms is used for each call to this function, through the `if' conditional construct (line 11). It checks whether the function has an argument \textit{args} other than empty \textit{'()}. 
 If it is indeed empty, then the QueryLink from line 12 to 46 is used, otherwise the one from line 47 to 85, which actually uses the \textit{args} argument.
-Indeed, initially the variable \textit{rule} is defined as one of the two QueryLinks, depending on the result of the conditional construct, and is then applied in line 88 (i.e., executing the QueryLink). \\
+Indeed, initially the variable \textit{rule} is defined as one of the two QueryLinks, depending on the result of the conditional construct, and then, it is applied in line 88. \\
 These QueryLinks are completely identical, except for the EqualLink atom on line 62.
-Consequently, take a look first at the QueryLink with no argument, based on the generic description of a QueryLink in Section \ref{sec:atoms}.\\
-It is composed of a parameter \textit{?ob} that is restricted to the ConceptNode type (lines 13-17). 
-In this way, the rule will do pattern matching using the conditional part as a pattern, which will be parameterised by \textit{?ob} that will result as all possible objects that can be picked up, given the current composition of the AtomSpace. Thus, the notation "object (parameterized)" is given to generic objects that satisfy the requirements of parameterization. \\
-The conditional part (or pattern) requires the logical and (AndLink) to be evaluated to TRUE (lines 18-32). This can only happen when both PresentLink and AbsentLink are evaluated to TRUE at the same time. 
+Consequently, take a look first at the QueryLink without arguments, based on the generic description of a QueryLink in Section \ref{sec:atoms}. \\
+
+Its variable\_declaration part consists of a \textit{?ob} parameter (VariableNode) that is restricted to the ConceptNode type (lines 13-17). 
+In this way, the rule will do pattern matching using the conditional part as a pattern, which will be parameterized by \textit{?ob} that will result as all possible objects that can be picked up, given the current composition of the AtomSpace. Thus, the notation "object (parameterized)" is given to generic objects that satisfy the parameterization requirements. \\
+
+The conditional part (or pattern) requires that the logical AND (AndLink) be evaluated to TRUE (lines 18-32). This can only happen when both PresentLink and AbsentLink are evaluated to TRUE at the same time. 
 
 \begin{itemize}
 	\item AbsentLink is a trick to differentiate atoms simply \textit{clear} from those \textit{clear}, but also \textit{on} some other object; this corresponds to differentiating \textit{Pickup} and \textit{Unstack} actions (design choice). \\
 Briefly, when an object is subjected to a \textit{Stack} action, a \enquote{stacked} state atom is created, and when it is subjected to \textit{Unstack}, that atom is removed from AtomSpace. \\
 Finally, AbsentLink checks for the absence of that atom in AtomSpace: if the object (parameterized) is simply \textit{clear}, then the atom is not there and it can be picked up, otherwise the object (parameterized) is \textit{on} something else and the \textit{Unstack} action must be used instead of \textit{Pickup}. 
-	\item PresentLink, the opposite of AbsentLink, verifies the presence in the AtomSpace of the atoms composing it, just like logical and, returns TRUE only when they are all found. \\
+	\item PresentLink, the opposite of AbsentLink, checks for the presence of atoms composing it in the AtomSpace , just like logical AND, returns TRUE only when all are found. \\
 In this case, it verifies that the object (parameterized) is indeed an \textit{object} and that it is also \textit{clear}, from the definitions of the Pickup action.
 \end{itemize}
 
-The last part of the code (lines 33-45) is relative to the graph re-write and uses an ExecutionOutputLink atom to execute a GroundedSchemaNode. The GroundedSchemaNode type atom behaves like the GroundedPredicateNode described in the previous section, but it is not associated with an EvaluationLink, it simply executes a Schema or Python code or Combo procedure. GroundedSchemaNode's preference, over GroundedPredicateNode, is a design choice to pursue the PDDL definition of the various actions. \\
+The last part of the QueryLink (lines 33-45) is relative to the graph re-write and uses an ExecutionOutputLink atom to execute a GroundedSchemaNode. The GroundedSchemaNode type atom behaves like the GroundedPredicateNode described in the previous section, but it is not associated with an EvaluationLink, it simply executes a Schema or Python code or Combo procedure. The preference of GroundedSchemaNode, over GroundedPredicateNode, is a design choice to follow the PDDL definition of the various actions. \\
 In this project, it was decided to use a Schema code (line 34, `scm' stands for Schema) that executes the \textit{pickup-action} function, with a list of arguments provided by the ExecutionOutputLink. \\
-This list of arguments (line 35) is made up of the effect and precondition of the Pickup rule. Therefore, the rule wants the object (parameterized) to be \textit{clear}, as a precondition, and the effect corresponds to the atom describing the state of the object \textit{in-hand}. 
-For the architecture of the GroundedSchemaNode, only one atom each is accepted as an effect and precondition. Consequently, the function called must add or remove the remaining effects and preconditions that were not considered. \\
-The \textit{pickup-action} function called (lines 1-6) takes these two atoms as arguments, removes from the AtomSpace the one corresponding to the precondition and finally, applies the effect, creating the relative atom in the AtomSpace (some other functions add more effects and remove more preconditions). This is how the action takes place inside the AtomSpace: states that would no longer be \enquote{valid} after the action is executed are removed (such as the state of \textit{clear}, because the object (parameterized) will be in hand, thus no longer \textit{clear}) and those created due to the action are added (such as the state of \textit{in-hand}). \\
+This list of arguments (line 35) is made up of the effect and precondition of the Pickup rule. Thus, the rule wants the object (parameterized) to be \textit{clear}, as a precondition, and the effect corresponds to the atom describing the \textit{in-hand} state of the object . 
+Initially, a QueryLink structure was sought that would also work using inference, specifically backward chaining. Thus, only one atom each was accepted for preconditions and effects. Although ExecutionOutputLink uses a ListLink, which can contain multiple arguments, this design was retained considering a possible integration of an inference algorithm to solve the problem. Consequently, the remaining effects and preconditions not included in the ListLink are added and removed in the called function. \\
+The \textit{pickup-action} called function (lines 1-6) takes these two atoms as arguments, removes the one corresponding to the precondition from the AtomSpace and finally applies the effect, creating the corresponding atom in the AtomSpace (some other functions add more effects and remove more preconditions). This is how the action takes place inside the AtomSpace: states that would no longer be \enquote{valid}, after the action has been performed ,are removed (such as the state of \textit{clear}, because the object (parameterized) will be in hand, thus no longer \textit{clear}) and those created due to the action are added (such as the state of \textit{in-hand}). \\
 
-Now that the first QueryLink has been explained, the second behaves the same way, but with an additional constraint in the conditional part. \\
-That constraint is the EqualLink in line 62 and it is used to limit the parameter (the VariabileNode) to coincide with the \textit{args} argument, which will be an atom corresponding to the object to be picked up, effectively restricting the pattern matching to that single atom. \\
-In practice, the QueryLink with no argument performs the Pickup action on all objects that can actually be picked up, instead of the QueryLink with argument that do \textit{Pickup} only on the object passed as argument. That is, the first shows which objects are takeable, the second actually takes one. \\
-The reason why these two possibilities (the two QueryLinks) are needed will be better understood when the algorithm will be discussed (Chapter [...]). 
+Now that the first QueryLink has been explained, the second behaves in the same way, but with an additional constraint in the conditional part. \\
+This constraint is the EqualLink in line 62 and it is used to limit the parameter (the VariabileNode) to coincide with the \textit{args} argument, which will be an atom corresponding to the object to be picked up, effectively restricting the pattern matching to that single atom. \\
+In practice, the QueryLink without argument performs the Pickup action on all objects that can actually be picked up, instead of the QueryLink with argument that does \textit{Pickup} only of the object passed as argument. That is, the first shows which objects are pickable, the second actually picks one of them. \\
+The reason why these two possibilities (QueryLinks) are necessary will be better understood when the algorithm is discussed (Chapter \ref{cha:algorithm}). 
 
  

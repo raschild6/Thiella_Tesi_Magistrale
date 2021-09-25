@@ -223,7 +223,7 @@ The second specifies a predicate whose truth value is updated by the evaluation 
 The ListLink is best understood as a Cartesian product\footnotemark{}, because all of its uses involve passing an ordered sequence of arguments to some function or predicate. Ordered sequences can be naturally understood as Cartesian products, which is extremely general, cutting across all branches of mathematics.
 \footnotetext{\url{https://github.com/opencog/atomspace/issues/1490\#issuecomment-352961503}}
 
-	\item \textbf{EvaluationLink}: provides a way for specifying the truth value of a predicate on a set of arguments. \\
+	\item \textbf{EvaluationLink}: it provides a way for specifying the truth value of a predicate on a set of arguments. \\
 The EvaluationLink is the most central and important atom type in OpenCog, as it is how OpenCog implements knowledge representation.
 
 \begin{footnotesize}\textbf{Code in Scheme notation:} \\
@@ -246,7 +246,27 @@ Pratical example, $3 < 42$ is true:
 			NumberNode 42
 \end{python}
 
-	\item \textbf{QueryLink}: TODO: MANCA QUESTO, SPIEGALO IN MODO GENERICO QUI \\
+	\item \textbf{QueryLink}: it is used to specify a search pattern that can be grounded, solved or satisfied. Patterns consist of a set of clauses, with each clause containing one or more variables. When executed, the pattern matcher attempts to find groundings for the variables; that is, it attempts to find values for the variables such that the resulting graph exists in the AtomSpace. \\
+QueryLink performs graph rewriting: after finding a match for a pattern, it uses the results to create a new pattern. \\
+The QueryLink is a 2-ary or a 3-ary link, containing an optional variable declaration, followed by a pattern, followed by an implicand (consequent). In this project is used in a 3-ary form and thus, only the explicitly-declared variables are bounded. \\
+QueryLink is treated as a graph re-write rule by the pattern matcher. That is, if the graph P (the antecedent) is found, then the graph Q (the consequent or implicand) is instantiated in the AtomSpace. If the graph Q is an \textbf{ExecutionOutputLink} atom type, such as in this project, then the specified Scheme/Python/C++/etc. routine is executed, with the rest of the ExecutionOutputLink contents passed as arguments. Conceptually, the pattern matcher acts to apply rules, specified as QueryLinks, to the contents of the AtomSpace. It implements a single step of a forward chainer.
+
+\begin{footnotesize}\textbf{Code in Scheme notation:} \\
+EvaluationLink general structure, followed by a pratical example.
+\end{footnotesize}
+\begin{python}
+	QueryLink
+		$variable_declarations	# optional
+		P
+		ExecutionOutputLink  	# graph Q
+			GroundedSchemaNode "some-routine"
+			ListLink
+				A_1
+				A_2
+				...
+\end{python}
+
+The expression or predicate P is the pattern to be matched. The variables appearing in P are listed in the \$variable\_declarations. If a match to P is found, the variables are grounded with their matching atoms. The various A\_1, A\_2, etc. are created for each match, and are then passed as the first, second, ... arguments to a function \enquote{some-routine}. This function can then perform any action, for example drives external systems, such as motor controls or other devices.
 \end{itemize}
 
 There are other atom types used here. A more general list of Opencog atom types, which can be divided into categories, is the following:
