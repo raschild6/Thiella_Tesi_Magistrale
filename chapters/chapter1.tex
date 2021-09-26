@@ -169,7 +169,7 @@ Values are used to assign \enquote{valuations} to Atoms, to indicate the truth o
 
 When an atom are placed in the AtomSpace, it becomes unique: it gets a single, unique ID. Thus, in comparison to other programming languages\footnotemark{}, Atoms can be understood to be the same thing as symbols. The AtomSpace is essentially a symbol table, which commonly has the unique-symbols property. \footnotetext{Section \ref{sec:atomese} explains why it is possible to talk about programming languages}\\
 The atom ID is the string name of a Node and the outgoing set of a Link. Specifically: Nodes are identified by their names or labels, that is the only property that they have. Links are identified by their contents, which are ordered or unordered sets of other atoms. Links do not have any name or label other than their contents: a link is uniquely identified by it's type and it's contents.\\
-A TruthValue (a certain type of Values) gives each Atom a valuation or an interpretation and conseguently, all Atoms in a given, fixed AtomSpace always carry a default valuation/interpretation (i.e. a SimpleTruthValue) along with them. Naturally, an Atom may have one of several different kinds of TruthValues. \\
+A TruthValue (a certain type of Values) gives each Atom a valuation or an interpretation and conseguently, all Atoms in a given, fixed AtomSpace always carry a default valuation/interpretation (i.e. a SimpleTruthValue) along with them. Naturally, an Atom may have one or more different kinds of TruthValues. \\
 All TruthValues (tv) expose at least two parameters, representative of the SimpleTruthValue (stv):
 
 \begin{enumerate}
@@ -275,7 +275,7 @@ There are other atom types used here. A more general list of Opencog atom types,
 \item Arithmetic Atom Types: EqualLink, GreaterThanLink, NumberNode, IntervalLink, etc.
 \item Boolean Atom Types: AndLink, OrLink, NotLink, etc. 
 \item All atom types used for Natural Language Processing (NLP)
-\item Atom types for the OpenCog Probabilist Logic Network (PLN) [TODO: da introdurre nei Values]
+\item Atom types for the OpenCog Probabilist Logic Network
 \item Atom types to perform Pattern Matching (PresentLink, AbsentLink, VariableList / VariableSet / VariableNode, etc.) 
 \item Atom types for the threading 
 \item Set-theoretical Atom Types: types having some form of set-theoretical signficance (MemberLink, SetLink, SubsetLink, etc.)
@@ -284,7 +284,11 @@ There are other atom types used here. A more general list of Opencog atom types,
 
 There is a type system for working with atom types: that is, the type of an atom can itself be specified using other atoms, which also applies to the polymorphic types. The type system allows for basic error checking, such as with the type checker, and more generally, it allows type-logical reasoning and inference to be performed on atom signatures. \\
 
-In conclusion, the AtomSpace Explorer web tool can be used to display OpenCog data on screen. Atomese is fetched from the AtomSpace, then displayed as a two dimensional graph in the browser, Figure \ref{fig:atomspace_explorer} provides an example. 
+In conclusion, the AtomSpace Explorer web tool can be used to display OpenCog data on screen. Atomese is fetched from the AtomSpace, then displayed as a two dimensional graph in the browser, Figure \ref{fig:atomspace_explorer} provides an example. \\
+
+As closing note, to greatly simplify the work in this project, uncertainty-free inference is used, so all truth values associated with atoms are always TRUE, that is what the robot \enquote{sees, does and thinks} has no probability of \enquote{failure}. But, as amply demonstrated above, the system is set up to work in completely uncertain environments and with uncertain reasoning. \\
+Indeed, one of the most interesting modules of OpenCog is Probabilistic Logic Networks (PLN), a conceptual, mathematical and computational approach to uncertain inference (not used in this project). Although this project does not use it, it is particularly suitable for uncertain reasoning, especially when knowledge is based on limited observations of reality, but it can also handle abstract mathematical reasoning, and the relationship between the two, therefore this project could be integrated into it in the future. \\
+PLN is currently used as a basic module for reasoning algorithms \cite{goertzel2008probabilistic, Goertzel2011RealWorldRT}. 
 
 \begin{figure}[h]
 \centering
@@ -308,17 +312,13 @@ It is a graph database that pattern mining algorithms could search, manipulate a
 
 In its current form, Atomese was primarily designed to allow the generalized manipulation of large networks of probabilistic data by means of rules and inferences and reasoning systems. It extends the idea of probabilistic logic networks to a generalized system for algorithmically manipulating and managing data. The current, actual Atomese design has been heavily influenced by practical experience with natural-language processing, question answering, inferencing and the specific needs of robot control. \\
 
-
-
 The use of the AtomSpace, and the operation and utility of Atomese, remains a topic of ongoing research (a re-evaluation of the OpenCog architecture is currently underway. A new OpenCog system called \enquote{Hyperon} is being studied \cite{goertzel_potapov_senna_singularitynet-opencog_team_2020}, introducing upgrades from Atomese to Atomese 2.0 \cite{DBLP:journals/corr/abs-2004-05267}, Distributed AtomSpace architecture \cite{distributed_2017, senna_2018, potapov_2020_1, potapov_2020_2} and much more) and design experimentation, as various AI and knowledge-processing subsystems are developed. These include machine learning, natural language processing, motion control and animation, deep-learning networks and vision processing, constraint solving and planning, pattern mining and data mining, question answering and common-sense systems, and emotional and behavioral psychological systems. Each of these impose sharply conflicting requirements on the AtomSpace architecture. The AtomSpace and Atomese are the current best-effort KR system for satisfying all these various needs in an integrated way.
 
 \subsection{Pattern Engine, Unified Rule Engine and Relex2Logic}\label{sec:pattern_ur_engine}
 
 Three more components of the OpenCog architecture are now introduced: Pattern Matcher, Unified Rule Engine and Relex2Logic. \\
 Each of them is necessary for the following ones, in order of listing.
-Unified Rule Engine is mostly built on top of the Pattern Matcher and it is applicable to rules written in a Scheme/Atomese representation, such as for Relex2Logic and PLN [trova il modo di introdurre PLN nei Values].
-%%In this example Values are used by a PLN to perform probabilistic reasoning
-%%To greatly simplify the work in this project, certain logic was used, so all TruthValues associated with atoms are always true, but, as amply demonstrated above, the system is set up to work in completely uncertain environments and with uncertain reasoning. \cite{goertzel2008probabilistic}
+Unified Rule Engine is mostly built on top of the Pattern Matcher and it is applicable to rules written in a Scheme/Atomese representation, such as for Relex2Logic and PLN.
 
 \subsubsection{Pattern Matcher}\label{sec:pattern_matcher}
 
@@ -332,7 +332,7 @@ For this project, patterns are specified using QueryLink type. \\
 One creates the pattern-template that one wishes to search for. The pattern can be specified as a collection of trees, containing the VariableNodes, making up the graph. 
 During the search, all matching graphs are found and the groundings are noted. \\
 The QueryLink is used for graph-rewriting, thus these grounding are then pasted into a second pattern, to create a new graph. \\
-In Chapter [applicazione...], practical applications will be presented to help understand these concepts as well.
+In Section \ref{sec:domain_atomese}, practical applications will be presented to help understand these concepts as well.
 
 \subsubsection{Unified Rule Engine}\label{sec:ure}
 
@@ -345,12 +345,12 @@ The strengths of the URE are:
 	\item Comes with a powerful control mechanism to speed up reasoning
 \end{itemize}
 
-It was used as a first approach to solve the problem faced in this project (set out in Chapter [...]). It was later abandoned due to conceptual and practical problems in favour of a new approach, although, in the end, good ideas emerged that solved these problems. See related Section [...]. \\
+It was used as a first approach to solve the problem faced in this project. It was later abandoned due to conceptual and practical problems in favour of a new approach, although, in the end, good ideas emerged that solved these problems. See related Section [...sviluppi futuri]. \\
 For these reasons, any other information related to URE is referred to \cite{geisweiller_2019} and the webpages linked to that.
-
+%% TODO
 \subsubsection{Relex2Logic}\label{sec:r2l}
 
-This project handles a Natural Language Processing (NLP) module. Here, some components of OpenCog this module superficially uses to achieve a certain result, are very briefly presented. \\
+This project handles a Natural Language Processing (NLP) module. Here, some components of OpenCog this module superficially uses, are very briefly presented. \\
 The component on the top is called Relex2Logic (R2L). \\
 R2L produces a certain form of predicate-argument structure for an English-language sentence. That structure roughly resembles classical propositional or predicate logic, thus the name. \\
 It is pointless to go into the details of this module because, first of all, it became obsolete because its java rule engine and representation scheme were inadequate and knowledge extraction was too far removed from the reasoning and anaphora components; secondly, because the predicate-argument structure is produced by applying a set of rules to the RelEx format (see below), using the forward chainer provided by URE, which require a very good knowledge of the topic in order to be understood. \\
@@ -365,7 +365,7 @@ Thus, this module takes as input an English sentence and returns a relatively si
 	(ConceptNode blablabla.....	<--
 	)
 \end{python}
-
+%% TODO
 The Atoms highlighted by an arrow describe in order that `cat' and `animal' are concepts (ConceptNode), that `is' is the present simple tense forms of be referring to the cat and that `animal' is the direct object (thus both InheritanceLink) and much more. \\
 
 The processing pipeline for a sentence is: 

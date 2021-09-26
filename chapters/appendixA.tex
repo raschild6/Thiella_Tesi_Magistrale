@@ -98,7 +98,7 @@ In this example: four blocks (A, B, C, D) are arranged independently on the tabl
 \begin{footnotesize}
 \textbf{Code in PDDL notation:} \\
 Description of the domain, concerning the problem above, as all possible actions and \enquote{predicates} available. \\
-Predicates are the \enquote{states} in which one or more objects can be. Actions, takeable by the robot, are described as input parameters, preconditions for performing that action and effects once the action is completed. 
+Predicates are the \enquote{states} in which one or more objects can be. Actions, takeable by the robot, are described as input parameters and preconditions for performing that action and effects once the action is completed. 
 \end{footnotesize}
 
 \begin{python}
@@ -160,48 +160,50 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 \end{footnotesize}
 
 \begin{python}
-(define (pickup args)
-  (let 
+(define (action_putdown . args)
+  (define precond (car (cdr args)))
+  (define eff (car args))
+  (cog-extract-recursive! precond)
+  eff
+)
+
+(define (putdown args)
+  (let
     ((rule
       (if (equal? args `())
         (QueryLink
           (VariableList
-            (TypedVariableLink 
+            (TypedVariableLink
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
           ) ; parameters
-          (AndLink
-            (PresentLink
-              (InheritanceLink
-                (VariableNode "?ob")
-                (ConceptNode "object"))
-              (EvaluationLink
-                (PredicateNode "clear")
-                (VariableNode "?ob"))
-            )
-            (AbsentLink
-              (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
-            )
+          (PresentLink
+            (InheritanceLink
+              (VariableNode "?ob")
+              (ConceptNode "object"))
+            (EvaluationLink
+              (PredicateNode "in_hand")
+              (VariableNode "?ob"))
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: putdown-action")
             (ListLink
               ; effect
               (EvaluationLink
-                (PredicateNode "in_hand")
-                (VariableNode "?ob"))
+                (PredicateNode "clear")
+                (VariableNode "?ob")
+              )
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
-                (VariableNode "?ob"))
+                (PredicateNode "in_hand")
+                (VariableNode "?ob")
+              )
             )
           )
         )
         (QueryLink
           (VariableList
-            (TypedVariableLink 
+            (TypedVariableLink
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
           ) ; parameters
@@ -211,30 +213,27 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
                 (VariableNode "?ob")
                 (ConceptNode "object"))
               (EvaluationLink
-                (PredicateNode "clear")
+                (PredicateNode "in_hand")
                 (VariableNode "?ob"))
             )
             (EqualLink
               (VariableNode "?ob")
               args
             )
-            (AbsentLink
-              (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
-            )
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: putdown-action")
             (ListLink
               ; effect
               (EvaluationLink
-                (PredicateNode "in_hand")
-                (VariableNode "?ob"))
+                (PredicateNode "clear")
+                (VariableNode "?ob")
+              )
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
-                (VariableNode "?ob"))
+                (PredicateNode "in_hand")
+                (VariableNode "?ob")
+              )
             )
           )
         )
@@ -244,6 +243,8 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
   )
 )
 \end{python}
+
+\bigskip
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
@@ -251,41 +252,82 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 \end{footnotesize}
 
 \begin{python}
-(define (pickup args)
-  (let 
+(define (action_stack . args)
+  (define precond (car (cdr args)))
+  (define eff (car args))
+  (define over_obj 
+    (cog-outgoing-atom (cog-outgoing-atom eff 1) 0))
+  (define under_obj 
+    (cog-outgoing-atom (cog-outgoing-atom eff 1) 1))
+
+  (cog-extract-recursive! precond)
+  (cog-extract! (Predicate "in_hand"))
+
+  (cog-extract! (Evaluation (Predicate "clear") under_obj))
+  (cog-extract! (Predicate "clear"))
+
+  (EvaluationLink (PredicateNode "clear") over_obj)
+  (EvaluationLink (PredicateNode "stacked") over_obj)
+
+  eff
+)
+
+(define (stack ob underob)
+  (let
     ((rule
-      (if (equal? args `())
+      (if (equal? ob `())
         (QueryLink
           (VariableList
             (TypedVariableLink 
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
+            (TypedVariableLink 
+              (VariableNode "?underob") 
+              (TypeNode "ConceptNode"))
           ) ; parameters
           (AndLink
             (PresentLink
+              (NotLink
+                (EqualLink 
+                  (VariableNode "?ob") 
+                  (VariableNode "?underob")))
               (InheritanceLink
                 (VariableNode "?ob")
                 (ConceptNode "object"))
               (EvaluationLink
-                (PredicateNode "clear")
+                (PredicateNode "in_hand")
                 (VariableNode "?ob"))
             )
-            (AbsentLink
-              (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
+            (OrLink
+              (AndLink
+                (InheritanceLink
+                  (VariableNode "?underob")
+                  (ConceptNode "object"))
+                (EvaluationLink
+                  (PredicateNode "clear")
+                  (VariableNode "?underob"))
+              )
+              (AndLink
+                (InheritanceLink
+                  (VariableNode "?underob")
+                  (ConceptNode "fixed-object"))
+              )
             )
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: stack-action")
             (ListLink
               ; effect
               (EvaluationLink
-                (PredicateNode "in_hand")
-                (VariableNode "?ob"))
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
+                (PredicateNode "in_hand")
                 (VariableNode "?ob"))
             )
           )
@@ -295,38 +337,63 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
             (TypedVariableLink 
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
+            (TypedVariableLink 
+              (VariableNode "?underob") 
+              (TypeNode "ConceptNode"))
           ) ; parameters
           (AndLink
             (PresentLink
+              (NotLink
+                (EqualLink 
+                  (VariableNode "?ob") 
+                  (VariableNode "?underob")))
               (InheritanceLink
                 (VariableNode "?ob")
                 (ConceptNode "object"))
               (EvaluationLink
-                (PredicateNode "clear")
+                (PredicateNode "in_hand")
                 (VariableNode "?ob"))
             )
             (EqualLink
               (VariableNode "?ob")
-              args
+              ob
             )
-            (AbsentLink
-              (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
+            (EqualLink
+              (VariableNode "?underob")
+              underob
+            )
+            (OrLink
+              (AndLink
+                (InheritanceLink
+                  (VariableNode "?underob")
+                  (ConceptNode "object"))
+                (EvaluationLink
+                  (PredicateNode "clear")
+                  (VariableNode "?underob"))
+              )
+              (AndLink
+                (InheritanceLink
+                  (VariableNode "?underob")
+                  (ConceptNode "fixed-object"))
+              )
             )
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: stack-action")
             (ListLink
               ; effect
               (EvaluationLink
-                (PredicateNode "in_hand")
-                (VariableNode "?ob"))
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
+                (PredicateNode "in_hand")
                 (VariableNode "?ob"))
-            )
+             )
           )
         )
       )
@@ -336,39 +403,80 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 )
 \end{python}
 
+\bigskip
+
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
 \textit{Unstack} action rule.
 \end{footnotesize}
 
 \begin{python}
-(define (pickup args)
-  (let 
+(define (action_unstack . args)
+  (define precond (car (cdr args)))
+  (define eff (car args))
+  (define over_obj 
+    (cog-outgoing-atom (cog-outgoing-atom precond 1) 0))
+  (define under_obj 
+    (cog-outgoing-atom (cog-outgoing-atom precond 1) 1))
+
+  (cog-extract-recursive! precond)
+  (cog-extract! (Predicate "on"))
+  (cog-extract! (List over_obj under_obj))
+
+  (cog-extract! (Evaluation (Predicate "clear") over_obj))
+  (cog-extract! (Predicate "clear"))
+  (cog-extract! (Evaluation (Predicate "stacked") over_obj))
+  (cog-extract! (Predicate "stacked"))
+
+  (EvaluationLink (PredicateNode "clear") under_obj)
+
+  eff
+)
+
+(define (unstack ob underob)
+  (let
     ((rule
-      (if (equal? args `())
+      (if (equal? ob `())
         (QueryLink
           (VariableList
             (TypedVariableLink 
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
+            (TypedVariableLink 
+              (VariableNode "?underob") 
+              (TypeNode "ConceptNode"))
           ) ; parameters
           (AndLink
             (PresentLink
+              (NotLink
+                (EqualLink 
+                  (VariableNode "?ob") 
+                  (VariableNode "?underob")))
               (InheritanceLink
                 (VariableNode "?ob")
                 (ConceptNode "object"))
               (EvaluationLink
                 (PredicateNode "clear")
                 (VariableNode "?ob"))
-            )
-            (AbsentLink
               (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
+            )
+            (OrLink
+              (InheritanceLink
+                (VariableNode "?underob")
+                (ConceptNode "object"))
+              (InheritanceLink
+                (VariableNode "?underob")
+                (ConceptNode "fixed-object"))
             )
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: unstack-action")
             (ListLink
               ; effect
               (EvaluationLink
@@ -376,8 +484,12 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
                 (VariableNode "?ob"))
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
-                (VariableNode "?ob"))
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
             )
           )
         )
@@ -386,28 +498,49 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
             (TypedVariableLink 
               (VariableNode "?ob") 
               (TypeNode "ConceptNode"))
+            (TypedVariableLink 
+              (VariableNode "?underob") 
+              (TypeNode "ConceptNode"))
           ) ; parameters
           (AndLink
             (PresentLink
+              (NotLink
+                (EqualLink 
+                  (VariableNode "?ob") 
+                  (VariableNode "?underob")))
               (InheritanceLink
                 (VariableNode "?ob")
                 (ConceptNode "object"))
               (EvaluationLink
                 (PredicateNode "clear")
                 (VariableNode "?ob"))
+              (EvaluationLink
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
+            )
+            (OrLink
+              (InheritanceLink
+                (VariableNode "?underob")
+                (ConceptNode "object"))
+              (InheritanceLink
+                (VariableNode "?underob")
+                (ConceptNode "fixed-object"))
             )
             (EqualLink
               (VariableNode "?ob")
-              args
+              ob
             )
-            (AbsentLink
-              (EvaluationLink
-                (PredicateNode "stacked")
-                (VariableNode "?ob"))
+            (EqualLink
+              (VariableNode "?underob")
+              underob
             )
           )
           (ExecutionOutputLink
-            (GroundedSchemaNode "scm: pickup-action")
+            (GroundedSchemaNode "scm: unstack-action")
             (ListLink
               ; effect
               (EvaluationLink
@@ -415,8 +548,12 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
                 (VariableNode "?ob"))
               ; precondition
               (EvaluationLink
-                (PredicateNode "clear")
-                (VariableNode "?ob"))
+                (PredicateNode "on")
+                (ListLink
+                  (VariableNode "?ob")
+                  (VariableNode "?underob")
+                )
+              )
             )
           )
         )
@@ -427,4 +564,187 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 )
 \end{python}
  
+\bigskip
 
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+\end{footnotesize}
+
+\begin{python}
+(define (find_underob args)
+  (QueryLink
+    (VariableList
+      (TypedVariableLink 
+        (VariableNode "?underob") 
+        (TypeNode "ConceptNode"))
+    ) ; parameters
+    (AndLink
+      (PresentLink
+        (NotLink
+          (EqualLink args 
+          (VariableNode "?underob")))
+        (EvaluationLink
+          (PredicateNode "on")
+            (ListLink
+              args
+              (VariableNode "?underob")
+            )
+        )
+      )
+      (OrLink
+        (InheritanceLink
+          (VariableNode "?underob")
+          (ConceptNode "object"))
+        (InheritanceLink
+          (VariableNode "?underob")
+          (ConceptNode "fixed-object"))
+      )
+    )
+    (VariableNode "?underob")
+  )
+)
+\end{python}
+
+
+\section{NLP Rules}\label{sec:NLP} 
+
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+\end{footnotesize}
+
+\begin{python}
+(define find_goal
+  (QueryLink
+    (VariableList
+      (TypedVariableLink 
+        (VariableNode "?status_id") 
+        (TypeNode "PredicateNode"))
+      (TypedVariableLink 
+        (VariableNode "?status") 
+        (TypeNode "PredicateNode"))
+      (TypedVariableLink 
+        (VariableNode "?ob_id") 
+        (TypeNode "ConceptNode"))
+      (TypedVariableLink 
+        (VariableNode "?ob") 
+        (TypeNode "ConceptNode"))
+  
+    )
+    (PresentLink
+      (EvaluationLink
+        (VariableNode "?status_id")
+        (ListLink
+          (VariableNode "?ob_id")
+        )
+      )
+      (InheritanceLink
+        (VariableNode "?ob_id")
+        (VariableNode "?ob")
+      )
+      (ImplicationLink
+        (VariableNode "?status_id")
+        (VariableNode "?status")
+      )
+    )
+    (EvaluationLink
+      (VariableNode "?status")
+      (VariableNode "?ob")
+    )
+  )
+)
+\end{python}
+
+\bigskip
+
+\begin{footnotesize}
+\textbf{Code in Atomese notation:} \\
+\end{footnotesize}
+
+\begin{python}
+(define fix
+  (QueryLink
+    (VariableList
+      (TypedVariableLink 
+        (VariableNode "?d1") 
+        (TypeNode "DefinedLinguisticRelationshipNode"))
+      (TypedVariableLink 
+        (VariableNode "?d2") 
+        (TypeNode "DefinedLinguisticRelationshipNode"))
+      (TypedVariableLink 
+        (VariableNode "?ob_w") 
+        (TypeNode "WordInstanceNode"))
+      (TypedVariableLink 
+        (VariableNode "?underob_w") 
+        (TypeNode "WordInstanceNode"))
+      (TypedVariableLink 
+        (VariableNode "?pred_w") 
+        (TypeNode "WordInstanceNode"))
+      (TypedVariableLink 
+        (VariableNode "?ob") 
+        (TypeNode "ConceptNode"))
+      (TypedVariableLink 
+        (VariableNode "?underob") 
+        (TypeNode "ConceptNode"))
+      (TypedVariableLink 
+        (VariableNode "?pred") 
+        (TypeNode "PredicateNode"))
+      (TypedVariableLink 
+        (VariableNode "?ob_id") 
+        (TypeNode "ConceptNode"))
+      (TypedVariableLink 
+        (VariableNode "?underob_id") 
+        (TypeNode "ConceptNode"))
+      (TypedVariableLink 
+        (VariableNode "?pred_id") 
+        (TypeNode "PredicateNode"))
+    )
+    (PresentLink
+      (EvaluationLink
+        (VariableNode "?d1")
+        (ListLink
+          (VariableNode "?pred_w")
+          (VariableNode "?underob_w")
+        )
+      )
+      (EvaluationLink
+        (VariableNode "?d2")
+        (ListLink
+          (VariableNode "?ob_w")
+          (VariableNode "?pred_w")
+        )
+      )
+      (InheritanceLink
+        (VariableNode "?ob_id")
+        (VariableNode "?ob")
+      )
+      (InheritanceLink
+        (VariableNode "?underob_id")
+        (VariableNode "?underob")
+      )
+      (ImplicationLink
+        (VariableNode "?pred_id")
+        (VariableNode "?pred")
+      )
+      (ReferenceLink
+        (VariableNode "?ob_id")
+        (VariableNode "?ob_w")
+      )
+      (ReferenceLink
+        (VariableNode "?underob_id")
+        (VariableNode "?underob_w")
+      )
+      (ReferenceLink
+        (VariableNode "?pred_id")
+        (VariableNode "?pred_w")
+      )
+    )
+    (EvaluationLink
+      (VariableNode "?pred")
+      (ListLink
+        (VariableNode "?ob")
+        (VariableNode "?underob")
+      )
+    )
+  )
+)
+\end{python}

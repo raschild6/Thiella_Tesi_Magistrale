@@ -2374,16 +2374,18 @@
     <bcf:citekey order="18">Vep20a</bcf:citekey>
     <bcf:citekey order="18">metagraph_app</bcf:citekey>
     <bcf:citekey order="19">DBLP:journals/corr/abs-2012-01759</bcf:citekey>
-    <bcf:citekey order="20">goertzel_potapov_senna_singularitynet-opencog_team_2020</bcf:citekey>
-    <bcf:citekey order="21">DBLP:journals/corr/abs-2004-05267</bcf:citekey>
-    <bcf:citekey order="22">distributed_2017</bcf:citekey>
-    <bcf:citekey order="22">senna_2018</bcf:citekey>
-    <bcf:citekey order="22">potapov_2020_1</bcf:citekey>
-    <bcf:citekey order="22">potapov_2020_2</bcf:citekey>
-    <bcf:citekey order="23">baader_nipkow_1998</bcf:citekey>
-    <bcf:citekey order="24">geisweiller_2019</bcf:citekey>
-    <bcf:citekey order="25">olson2011tags</bcf:citekey>
-    <bcf:citekey order="25">wang2016iros</bcf:citekey>
+    <bcf:citekey order="20">goertzel2008probabilistic</bcf:citekey>
+    <bcf:citekey order="20">Goertzel2011RealWorldRT</bcf:citekey>
+    <bcf:citekey order="21">goertzel_potapov_senna_singularitynet-opencog_team_2020</bcf:citekey>
+    <bcf:citekey order="22">DBLP:journals/corr/abs-2004-05267</bcf:citekey>
+    <bcf:citekey order="23">distributed_2017</bcf:citekey>
+    <bcf:citekey order="23">senna_2018</bcf:citekey>
+    <bcf:citekey order="23">potapov_2020_1</bcf:citekey>
+    <bcf:citekey order="23">potapov_2020_2</bcf:citekey>
+    <bcf:citekey order="24">baader_nipkow_1998</bcf:citekey>
+    <bcf:citekey order="25">geisweiller_2019</bcf:citekey>
+    <bcf:citekey order="26">olson2011tags</bcf:citekey>
+    <bcf:citekey order="26">wang2016iros</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  25 SEP 2021 13:00
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  26 SEP 2021 12:28
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -2024,16 +2024,29 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [16] [17]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 6.0pt on input line 239.
- [18]
-Overfull \hbox (4.42892pt too wide) in paragraph at lines 263--264
+ [18] [19]
+Overfull \hbox (4.42892pt too wide) in paragraph at lines 282--283
 []\TU/EBGaramond(2)/m/n/12 Atom types to perform searches over the AtomSpace (J
 oinLink, QueryLink, MeetLink,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--267
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+
+LaTeX Warning: Citation 'goertzel2008probabilistic' on page 20 undefined on inp
+ut line 291.
+
+
+LaTeX Warning: Citation 'Goertzel2011RealWorldRT' on page 20 undefined on input
+ line 291.
 
 File: figures/Magistrale/atomspace_explorer.png Graphic file (type bmp)
 <figures/Magistrale/atomspace_explorer.png>
@@ -2041,69 +2054,69 @@ File: figures/Magistrale/atomspace_explorer.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 281--285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 286--289
-
- []
-
-[19]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 304--308
 
  []
 
 [20]
-Overfull \hbox (27.28496pt too wide) in paragraph at lines 298--303
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
+
+ []
+
+[21]
+Overfull \hbox (27.28496pt too wide) in paragraph at lines 319--322
 \TU/EBGaramond(2)/m/n/12 mostly built on top of the Pattern Matcher and it is a
 pplicable to rules written in a Scheme/Atomese
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--311
+Underfull \hbox (badness 10000) in paragraph at lines 325--330
 
  []
 
-[21]
-Overfull \hbox (0.24092pt too wide) in paragraph at lines 312--317
+[22]
+Overfull \hbox (0.24092pt too wide) in paragraph at lines 331--336
 \TU/EBGaramond(2)/m/n/12 In Chapter [applicazione...], practical applications w
 ill be presented to help understand these
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 334--338
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
 
  []
 
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 350--351
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 358--359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 378--379
 
  []
 
 
-Overfull \hbox (8.00142pt too wide) in paragraph at lines 361--364
+Overfull \hbox (8.00142pt too wide) in paragraph at lines 380--383
 \TU/EBGaramond(2)/m/n/12 This converter is called RelEx, a Narrow-AI component 
 of OpenCog. It is an English-language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 361--364
+Underfull \hbox (badness 10000) in paragraph at lines 380--383
 
  []
 
-[23]) [24]
+) [25]
 \openout2 = `chapters/chapter2.aux'.
 
  (chapters/chapter2.tex
@@ -2125,7 +2138,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
-[25
+[26
 
 
 
@@ -2138,7 +2151,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
-[26]
+[27]
 File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
 <figures/Magistrale/blocks_example.png>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
@@ -2153,7 +2166,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[27]
+[28]
 Underfull \hbox (badness 10000) in paragraph at lines 68--71
 
  []
@@ -2168,7 +2181,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--77
 
  []
 
-[28]
+[29]
 Underfull \hbox (badness 10000) in paragraph at lines 87--88
 
  []
@@ -2178,28 +2191,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 89--90
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--115
+
+ []
+
+[30] [31]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 118.
-[29] [30]
+(Font)              scaled to size 10.0pt on input line 184.
+ [32]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
-[32]) [33]
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34]
+Underfull \hbox (badness 10000) in paragraph at lines 280--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--291
+
+ []
+
+
+Underfull \vbox (badness 4168) has occurred while \output is active []
+
+ [35]
+Underfull \hbox (badness 10000) in paragraph at lines 302--307
+
+ []
+
+[36]
+
+LaTeX Warning: Reference `cha:algorithm' on page 37 undefined on input line 311
+.
+
+) [37]
 \openout2 = `chapters/chapter3.aux'.
 
- (chapters/chapter3.tex)
+ (chapters/chapter3.tex
+Chapter 4.
+) [38
+
+
+
+
+]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex)
 \openout2 = `chapters/conclusionDue.aux'.
 
-
-(chapters/conclusionDue.tex
-Chapter 4.
-) [34
-
-
-
+ (chapters/conclusionDue.tex
+Chapter 5.
+) [39
 
 
 
@@ -2211,13 +2258,13 @@ Chapter 4.
 \openout2 = `chapters/AppendixA.aux'.
 
  (chapters/AppendixA.tex
-Chapter 5.
+Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[35
+[40
 
 
 
@@ -2227,27 +2274,60 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
 
-[36]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[37] [38] [39]
+[42] [43] [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40]
+ [45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-[42]
+ [46]
+[47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
-[44]
+ [48]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45])
-[46]
+ [49]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \hbox (badness 10000) in paragraph at lines 570--572
+
+ []
+
+[55]
+Underfull \hbox (badness 10000) in paragraph at lines 612--614
+
+ []
+
+[56]
+Underfull \hbox (badness 10000) in paragraph at lines 660--662
+
+ []
+
+[57]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59])
+[60]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.99994pt on input line 98.
 
@@ -2279,7 +2359,7 @@ Overfull \hbox (17.90956pt too wide) in paragraph at lines 99--99
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[47
+[61
 
 
 
@@ -2321,7 +2401,7 @@ Survey”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.
 2116
  []
 
-[48]
+[62]
 Overfull \hbox (0.57768pt too wide) in paragraph at lines 99--99
 []\TU/EBGaramond(2)/m/n/12 Yuan Gong and Christian Poellabauer. “  An Overview 
 of Vulnerabilities of Voice Con-
@@ -2341,7 +2421,7 @@ t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
 /EBGaramond(2)/m/sc/12 isbn\TU/EBGaramond(2)/m/n/12 :
  []
 
-[49]
+[63]
 Overfull \hbox (1.64275pt too wide) in paragraph at lines 99--99
 []\TU/EBGaramond(2)/m/n/12 André Senna. Aug. 2018. \TU/EBGaramond(2)/m/sc/12 ur
 l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
@@ -2354,25 +2434,42 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 99--99
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[50] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[64] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/conclusion.aux)
 (chapters/conclusionDue.aux) (chapters/AppendixA.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: E08E587BEA020107EA6B87995A910990;3617.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `dissertation.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `dissertation.out':
+(rerunfilecheck)             Before: E08E587BEA020107EA6B87995A910990;3617
+(rerunfilecheck)             After:  DCFDAB3E576BF723553B1BDEEC4B03F4;3832.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                dissertation
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'dissertation.run.xml'.
 \openout1 = `dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52287 strings out of 411335
- 1192316 string characters out of 2837817
- 2142613 words of memory out of 3000000
- 71785 multiletter control sequences out of 15000+600000
+ 52337 strings out of 411335
+ 1192984 string characters out of 2837817
+ 2146718 words of memory out of 3000000
+ 71835 multiletter control sequences out of 15000+600000
  410750 words of font info for 131 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,8n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (58 pages).
+Output written on dissertation.pdf (72 pages).

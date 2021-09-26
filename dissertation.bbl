@@ -1515,6 +1515,78 @@
       \verb https://arxiv.org/abs/2012.01759
       \endverb
     \endentry
+    \entry{goertzel2008probabilistic}{book}{}
+      \name{author}{1}{}{%
+        {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={Ben},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York, NY}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{fullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{bibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
+      \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1441945785}
+      \field{title}{Probabilistic logic networks : a comprehensive framework for uncertain inference}
+      \field{year}{2008}
+    \endentry
+    \entry{Goertzel2011RealWorldRT}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=73e14543442b76d612d65c4d5bb14386}{%
+           family={Goertzel},
+           familyi={G\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b6672240c8c6757a029975c2f947a068}{%
+           family={Geisweiller},
+           familyi={G\bibinitperiod},
+           given={Nil},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1e2a63a61279f4e17d2f99cf50166c3e}{%
+           family={Coelho},
+           familyi={C\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e135b5e9cc524cbe3f921288424148d5}{%
+           family={Janicic},
+           familyi={J\bibinitperiod},
+           given={Predrag},
+           giveni={P\bibinitperiod}}}%
+        {{hash=c014d01a8c3169612c38458e3e1f3fa1}{%
+           family={Pennachin},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c7a638f333229f183c21f9746e169c3c}
+      \strng{fullhash}{af5379085b268ee1d943df57b13e5b8c}
+      \strng{bibnamehash}{c7a638f333229f183c21f9746e169c3c}
+      \strng{authorbibnamehash}{c7a638f333229f183c21f9746e169c3c}
+      \strng{authornamehash}{c7a638f333229f183c21f9746e169c3c}
+      \strng{authorfullhash}{af5379085b268ee1d943df57b13e5b8c}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Atlantis Thinking Machines}
+      \field{title}{Real-World Reasoning: Toward Scalable, Uncertain Spatiotemporal, Contextual and Causal Inference}
+      \field{year}{2011}
+    \endentry
     \entry{goertzel_potapov_senna_singularitynet-opencog_team_2020}{misc}{}
       \name{author}{4}{}{%
         {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
@@ -1544,6 +1616,7 @@
       \strng{authorbibnamehash}{d2b1a795bebbb125aa7bcf266447f9c4}
       \strng{authornamehash}{d2b1a795bebbb125aa7bcf266447f9c4}
       \strng{authorfullhash}{4e6a5bbc0d3143c295de104a9ee70be7}
+      \field{extraname}{2}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -1571,7 +1644,7 @@
       \strng{authorbibnamehash}{d00baed2f90b47ae52840783b7ac55e4}
       \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
       \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
-      \field{extraname}{5}
+      \field{extraname}{6}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
