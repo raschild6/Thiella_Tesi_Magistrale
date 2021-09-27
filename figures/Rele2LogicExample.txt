@@ -1,0 +1,33 @@
+(EvaluationLink (stv 1 1)
+  (PredicateNode "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+    (ConceptNode "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616")))
+(InheritanceLink (stv 1 1)
+  (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+  (ConceptNode "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616"))
+(EvaluationLink (stv 1 1)
+  (PredicateNode "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")))
+(InheritanceLink (stv 1 1)
+  (InterpretationNode "sentence@c9bf0479-2636-4a8b-901c-38d1305ed29e_parse_0_interpretation_$X" (stv 9.75697e-13 0.00124844))
+  (DefinedLinguisticConceptNode "DeclarativeSpeechAct" (stv 9.75697e-13 0.00124844)))
+(ImplicationLink (stv 1 1)
+  (PredicateNode "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" (stv 9.75697e-13 0.00124844))
+  (PredicateNode "be" (stv 9.75697e-13 0.00124844)))
+(InheritanceLink (stv 1 1)
+  (ConceptNode "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616")
+  (ConceptNode "animal"))
+(InheritanceLink (stv 1 1)
+  (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+  (ConceptNode "cat"))
+(InheritanceLink (stv 1 1)
+  (PredicateNode "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" (stv 9.75697e-13 0.00124844))
+  (DefinedLinguisticConceptNode "present" (stv 9.75697e-13 0.00124844)))
+(EvaluationLink (stv 1 1)
+  (DefinedLinguisticPredicateNode "definite" (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")))
+
+

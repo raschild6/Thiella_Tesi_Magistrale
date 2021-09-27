@@ -286,8 +286,8 @@ There is a type system for working with atom types: that is, the type of an atom
 
 In conclusion, the AtomSpace Explorer web tool can be used to display OpenCog data on screen. Atomese is fetched from the AtomSpace, then displayed as a two dimensional graph in the browser, Figure \ref{fig:atomspace_explorer} provides an example. \\
 
-As closing note, to greatly simplify the work in this project, uncertainty-free inference is used, so all truth values associated with atoms are always TRUE, that is what the robot \enquote{sees, does and thinks} has no probability of \enquote{failure}. But, as amply demonstrated above, the system is set up to work in completely uncertain environments and with uncertain reasoning. \\
-Indeed, one of the most interesting modules of OpenCog is Probabilistic Logic Networks (PLN), a conceptual, mathematical and computational approach to uncertain inference (not used in this project). Although this project does not use it, it is particularly suitable for uncertain reasoning, especially when knowledge is based on limited observations of reality, but it can also handle abstract mathematical reasoning, and the relationship between the two, therefore this project could be integrated into it in the future. \\
+As closing note of this section, to greatly simplify the work in this project, uncertainty-free inference is used, so all TruthValues associated with atoms are always TRUE, that is what the robot \enquote{sees, does and thinks} has no probability of \enquote{failure}. But, as amply demonstrated above, the system is set up to work in completely uncertain environments and with uncertain reasoning. \\
+Indeed, one of the most interesting modules of OpenCog is Probabilistic Logic Networks (PLN), a conceptual, mathematical and computational approach to uncertain inference. Although this project does not use it, it is particularly suitable for uncertain reasoning, especially when knowledge is based on limited observations of reality, but it can also handle abstract mathematical reasoning, and the relationship between the two, therefore this project could be integrated into it in the future. \\
 PLN is currently used as a basic module for reasoning algorithms \cite{goertzel2008probabilistic, Goertzel2011RealWorldRT}. 
 
 \begin{figure}[h]
@@ -357,16 +357,72 @@ It is pointless to go into the details of this module because, first of all, it 
 
 Thus, this module takes as input an English sentence and returns a relatively simple logical representation of it in Atomese. That is, a hypergraph composed of atoms that are associated with the words of the sentence and then structured to express the logic of it in the form of a hypergraph. The following example is used to better explain: \\
 \begin{python}
-	The English sentence: " The cat is an animal "
+	The English sentence: "The cat is an animal"
 
-	-------- Result:
-	MANCA 
+---------------- Result:
+(EvaluationLink (stv 1 1)
+  (PredicateNode 
+    "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" 
+      (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode 
+      "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+    (ConceptNode 
+      "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616")))
 
-	(ConceptNode blablabla.....	<--
-	)
+(InheritanceLink (stv 1 1)
+  (ConceptNode 
+    "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+  (ConceptNode 
+    "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616"))
+
+(EvaluationLink (stv 1 1)
+  (PredicateNode 
+    "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" 
+      (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode 
+      "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")))
+
+(InheritanceLink (stv 1 1)
+  (InterpretationNode 
+    "sentence@c9bf0479-2636-4a8b-901c-38d1305ed29e_
+parse_0_interpretation_$X" (stv 9.75697e-13 0.00124844))
+  (DefinedLinguisticConceptNode 
+    "DeclarativeSpeechAct" (stv 9.75697e-13 0.00124844)))
+
+(ImplicationLink (stv 1 1)
+  (PredicateNode 
+    "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" 
+      (stv 9.75697e-13 0.00124844))
+  (PredicateNode "be" (stv 9.75697e-13 0.00124844)))
+
+(InheritanceLink (stv 1 1)
+  (ConceptNode "animal.n@1813a95c-0c44-46f6-bad3-7232f6ff8616")
+  (ConceptNode "animal"))
+
+(InheritanceLink (stv 1 1)
+  (ConceptNode "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")
+  (ConceptNode "cat"))
+
+(InheritanceLink (stv 1 1)
+  (PredicateNode 
+    "is.v@5fdee4a0-7ad4-4aa7-9172-55a137c3dbdf" 
+      (stv 9.75697e-13 0.00124844))
+  (DefinedLinguisticConceptNode 
+    "present" (stv 9.75697e-13 0.00124844)))
+
+(EvaluationLink (stv 1 1)
+  (DefinedLinguisticPredicateNode 
+    "definite" (stv 9.75697e-13 0.00124844))
+  (ListLink
+    (ConceptNode 
+      "cat.n@e425545c-ceea-4eee-931b-a6c312d66d58")))
 \end{python}
-%% TODO
-The Atoms highlighted by an arrow describe in order that `cat' and `animal' are concepts (ConceptNode), that `is' is the present simple tense forms of be referring to the cat and that `animal' is the direct object (thus both InheritanceLink) and much more. \\
+
+All the Atoms whose names contain the \textit{@} character are those that are associated with the words in the sentence. In this way, the same word in different places can take on different meanings and links. \\
+However, these atoms (such as \textit{cat.n@...}, \textit{animal.n@...} and \textit{is.v@...}) are actually inherited by the concepts (ConceptNodes) that represent them, so `cat', `animal' and `is' (lines 35, 41, 45). \\ 
+Moreover, the atom in line 4 perfectly describes the relationship between these three concepts in the sentence. \\
 
 The processing pipeline for a sentence is: 
 \begin{enumerate}
