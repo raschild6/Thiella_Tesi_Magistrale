@@ -1878,6 +1878,46 @@
       \field{title}{{AprilTag} 2: Efficient and robust fiducial detection}
       \field{year}{2016}
     \endentry
+    \entry{BFS-wiki}{misc}{}
+      \list{publisher}{1}{%
+        {Wikimedia Foundation}%
+      }
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wikipedia}
+      \field{month}{9}
+      \field{title}{Breadth-first search}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Breadth-first_search
+      \endverb
+    \endentry
+    \entry{BFS}{article}{}
+      \name{author}{1}{}{%
+        {{hash=304533c2b267a0573fb30d7e91ae7d50}{%
+           family={Holdsworth},
+           familyi={H\bibinitperiod},
+           given={Jason},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{304533c2b267a0573fb30d7e91ae7d50}
+      \strng{fullhash}{304533c2b267a0573fb30d7e91ae7d50}
+      \strng{bibnamehash}{304533c2b267a0573fb30d7e91ae7d50}
+      \strng{authorbibnamehash}{304533c2b267a0573fb30d7e91ae7d50}
+      \strng{authornamehash}{304533c2b267a0573fb30d7e91ae7d50}
+      \strng{authorfullhash}{304533c2b267a0573fb30d7e91ae7d50}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{02}
+      \field{title}{The Nature of Breadth-First Search}
+      \field{year}{1999}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

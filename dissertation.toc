@@ -33,24 +33,36 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.3.3}Relex2Logic}{24}{subsubsection.2.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Problem Description}{26}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Problem Description}{28}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Knowledge Base in Atomese}{28}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Knowledge Base in Atomese}{30}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Actions in Atomese}{30}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Actions in Atomese}{32}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}The Algorithm}{38}{chapter.4}%
+\contentsline {chapter}{\numberline {4}The Algorithm}{40}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Conclusione}{39}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Initial Phase}{40}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Appendix A}{40}{chapter.6}%
+\contentsline {section}{\numberline {4.2}Perception Phase}{41}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Knowledge Base Examples}{40}{section.6.1}%
+\contentsline {section}{\numberline {4.3}Learning Phase}{41}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}PDDL Problem and Domain}{42}{section.6.2}%
+\contentsline {section}{\numberline {4.4}Request Phase}{42}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Action Rules}{44}{section.6.3}%
+\contentsline {section}{\numberline {4.5}Search Phase}{42}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}NLP Rules}{56}{section.6.4}%
+\contentsline {section}{\numberline {4.6}Results Execution Phase}{43}{section.4.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{61}{section*.19}%
+\contentsline {chapter}{\numberline {5}Conclusione}{44}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Appendix A}{45}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.1}Knowledge Base Examples}{45}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}PDDL Problem and Domain}{47}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}Action Rules}{49}{section.6.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.4}NLP Rules}{61}{section.6.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{66}{section*.20}%
