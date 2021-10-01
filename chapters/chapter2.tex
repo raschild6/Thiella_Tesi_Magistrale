@@ -282,7 +282,7 @@ The main rule (or action or function) is the second one, called \textit{pickup} 
 It is composed of two large QueryLink atoms (lines 12 and 47), as for all other actions. \\
 Only one of the two atoms is used for each call to this function, through the `if' conditional construct (line 11). It checks whether the function has an argument \textit{args} other than empty \textit{'()}. 
 If it is indeed empty, then the QueryLink from line 12 to 46 is used, otherwise the one from line 47 to 85, which actually uses the \textit{args} argument.
-Indeed, initially the variable \textit{rule} is defined as one of the two QueryLinks, depending on the result of the conditional construct, and then, it is applied in line 88. \\
+Indeed, the variable \textit{rule} is defined as one of the two QueryLinks, depending on the result of the conditional construct, and then, it is applied in line 88. \\
 These QueryLinks are completely identical, except for the EqualLink atom on line 62.
 Consequently, take a look first at the QueryLink without arguments, based on the generic description of a QueryLink in Section \ref{sec:atoms}. \\
 
@@ -308,6 +308,6 @@ The \textit{pickup-action} called function (lines 1-6) takes these two atoms as 
 Now that the first QueryLink has been explained, the second behaves in the same way, but with an additional constraint in the conditional part. \\
 This constraint is the EqualLink in line 62 and it is used to limit the parameter (the VariabileNode) to coincide with the \textit{args} argument, which will be an atom corresponding to the object to be picked up, effectively restricting the pattern matching to that single atom. \\
 In practice, the QueryLink without argument performs the Pickup action on all objects that can actually be picked up, instead of the QueryLink with argument that does \textit{Pickup} only of the object passed as argument. That is, the first shows which objects are pickable, the second actually picks one of them. \\
-The reason why these two possibilities (QueryLinks) are necessary will be better understood when the algorithm is discussed (Chapter \ref{cha:algorithm}). 
+The reason why these two possibilities (QueryLinks) are necessary will be better understood when the algorithm is discussed (Section \ref{sec:step_search}). 
 
  

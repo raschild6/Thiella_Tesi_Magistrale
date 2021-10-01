@@ -306,7 +306,7 @@
 	  Università di Padova \\
 	  \vspace{6pt}
 	  \textit{Co-supervisor} \hfill \small{Date}\\
-	  \@coadvisorOne \hfill \small{.. October 2021}\\
+	  \@coadvisorOne \hfill \small{18 October 2021}\\
 	  \@coadvisorTwo \\
 	  \@coadvisorOneUniversity \\  
 	 \vspace{7pt}

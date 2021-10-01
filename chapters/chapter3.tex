@@ -72,13 +72,14 @@ Following the rules of the problem (Secion \ref{cha:problem_description}), it is
 That is, starting from the root:
 
 \begin{enumerate} 
-	\item If there exists an atom, within the AtomSpace contained in the root, that describes the \textit{in-hand} state of an object, then only \textit{Stack} and \textit{Putdown} actions can create childs. Conversely, if there are no objects in hand, only the actions of \textit{Pickup} and \textit{Unstack} can. This is because the current state of the robot's hand limits the action used to go to the next state. If the hand is free, it can only grab an object, while if it is busy, it can only place the object down.
+	\item If there exists an atom, within the AtomSpace contained in the root, that describes the \textit{in-hand} state of an object, then only \textit{Stack} and \textit{Putdown} actions can create children. Conversely, if there are no objects in hand, only the actions of \textit{Pickup} and \textit{Unstack} can. This is because the current state of the robot's hand limits the action used to go to the next state. If the hand is free, it can only grab an object, while if it is busy, it can only place the object down.
 
 	\item From this first intuition, follows the one applicable to each step: given a certain tree-node, if the action that created it is \textit{Stack} or \textit{Putdown}, then the childs of that node can only be created by \textit{Pickup} or \textit{Unstack} actions, and vice versa.
 \end{enumerate}
 
-This is why the BFS-algorithm has a variable as the second argument, it holds the action used to create the node in the first argument. \\
-Trying all actions at each step would also achieve the same result, as unavailable actions would still give a null result, but this way speeds up the algorithm and avoids unnecessary code execution.
+This is the reason why the BFS-algorithm has a variable as the second argument, it holds the action used to create the node in the first argument. \\
+Trying all the actions at each step would also give the same result, but atoms would have to be added to the rule pattern to check whether the hand is free or busy.
+Instead, following this design simplifies the rules, speeds up the algorithm and avoids unnecessary code execution.
 
 
 \subsubsection{Termination Criteria of the BFS-Based Algorithm}\label{sec:term_criteria}
@@ -97,15 +98,48 @@ As this type of problems suffers from combinatorial explosion\footnotemark{}, th
 \footnotetext{\url{https://en.wikipedia.org/wiki/Combinatorial_explosion}} \\
 One way to reduce this expansion is to limit the available actions to only those that interact with one or more objects appearing in the goal list.
 Many unnecessary actions are avoided, however this makes the algorithm incorrect, since the certainty of finding a solution is lost.
-It still works well for most initial arrangements and goal lists and if it fails, the search in step 1 (which is correct, like search 2 and 3, if a solution exists) can be used. \\
+It still works well for most initial arrangements and goal lists and if it fails, the search in point 1 (which is correct, like search in points 2 and 3, if a solution exists) can be used. \\
 
-Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a node. \\
+Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a tree-node. \\
 Furthermore, the first solution found will certainly be the optimal solution, i.e. the solution that uses the minimum number of actions to go from the initial arrangement of objects to the goal one.
 This is because for each tree-node, before being expanded, its AtomSpace is compared with the one of any tree-node belonging to its same branch.
 If a match is found (i.e. they are identical), then the algorithm has returned to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of that tree-node ends.
 
 
-\subsubsection{Steps of the Search Phase}\label{sec:step_search}
+\subsubsection{Steps of the BFS-Based Algorithm}\label{sec:step_search}
+
+From the definitions above, it is now possible to list the steps that the BFS-based algorithm goes through. \\
+The first recursive call has as arguments the root node (containing the main AtomSpace) and the variable defined according to the state of the hand.
+Inside each call:
+
+\begin{enumerate}
+	\item It is checked if the maximum number of iterations is reached (in the case of limited search). As a consequence, the algorithm returns or continues.
+	
+	\item It is checked if the AtomSpace, contained in the tree-node argument, satisfies all the atoms in the goal list. If satisfied, this tree-node is added to the solution list and the algorithm returns or continues depending on the type of search.
+	
+	\item It is checked that the AtomSpace, contained in the tree-node argument, has not been encountered before. If encountered, this tree-node is not expanded and the algorithm moves on to the next one, otherwise its expansion begins.
+	
+	\item Now that the checks have been passed, the expansion of the tree-node argument occurs. \\
+According to the variable argument, only two of the four actions can be executed.
+Thus, from the AtomSpace of the current tree-node, two AtomSpace children (two copies of the parent) are created, one for each action. \\
+Then, for each action (rule), the respective QueryLink without argument (i.e., the one that returns all possible objects that match the pattern; i.e., the objects on which that action can be performed), is executed within the AtomSpace assigned to it. \\
+It is necessary to use AtomSpace copies because rule execution adds and removes atoms within AtomSpace and thus, modifies it. This means that executing a QueryLink without arguments modifies the AtomSpace as if the related action had been executed on all the matched objects at the same time, leading the AtomSpace into an incorrect state. \\
+To summarise: 
+
+	\begin{enumerate}
+		\item AtomSpace copies are created
+		\item Rules on generic objects are executed, one in each AtomSpace
+		\item The objects returned as solutions of the rules correspond to the objects on which actions can be executed. They are stored in a list for each action.
+		\item AtomSpace copies are cleaned up and deleted.
+	\end{enumerate}
+
+	\item Finally, for each object found, a copy of the AtomSpace of the tree-node argument is created again. Based on the list to which the object belongs, the corresponding action is executed in that AtomSpace, but this time using the QueryLink with the argument, which corresponds to that object. That is, the action is only executed on that object. \\
+The resulting AtomSpaces are associated with new tree-nodes and become the children of the tree-node argument.
+	
+	\item At last, these new tree-nodes, obtained by executing the two actions available to each object on which they are applicable, are then added to a FIFO queue.
+This queue is used for BFS search. \\
+The expansion of this tree-node is finished and the tree-node at the top of the queue is extracted and passed to a new recursive call of this algorithm, together with the variable describing the action used previously in its branch. 
+\end{enumerate}
 
 
 
