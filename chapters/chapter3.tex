@@ -25,8 +25,8 @@ Finally, the main AtomSpace is created and the actions rules are loaded into it.
 
 \section{Perception Phase}\label{sec:perception}
 
-The perception phase, like the remaining phases, is written in Python code and sends commands via a Python client to the C++ server mentioned above. These commands move the robot and allow it to scan its surroundings area for possible objects (related AprilTags are recognised), thanks to the camera attached to the top of it. \\
-Of each AprilTag found, its associated semantic representation (i.e. English word describing the object, as well as the name of its relative ConceptNode) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list present in the environment.
+The perception phase, like the remaining phases, is written in Python code and sends commands via a Python client to the C++ server mentioned above. These commands move the robot and allow it to scan its surrounding area for possible objects (related AprilTags are recognised), thanks to the camera attached to the top of it. \\
+Of each AprilTag found, its associated semantic representation (i.e. English word describing the object, as well as the name of its relative ConceptNode) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list, found in the environment.
 
 \section{Learning Phase}\label{sec:learning}
 
@@ -34,12 +34,12 @@ The learning phase is used to provide additional information. \\
 The perception algorithm is extremely simple and does not deal with information processing. Consequently, it is not able to distinguish an object from a fixed object or to infer that an object is placed on top of another. Surely, with a perception processing module all of this, and much more, could be managed. \\
 However, this project shows the simplicity of integration and the potential of the learning with the OpenCog system. \\
 
-This phase was created to tell the robot which objects are fixed and which objects are on top of others (fixed objects excluded) or which object is in the robot's hand. That is, to provide the necessary additional information, which the simple perception phase does not perceive, to describe the initial situation of the environment.
+This phase was created to tell the robot which objects are fixed, which are on top of others (fixed objects excluded) or which one is in the robot's hand. That is, to provide the necessary additional information, which the simple perception phase does not perceive, to describe the initial situation of the environment.
 This is done by a module using NLP, consisting of the Relex2Logic OpenCog module and a post-processing phase. \\
 
 Additional information is provided to the system via English sentences. \\
-This module applies Relex2Logic to these sentences, creating the hypergraph describing them within a new empty AtomSpace (as explained in Section \ref{sec:r2l}).  \\
-Next, the post-processing phase loads the rules set out in Section \ref{sec:NLP} and executes them within that AtomSpace. Those rules look for patterns corresponding to the possible information that the system might need and create summary atoms that can be easily used by the algorithm. Thus, from the results obtained by Relex2Logic, they infer atoms such as the ones shown in Section \ref{sec:env_atomese}, which are then added to the main AtomSpace. \\
+This module applies Relex2Logic to these sentences, creating the hypergraph describing them within a new empty AtomSpace (process explained in Section \ref{sec:r2l}).  \\
+Next, the post-processing phase loads the rules presented in Section \ref{sec:NLP} and executes them within that AtomSpace. Those rules look for patterns corresponding to the possible information that the system might need and create summary atoms that can be easily used by the algorithm. Thus, from the results obtained by Relex2Logic, they infer atoms such as the ones shown in Section \ref{sec:env_atomese}, which are then added to the main AtomSpace. \\
 
 Moreover, from the information learned in this phase, the \textit{clear} state atoms of the effectively free objects and the \textit{object} inheritance atoms of the non-fixed objects are created.  \\
 Finally, the last atoms of the initial KB are added to the main AtomSpace. They are all possible simple combinations (without repetition) from the objects list taken two at a time (explained in Section \ref{sec:r2l}, too). \\
@@ -48,7 +48,7 @@ The main AtomSpace is now complete and fully describes the initial situation.
 \section{Request Phase}\label{sec:request}
 
 The request phase behaves like the previous one, except for the aim. Whereas before, English sentences are used to give additional information, now new English sentences are requested to define the goal to be achieved. \\
-In order to define the goal it is not necessary to describe the final complete arrangement of objects in the environment, but simply the states of the objects one wants to achieve. \\
+In order to define the goal it is not necessary to describe the final complete arrangement of objects in the environment, but just the states of the objects one wants to achieve. \\
 Thus, the same steps used in the learning phase are performed here. That is, the English sentences are processed to obtain the corresponding set of atoms that describes them. Then, these atoms are added to a goal list used by the algorithm to find a solution.
 
 \section{Search Phase}\label{sec:search}
@@ -59,10 +59,13 @@ To find a solution, the AtomSpace of the final arrangement must contain every at
 Since each atom is unique in the AtomSpace, two AtomSpaces describing the same arrangement and state of objects have the same atoms, thus they are identical. 
 Consequently, each possible arrangement of objects in the environment can be associated with one and only one AtomSpace, making it a de facto state of a Finite State Machine (FSM).
 Moreover, each of the four actions available to the robot can be seen as a step of this FSM. 
-Starting from a certain state, performing an action leads that state (i.e. that AtomSpace) into a new one. However from each state, one or more actions can be performed and thus, one or more states can be reached. \\
+Starting from a certain state, performing an action leads that state (i.e. that AtomSpace) into a new one. However, from each state, one or more actions can be performed and thus, one or more states can be reached. \\
 
-One of the best ways to handle this structure is through a tree that has AtomSpaces as tree-nodes (to distinguish them from Nodes in Atomese) and available actions as tree-edges. 
-After the request phase, the root of the tree, containing the main AtomSpace, is created. \\
+One of the best ways to handle this structure is through a tree that has AtomSpaces as tree-nodes (to distinguish them from Nodes in Atomese) and available actions as tree-edges.
+In addition, each tree-node has a label describing the action used, and on which objects, by its parent to create it.
+In this way, each branch of the tree describes a different sequence of actions. They can be derived by starting with a solution tree-node and reading the labels of the parent tree-nodes backwards until the root, adding each label to a list. Finally, reversing the list.  \\
+
+After the request phase, the root of the tree, containing the main AtomSpace and a \textit{NULL} label, is created. \\
 Next, a search algorithm, based on the well-known Breadth-First Search (BFS) (more details in \cite{BFS-wiki, BFS}), expands the tree in search of a solution.
 
 \subsection{BFS-Based Algorithm}\label{sec:bfs_search}
@@ -74,11 +77,11 @@ That is, starting from the root:
 \begin{enumerate} 
 	\item If there exists an atom, within the AtomSpace contained in the root, that describes the \textit{in-hand} state of an object, then only \textit{Stack} and \textit{Putdown} actions can create children. Conversely, if there are no objects in hand, only the actions of \textit{Pickup} and \textit{Unstack} can. This is because the current state of the robot's hand limits the action used to go to the next state. If the hand is free, it can only grab an object, while if it is busy, it can only place the object down.
 
-	\item From this first intuition, follows the one applicable to each step: given a certain tree-node, if the action that created it is \textit{Stack} or \textit{Putdown}, then the childs of that node can only be created by \textit{Pickup} or \textit{Unstack} actions, and vice versa.
+	\item From this first intuition, follows the one applicable to each step: given a certain tree-node, if the action \textit{Stack} or \textit{Putdown} created it, then the children of that node can only be created by \textit{Pickup} or \textit{Unstack} actions, otherwise vice versa.
 \end{enumerate}
 
 This is the reason why the BFS-algorithm has a variable as the second argument, it holds the action used to create the node in the first argument. \\
-Trying all the actions at each step would also give the same result, but atoms would have to be added to the rule pattern to check whether the hand is free or busy.
+Trying all the actions at each step would also give the same result, but additional atoms would have to be added to the rule pattern to check whether the hand is free or busy.
 Instead, following this design simplifies the rules, speeds up the algorithm and avoids unnecessary code execution.
 
 
@@ -98,12 +101,12 @@ As this type of problems suffers from combinatorial explosion\footnotemark{}, th
 \footnotetext{\url{https://en.wikipedia.org/wiki/Combinatorial_explosion}} \\
 One way to reduce this expansion is to limit the available actions to only those that interact with one or more objects appearing in the goal list.
 Many unnecessary actions are avoided, however this makes the algorithm incorrect, since the certainty of finding a solution is lost.
-It still works well for most initial arrangements and goal lists and if it fails, the search in point 1 (which is correct, like search in points 2 and 3, if a solution exists) can be used. \\
+It still works well for most initial arrangements and goal lists and if it fails, the search in point 1 (which is correct if a solution exists, like searches in points 2 and 3) can be used. \\
 
 Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a tree-node. \\
 Furthermore, the first solution found will certainly be the optimal solution, i.e. the solution that uses the minimum number of actions to go from the initial arrangement of objects to the goal one.
 This is because for each tree-node, before being expanded, its AtomSpace is compared with the one of any tree-node belonging to its same branch.
-If a match is found (i.e. they are identical), then the algorithm has returned to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of that tree-node ends.
+If a match is found (i.e. they are identical), then the algorithm has come back to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of this tree-node ends.
 
 
 \subsubsection{Steps of the BFS-Based Algorithm}\label{sec:step_search}
@@ -117,7 +120,7 @@ Inside each call:
 	
 	\item It is checked if the AtomSpace, contained in the tree-node argument, satisfies all the atoms in the goal list. If satisfied, this tree-node is added to the solution list and the algorithm returns or continues depending on the type of search.
 	
-	\item It is checked that the AtomSpace, contained in the tree-node argument, has not been encountered before. If encountered, this tree-node is not expanded and the algorithm moves on to the next one, otherwise its expansion begins.
+	\item It is checked that the AtomSpace, contained in the tree-node argument, has not been encountered before. If encountered, this tree-node is not expanded and the algorithm moves on to the next one (Go back to point 1), otherwise its expansion begins.
 	
 	\item Now that the checks have been passed, the expansion of the tree-node argument occurs. \\
 According to the variable argument, only two of the four actions can be executed.
@@ -129,7 +132,7 @@ To summarise:
 	\begin{enumerate}
 		\item AtomSpace copies are created
 		\item Rules on generic objects are executed, one in each AtomSpace
-		\item The objects returned as solutions of the rules correspond to the objects on which actions can be executed. They are stored in a list for each action.
+		\item The objects, returned as solutions of the rules, correspond to the objects on which actions can be executed. They are stored in a list for each action.
 		\item AtomSpace copies are cleaned up and deleted.
 	\end{enumerate}
 
@@ -142,37 +145,73 @@ The expansion of this tree-node is finished and the tree-node at the top of the 
 \end{enumerate}
 
 
+\section{Results Execution Phase}\label{sec:results_exec}
+
+At the end of the search phase, the solution list contains the tree-nodes having an AtomSpace that satisfies all the atoms in the solution list.
+As already explained in Section \ref{sec:search}, from each solution tree-node, a list containing a sequence of actions can be extracted.
+If the solution list is not empty, then the first result corresponds to the optimal solution, otherwise either there is no solution or the search parameters need to be changed. \\
+In conclusion, the optimal solution is sent from the client to the server, which will command the robot to perform each of those actions in sequence, thus achieving the required arrangement of objects.
+
+\section{Practical Example}\label{sec:alg_example}
+
+The following steps provide a simple practical example in order to clarify and contextualise the above phases.
+
+\begin{enumerate}
+
+	\item Initial Phase: \\
+Loading environment (Ros, Gazebo, Relex2Logic Server, Cubes, AprilTags, etc.)
+
+	\item Perception Phase: \\
+Assume that four AprilTags are detected. Assume also that the AprilTags associate tree objects with a semantic meaning corresponding to parts of an industrial product to be assembled and the fourth with \enquote{workbench}. For simplicity in this example, the parts will be called \enquote{screw}, \enquote{bolt} and \enquote{washer}.
+
+	\item Learning Phase: \\
+The only additional information needed by the robot is: \enquote{The workbench is a fixed object.}. From this sentence the following atom will be extracted:
+\begin{python}
+	(InheritanceLink
+		(ConceptNode "workbench")
+		(ConceptNode "fixed-object"))
+\end{python}
+
+	\item Request Phase: \\
+Assign an easy task: \enquote{The washer is on the screw. The bolt is on the washer.}.  From these sentences the following atoms will be extracted:
+\begin{python}
+	(EvaluationLink
+		(PredicateNode "on")
+		(ListLink
+			(ConceptNode "washer")
+			(ConceptNode "screw")))
+
+	(EvaluationLink
+		(PredicateNode "on")
+		(ListLink
+			(ConceptNode "bolt")
+			(ConceptNode "washer")))
+\end{python}
+
+	\item Search Phase: \\
+The Figure \ref{fig:BFS_1} shows the first steps of tree expansion using the BFS-based algorithm.
+First, the hand is free, thus the algorithm will try to do \textit{Pickup} and \textit{Unstack} actions. Since \textit{screw}, \textit{bolt} and \textit{washer} are \textit{clear} objects, the first iteration of the algorithm will create 3 tree-nodes corresponding to the initial object arrangement (i.e., the arrangement of the root) except the one to which \textit{Pickup} is performed. The \textit{workbench} is a fixed object, thus it is not found as a solution of \textit{Pickup}, moreover the action \textit{Unstack} returns an empty result because there are no stacked objects\footnotemark{}. \\
+\footnotetext{The objects are actually stacked relative to the workbench. However, this fixed object can be considered as the initial one and therefore one can ignore the stacks and use actions of \textit{Pickup} and \textit{Putdown}, alternatively the stacks can be added as information during the learning phase and consequently, actions of \textit{Stack} and \textit{Unstack} will be used instead.}
+Subsequently, these tree-nodes are analysed following the order corresponding to the blue numbers in the figure. None of them is a solution tree-node or has an AtomSpace already encountered, thus their children are created. \\
+Tree-node number 4 is obtained by making \textit{Pickup} of A and then \textit{Putdown} of the same, so its AtomSpace will correspond to the one of the root. Consequently, its expansion ends. \\
+The expansions continue until we arrive at the yellow tree-node which has an AtomSpace containing all the atoms in the goal list. Therefore, a solution is found and the search ends (Quick search).
 
 \begin{figure} [h]
 \centering
 \includegraphics[width=1.0
 \textwidth]{figures/Magistrale/BFS_1_blue}
-\caption[BFS Example]{ TODO: descrizione
+\caption[BFS Example]{ TODO: descrizione, finisci di disegnare il branch soluzione\\ A : washer, B : bolt, C : screw
 \label{fig:BFS_1}}
 \end{figure} 
 
-\section{Results Execution Phase}\label{sec:results_exec}
-
-
-\begin{comment}
-\begin{footnotesize}
-\textbf{Code in Atomese notation:} \\
-Learning phase
-\end{footnotesize}
-
+The sequence of actions from the initial arrangement to the goal arrangement can easily be read from the tree-edges going up the branch from the yellow tree-node to the root.
+	
+	\item Results Execution Phase: \\
+The following sequence of actions will be performed by the robot, satisfying the initial request:
 \begin{python}
-	The English sentence: "The apple is in hand. The tray is on the table. The table is a fixed object."
-
----------------- Result:
-\begin{python}
-\begin{footnotesize}
-\textbf{Code in Atomese notation:} \\
-\textit{Pickup} action rule.
-\end{footnotesize}
-
-\begin{python}
-	The English sentence: "The apple is in hand. The tray is on the table. The table is a fixed object."
-
----------------- Result:
-\begin{python}
-\end{comment}
+	- Pickup washer
+	- Stack washer on screw
+	- Pickup bolt
+	- Stack bolt on washer
+\end{python}
+\end{enumerate}
