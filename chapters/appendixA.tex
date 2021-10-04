@@ -5,45 +5,45 @@
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-Starting with the simplest arrangement of objects: there is a table and there is an apple, a banana and a tray on it. Then, first the objects and their inheritances are defined, next the objects are differentiated, and finally, as they are all on top of the table, the \textit{clear} status is associated with each of them. \\
+Starting with the simplest arrangement of objects: there is a table and there is a screw, a bolt and a toolbox on it. Then, first the objects and their inheritances are defined, next the objects are differentiated, and finally, as they are all on top of the table, the \textit{clear} status is associated with each of them. \\
 \end{footnotesize}
 
 \begin{python}
 	(InheritanceLink
-		(ConceptNode "apple")
+		(ConceptNode "screw")
 		(ConceptNode "object"))
 	(InheritanceLink
-		(ConceptNode "banana")
+		(ConceptNode "bolt")
 		(ConceptNode "object"))
 	(InheritanceLink
-		(ConceptNode "tray")
+		(ConceptNode "toolbox")
 		(ConceptNode "object"))
 	(InheritanceLink
 		(ConceptNode "table")
 		(ConceptNode "fixed-object"))
 
 	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "banana")))
+		(ConceptNode "screw") (ConceptNode "bolt")))
 	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "tray")))
+		(ConceptNode "screw") (ConceptNode "toolbox")))
 	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "table")))
+		(ConceptNode "screw") (ConceptNode "table")))
 	(NotLink (EqualLink 
-		(ConceptNode "banana") (ConceptNode "tray")))
+		(ConceptNode "bolt") (ConceptNode "toolbox")))
 	(NotLink (EqualLink 
-		(ConceptNode "banana") (ConceptNode "table")))
+		(ConceptNode "bolt") (ConceptNode "table")))
 	(NotLink (EqualLink 
-		(ConceptNode "tray") (ConceptNode "table")))
+		(ConceptNode "toolbox") (ConceptNode "table")))
 	
 	(EvaluationLink
 		(PredicateNode "clear")
-		(ConceptNode "apple"))
+		(ConceptNode "screw"))
 	(EvaluationLink
 		(PredicateNode "clear")
-		(ConceptNode "banana"))
+		(ConceptNode "bolt"))
 	(EvaluationLink
 		(PredicateNode "clear")
-		(ConceptNode "tray"))
+		(ConceptNode "toolbox"))
 	(EvaluationLink
 		(PredicateNode "clear")
 		(ConceptNode "table"))
@@ -54,20 +54,20 @@ Furthermore, notice how there are no states related to the fact that the objects
 In general, these actions can be used on objects that are on top of fixed objects in the initial situation, so for example, \textit{Pickup} will not require to know what is under the object to pick up, it will just pick it up. \textit{Putdown}, on the other hand, is used to put down an object in a generic position, it is not important where. This action is rarely used. \\
 However, all four actions are maintained and used to speed up the first actions and simplify the initial knowledge base.\\
 
-To conclude, suppose now that the apple is on the tray and the banana is in the hand. InheritanceLinks and NotLinks are the same as the code above and will always remain unchanged once created, within each execution of the algorithm, thus they are omitted below. The last part of the knowledge base will become as follows: \\
+To conclude, suppose now that the screw is on the toolbox and the bolt is in the hand. InheritanceLinks and NotLinks are the same as the code above and will always remain unchanged once created, within each execution of the algorithm, thus they are omitted below. The last part of the knowledge base will become as follows: \\
 
 \begin{python}	
 	(EvaluationLink
 		(PredicateNode "clear")
-		(ConceptNode "apple"))
+		(ConceptNode "screw"))
 	(EvaluationLink
 		(PredicateNode "in-hand")
-		(ConceptNode "banana"))
+		(ConceptNode "bolt"))
 	(EvaluationLink
 		(PredicateNode "on")
 		(ListLink
-			(ConceptNode "apple")
-			(ConceptNode "tray"))
+			(ConceptNode "screw")
+			(ConceptNode "toolbox"))
 	(EvaluationLink
 		(PredicateNode "clear")
 		(ConceptNode "table"))
