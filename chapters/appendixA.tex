@@ -156,11 +156,11 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-\textit{Putdown} action rule.
+\textit{Putdown} action rule. This rule works exactly in the same way as \textit{Pickup}. The only differences are the preconditions and effects, which are reversed, and the absence of the \enquote{stacked} state atom, which is no longer required. 
 \end{footnotesize}
 
 \begin{python}
-(define (action_putdown . args)
+(define (putdown-action . args)
   (define precond (car (cdr args)))
   (define eff (car args))
   (cog-extract-recursive! precond)
@@ -248,11 +248,14 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-\textit{Stack} action rule.
+\textit{Stack} action rule. This rule requires a more complex pattern than the first two, however, its structure and operation behave in the same way as the previous ones. \\
+Firstly, two arguments are used to define which objects will form the stack.
+Also in the pattern, an OrLink type atom differentiates the case where a fixed object is coinvolved. 
+Finally, the Scheme function \textit{stack-action} must first extract the object above and the object below and then it can use them to create the effect atoms and remove the state atoms that are no longer valid.
 \end{footnotesize}
 
 \begin{python}
-(define (action_stack . args)
+(define (stack-action . args)
   (define precond (car (cdr args)))
   (define eff (car args))
   (define over_obj 
@@ -407,11 +410,11 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
-\textit{Unstack} action rule.
+\textit{Unstack} action rule. Same considerations made for the rule of \textit{Putdown}: this rule behaves like \textit{Stack} with inverted preconditions and effects. While \textit{Stack} creates the \enquote{stacked} state atom, \textit{Unstack} removes it.
 \end{footnotesize}
 
 \begin{python}
-(define (action_unstack . args)
+(define (unstack-action . args)
   (define precond (car (cdr args)))
   (define eff (car args))
   (define over_obj 
@@ -568,6 +571,8 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
+This is an additional rule of utility: given an object as an argument, it returns the object immediately under it, if it exists. \\
+It is used by the BFS-Based algorithm \ref{sec:bfs_search} when calling \textit{Unstack} action.
 \end{footnotesize}
 
 \begin{python}
@@ -610,6 +615,7 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
+This rule infers all objects that are subject to a state but are independent of other objects. That is, the \textit{clear} and \textit{in-hand} state atoms.
 \end{footnotesize}
 
 \begin{python}
@@ -658,6 +664,10 @@ Predicates are the \enquote{states} in which one or more objects can be. Actions
 
 \begin{footnotesize}
 \textbf{Code in Atomese notation:} \\
+This rule infers all objects subject to a stack. That is, the \textit{on} state atoms. \\
+However, the various EvaluationLink type atoms (lines 78-84) that you get as results should already exist once Relex2Logic is run. \\
+Unfortunately, it has errors which, instead of creating a single EvaluationLink that joins multiple ConceptNodes in the ListLink, create multiple EvaluationLinks with the same PredicateNode but separate for each object ( thus, the ListLinks contain only one ConceptNode each). \\
+Since Relex2Logic is no longer maintained, this rule fixes this kind of error.
 \end{footnotesize}
 
 \begin{python}
