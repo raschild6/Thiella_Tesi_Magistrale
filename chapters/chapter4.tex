@@ -2,23 +2,25 @@
 
 \chapter{Tests and Results} \label{cha:test}
 
-%%The purpose of this project is to show how a proto-AGI system such as OpenCog can be used 
+\section{Assembling Objects Test}\label{sec:ass_objs_test}
 
 \begin{table}[htbp]
   \centering
   \caption{Assemblable Objects Description Table}\label{Approcci}
   \medskip
-\begin{tabular}{cccccccc}
+\renewcommand\arraystretch{1.5}
+\renewcommand\tabcolsep{12pt}
+\begin{tabular}{cccc}
 \toprule
 \multicolumn{4}{c}{\textbf{Assemblable Objects}} \\
-\textbf{Number} &  \textbf{Quantity} &  \textbf{Colour} &  \textbf{Semantic Name}  \\
+\textbf{Number} &  \textbf{Quantity} &  \textbf{Colour Cube} &  \textbf{Semantic Name}  \\
 \midrule
 \rowcolor{gray!35}
-5 & 2 & Green/Orange & BearingSleeve1/BearingSleeve2 \\
+5 & 2 & Green / Orange & BearingSleeve1 / BearingSleeve2 \\
 6 & 1 & Blue & BettClamp \\
 \rowcolor{gray!35}
 7 & 1 & - & Bearing \\
-9 & 2 & Grey/Gold & SnapRing1/SnapRing2 \\
+9 & 2 & Grey / Gold & SnapRing1 / SnapRing2 \\
 \rowcolor{gray!35}
 14 & 1 & - & TCEIScrew \\
 31 & 1 & - & RotatingBalancerSupport \\
@@ -29,6 +31,8 @@
 43 & 1 & Yellow & InductionHardenedRod \\
 \bottomrule
 \end{tabular}
+\renewcommand\arraystretch{1}
+\renewcommand\tabcolsep{1}
 \end{table}
 
 
@@ -36,7 +40,7 @@
 \centering
 \includegraphics[width=1.0
 \textwidth]{figures/Magistrale/ass_obj_1}
-\caption[BFS Example]{
+\caption[BlockA Assembly]{Assembly of BlockA
 \label{fig:ass_obj_1}}
 \end{figure} 
 
@@ -44,7 +48,7 @@
 \centering
 \includegraphics[width=1.0
 \textwidth]{figures/Magistrale/ass_obj_2}
-\caption[BFS Example]{
+\caption[BlockB Assembly]{Assembly of BlockB
 \label{fig:ass_obj_2}}
 \end{figure} 
 
@@ -52,6 +56,11 @@
 \centering
 \includegraphics[width=1.0
 \textwidth]{figures/Magistrale/ass_obj_3}
-\caption[BFS Example]{
+\caption[BlockC Assembly]{Assembly of BlockC
 \label{fig:ass_obj_3}}
 \end{figure} 
+
+
+\section{Performance Considerations}\label{sec:perf_consid}
+
+
