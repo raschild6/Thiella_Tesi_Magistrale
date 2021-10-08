@@ -2,7 +2,6 @@
 
 \chapter{The Algorithm} \label{cha:algorithm}
 
-%%The purpose of this project is to show how a proto-AGI system such as OpenCog can be used 
 Having defined the OpenCog system and part of the implementation of the problem in the previous chapters, it is now possible to combine all the various modules and explain the functioning of the internal design and the main algorithm. \\
 
 It is possible to divide the entire project into 6 phases: initial, perception, learning, request, search and results execution.  
@@ -11,22 +10,22 @@ It is possible to divide the entire project into 6 phases: initial, perception, 
 
 The initial phase concerns the initialization of the simulated environment. The framework used for the development and programming of the robot is the well-known ROS, Melodic version, and the Gazebo 9 system handles the simulation. \\
 Therefore, the world as in Figure \ref{fig:env_2_named} is loaded into Gazebo. 
-It consists of a robot manipulator with an attached camera, some fixed objects (such as tables, shelves, etc.) and cubes, both with their AprilTags used for detection and semantic assignment. \\
+It consists of a robot manipulator with an attached camera, some fixed objects (such as tables, workbench and bins) and cubes, both with their AprilTags used for detection and semantic assignment. \\
 Then, a server in C++ code is activated and the nodes of the ROS system for robot control and object perception become available for listening. \\
 Finally, the main AtomSpace is created and the actions rules are loaded into it. 
 
 \begin{figure} [h]
 \centering
-\includegraphics[width=0.9
-\textwidth]{figures/Magistrale/env_2_named}
-\caption[Environment Components Description]{ TODO: descrizione
+\includegraphics[width=1.0
+\textwidth]{figures/Magistrale/env_objs}
+\caption[Environment Components Description]{ In the red boxes are collected the objects that are considered fixed. Meanwhile, the blue box contains the remaining objects, represented by cubes.
 \label{fig:env_2_named}}
 \end{figure} 
 
 \section{Perception Phase}\label{sec:perception}
 
 The perception phase, like the remaining phases, is written in Python code and sends commands via a Python client to the C++ server mentioned above. These commands move the robot and allow it to scan its surrounding area for possible objects (related AprilTags are recognised), thanks to the camera attached to the top of it. \\
-Of each AprilTag found, its associated semantic representation (i.e. English word describing the object, as well as the name of its relative ConceptNode) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list, found in the environment.
+Of each AprilTag found, its associated semantic representation (i.e. English word describing the object, as well as the name of its relative ConceptNode, thus, for example: \enquote{table}, \enquote{workbench}, etc.) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list, found in the environment.
 
 \section{Learning Phase}\label{sec:learning}
 
@@ -140,7 +139,7 @@ To summarise:
 The resulting AtomSpaces are associated with new tree-nodes and become the children of the tree-node argument.
 	
 	\item At last, these new tree-nodes, obtained by executing the two actions available to each object on which they are applicable, are then added to a FIFO queue.
-This queue is used for BFS search. \\
+This queue is used for BFS. \\
 The expansion of this tree-node is finished and the tree-node at the top of the queue is extracted and passed to a new recursive call of this algorithm, together with the variable describing the action used previously in its branch. 
 \end{enumerate}
 
@@ -190,21 +189,28 @@ Assign an easy task: \enquote{The washer is on the screw. The bolt is on the was
 
 	\item Search Phase: \\
 The Figure \ref{fig:BFS_1} shows the first steps of tree expansion using the BFS-based algorithm.
-First, the hand is free, thus the algorithm will try to do \textit{Pickup} and \textit{Unstack} actions. Since \textit{screw}, \textit{bolt} and \textit{washer} are \textit{clear} objects, the first iteration of the algorithm will create 3 tree-nodes corresponding to the initial object arrangement (i.e., the arrangement of the root) except the one to which \textit{Pickup} is performed. The \textit{workbench} is a fixed object, thus it is not found as a solution of \textit{Pickup}, moreover the action \textit{Unstack} returns an empty result because there are no stacked objects\footnotemark{}. \\
+First, the hand is free, thus the algorithm will try to do \textit{Pickup} and \textit{Unstack} actions. Since \textit{screw}, \textit{bolt} and \textit{washer} are \textit{clear} objects, the first iteration of the algorithm will create 3 tree-nodes corresponding to the initial object arrangement (i.e., the arrangement of the root), except the one to which \textit{Pickup} is performed. \\
+The \textit{workbench} is a fixed object, thus it is not found as a solution of \textit{Pickup}, moreover the action \textit{Unstack} returns an empty result because there are no stacked objects\footnotemark{}.
 \footnotetext{The objects are actually stacked relative to the workbench. However, this fixed object can be considered as the initial one and therefore one can ignore the stacks and use actions of \textit{Pickup} and \textit{Putdown}, alternatively the stacks can be added as information during the learning phase and consequently, actions of \textit{Stack} and \textit{Unstack} will be used instead.}
-Subsequently, these tree-nodes are analysed following the order corresponding to the blue numbers in the figure. None of them is a solution tree-node or has an AtomSpace already encountered, thus their children are created. \\
+\\Subsequently, these tree-nodes are analysed following the order corresponding to the blue numbers in the figure. None of them is a solution tree-node or has an AtomSpace already encountered, thus, their children are created. \\
 Tree-node number 4 is obtained by making \textit{Pickup} of A and then \textit{Putdown} of the same, so its AtomSpace will correspond to the one of the root. Consequently, its expansion ends. \\
-The expansions continue until we arrive at the yellow tree-node which has an AtomSpace containing all the atoms in the goal list. Therefore, a solution is found and the search ends (Quick search).
+The expansions continue until the yellow tree-node is reached, which has an AtomSpace containing all the atoms in the goal list. Therefore, a solution is found and the search ends (Quick search).
 
 \begin{figure} [h]
 \centering
 \includegraphics[width=1.0
 \textwidth]{figures/Magistrale/BFS_1_blue}
-\caption[BFS Example]{ TODO: descrizione, finisci di disegnare il branch soluzione\\ A : washer, B : bolt, C : screw
+\caption[BFS Example]{Graph describing the expansion of the tree of the practical example.  \\
+Each node contains an AtomSpace and each edge describes an action. \\
+Each AtomSpace at an internal node is unique among all those contained in its branch. With the exception of AtomSpaces at leaf nodes that either already exist within its own branch (node marked with a blue X) or are a solution (yellow node). \\
+The order of node expansion is shown by the sequence of numbers within them and follows the order of the BFS. \\
+The legend on the top simplifies the labels in the tree by using the letters A, B, C instead of names used in the algorithm. 
+
+Translated with www.DeepL.com/Translator (free version)
 \label{fig:BFS_1}}
 \end{figure} 
 
-The sequence of actions from the initial arrangement to the goal arrangement can easily be read from the tree-edges going up the branch from the yellow tree-node to the root.
+The sequence of actions from the initial arrangement to the goal arrangement can easily be read from the tree-edges, going up the branch from the yellow tree-node to the root.
 	
 	\item Results Execution Phase: \\
 The following sequence of actions will be performed by the robot, satisfying the initial request:

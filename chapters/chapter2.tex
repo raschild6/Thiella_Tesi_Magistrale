@@ -14,9 +14,9 @@ First of all, the environment consists of:
 
 \begin{figure} [h]
 \centering
-\includegraphics[width=0.9
-\textwidth]{figures/Magistrale/env_1_temp}
-\caption[Environment Configuration]{ TODO: descrizione
+\includegraphics[width=1.0
+\textwidth]{figures/Magistrale/env_fin_1}
+\caption[Environment Configuration]{The configuration of the environment used in this project: a white table on the left, a grey workbench on the right, on which the robot manipulator is fixed, and behind it, five bins of various colours, which will contain the different blocks. All these objects have an AprilTag on top of each one.
 \label{fig:env_1}}
 \end{figure} 
 
@@ -32,7 +32,6 @@ In order to define the implementation, it is first necessary to explain the cons
 	\item Each block can be \textit{on} the table, on top of another object or \textit{in-hand}
 	\item The robot's hand may be busy (it is holding a block) or free (it holds nothing)
 	\item Only one block can be picked up at a time, putting it down before the next. It is not possible to pick up a block that is under another one (because it is not considered \textit{clear}) or to move a fixed object.
-%% Aggiungi o rimuovi
 \end{itemize}
 
 The \textit{Pickup} action is the opposite of \textit{Putdown} and they are used to take/place a block from/on a fixed object. The \textit{Stack} action is the opposite of \textit{Unstack} and they are used to put/take a block on/from another block or a fixed object. \\
@@ -47,7 +46,7 @@ For example, consider two blocks (A and B) on a table and block A is \textit{on}
 \label{fig:blocks_example}}
 \end{figure} 
 
-Since it is possible to have more fixed objects (such as tables, shelves, etc.) than in the blocks world, where there is only a work plane, any free block can always be considered on top of something else. Consequently, the actions \textit{Pickup} and \textit{Putdown} lose their meaning because they become subcases of the respective \textit{Unstack} and \textit{Stack}. However, in this project all four are still maintained and used, as explained below. 
+Since it is possible to have more fixed objects (such as tables, workbench, etc.) than in the blocks world, where there is only a work plane, any free block can always be considered on top of something else. Consequently, the actions \textit{Pickup} and \textit{Putdown} lose their meaning because they become subcases of the respective \textit{Unstack} and \textit{Stack}. However, in this project all four are still maintained and used, as explained below. 
 
 
 \section{Knowledge Base in Atomese}\label{sec:env_atomese}
@@ -76,10 +75,10 @@ As each atom is unique, it is not necessary to first define objects (i.e., \text
 In addition, by construction of pattern matching rules, it is necessary to explicitly define the \enquote{non-equality} between all the various pairs of objects. Therefore, for example, given three objects such as \textit{screw}, \textit{bolt} and \textit{table}, there will be atoms like these: \\
 \begin{python}
 	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "bolt")))
+		(ConceptNode "screw") (ConceptNode "bolt")))
 
 	(NotLink (EqualLink 
-		(ConceptNode "apple") (ConceptNode "table")))
+		(ConceptNode "screw") (ConceptNode "table")))
 
 	(NotLink (EqualLink 
 		(ConceptNode "bolt") (ConceptNode "table")))
