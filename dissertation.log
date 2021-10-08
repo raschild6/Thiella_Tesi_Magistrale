@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  5 OCT 2021 12:13
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  8 OCT 2021 17:51
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1572,8 +1572,10 @@ File: biblatex.cfg
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-
-No file dissertation.aux.
+ (dissertation.aux
+(chapters/introduction.aux) (chapters/chapter1.aux) (chapters/chapter2.aux)
+(chapters/chapter3.aux) (chapters/chapter4.aux) (chapters/conclusion.aux)
+(chapters/conclusionDue.aux) (chapters/AppendixA.aux))
 \openout1 = `dissertation.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
@@ -1587,6 +1589,7 @@ LaTeX Font Info:    ... okay on input line 31.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
 LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
 1.
+
 (D:\Programmi\MiKTeX\tex/latex/base\ts1cmr.fd
 File: ts1cmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
@@ -1651,12 +1654,10 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 31.
 LaTeX Info: Redefining \pageref on input line 31.
 LaTeX Info: Redefining \nameref on input line 31.
+
+(dissertation.out) (dissertation.out)
 \@outlinefile=\write5
 \openout5 = `dissertation.out'.
-
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
@@ -1669,6 +1670,7 @@ Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of spacing.
 Package microtype Info: No adjustment of kerning.
+
 (D:\Programmi\MiKTeX\tex/latex/microtype\mt-EBGaramond.cfg
 File: mt-EBGaramond.cfg 2021/02/22 v1.6 microtype config. file: EB Garamond / A
 dobe Garamond (RS)
@@ -1763,25 +1765,47 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  (frontmatter/abstract.tex) [3
 
-]
+] (dissertation.toc
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 4.
+ (D:\Programmi\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
+
+(D:\Programmi\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(D:\Programmi\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
+
+(D:\Programmi\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(D:\Programmi\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+) [4
+
+])
 \tf@toc=\write6
 \openout6 = `dissertation.toc'.
 
- [4
-
-]
+ [5] (dissertation.lof)
 \tf@lof=\write7
 \openout7 = `dissertation.lof'.
 
- [5
+ [6
 
-]
+] (dissertation.lot)
 \tf@lot=\write8
 \openout8 = `dissertation.lot'.
 
- [6
+ [7
 
-] (frontmatter/dedication.tex) [7] [8]
+] (frontmatter/dedication.tex) [8] [9]
 \openout2 = `chapters/introduction.aux'.
 
 
@@ -1797,28 +1821,7 @@ Overfull \hbox (13.37932pt too wide) in paragraph at lines 18--20
 Narrow Intelligence (ANI or Narrow-
  []
 
-[2] (D:\Programmi\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
-
-
-(D:\Programmi\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(D:\Programmi\MiKTeX\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
-
-
-(D:\Programmi\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(D:\Programmi\MiKTeX\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
+[2]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 45.
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
@@ -1836,12 +1839,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
  []
 
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 57.
-
-LaTeX Warning: Reference `cha:opencog_system' on page 3 undefined on input line
- 57.
-
 
 Overfull \hbox (1.08093pt too wide) in paragraph at lines 53--58
 \TU/EBGaramond(2)/m/n/12 (Deep Neural Networks, Probabilistic Logic Theorem Pro
@@ -1853,20 +1850,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--58
 
  []
 
-[3]
-
-LaTeX Warning: Reference `fig:nn_data_process' on page 4 undefined on input lin
-e 64.
-
-
-LaTeX Warning: Reference `fig:adversarial_examples' on page 4 undefined on inpu
-t line 66.
-
-
-LaTeX Warning: Reference `fig:nn_development_process' on page 4 undefined on in
-put line 68.
-
-[4]
+[3] [4]
 File: figures/Magistrale/02 - neural-networks-development-process.jpg Graphic f
 ile (type bmp)
 <figures/Magistrale/02 - neural-networks-development-process.jpg>
@@ -1905,10 +1889,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  (chapters/chapter1.tex
 Chapter 2.
-
-LaTeX Warning: Reference `sec:cognitive_synergy' on page 7 undefined on input l
-ine 14.
-
 [7
 
 
@@ -1925,10 +1905,6 @@ Overfull \hbox (1.30092pt too wide) in paragraph at lines 28--29
 []\TU/EBGaramond(2)/m/n/12 The Cognitive Synergy is, therefore, represented by 
 the interaction between the knowl-
  []
-
-
-LaTeX Warning: Reference `fig:cognitive_processes' on page 8 undefined on input
- line 37.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 32--38
@@ -1968,16 +1944,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  []
 
 [10]
-
-LaTeX Warning: Reference `fig:atomspace_table' on page 11 undefined on input li
-ne 81.
-
 File: figures/Magistrale/atomspace_table.png Graphic file (type bmp)
 <figures/Magistrale/atomspace_table.png>
-
-LaTeX Warning: Reference `fig:hypergraph_graph' on page 11 undefined on input l
-ine 92.
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
@@ -1988,20 +1956,12 @@ File: figures/Magistrale/hypergraph_graph.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-LaTeX Warning: Reference `fig:metagraph_graph' on page 11 undefined on input li
-ne 109.
-
 [11]
 File: figures/Magistrale/metagraph_graph.png Graphic file (type bmp)
 <figures/Magistrale/metagraph_graph.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:metagraph_table' on page 12 undefined on input li
-ne 121.
 
 File: figures/Magistrale/metagraph_table.png Graphic file (type bmp)
 <figures/Magistrale/metagraph_table.png>
@@ -2020,10 +1980,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--133
  []
 
 
-LaTeX Warning: Reference `fig:typed_edge' on page 12 undefined on input line 13
-6.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 134--137
 
  []
@@ -2037,10 +1993,6 @@ File: figures/Magistrale/typed_edge.png Graphic file (type bmp)
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:typed_metapath' on page 13 undefined on input lin
-e 147.
 
 
 Overfull \hbox (2.0929pt too wide) in paragraph at lines 146--153
@@ -2060,18 +2012,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 164--169
 
  []
 
-[14]
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 170.
-
-
-LaTeX Warning: Reference `sec:atomese' on page 15 undefined on input line 170.
-
-[15]
+[14] [15]
 Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 192.
 (D:\Programmi\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [16] [17]
@@ -2087,10 +2034,6 @@ oinLink, QueryLink, MeetLink,
 Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
-
-
-LaTeX Warning: Reference `fig:atomspace_explorer' on page 20 undefined on input
- line 287.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 287--288
@@ -2129,14 +2072,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 325--330
  []
 
 [22]
-
-LaTeX Warning: Reference `sec:domain_atomese' on page 23 undefined on input lin
-e 335.
-
-
-LaTeX Warning: Reference `sec:search' on page 23 undefined on input line 348.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
@@ -2191,13 +2126,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 ][][][][][] [] [][][][][][] [] [][] []
  []
 
-File: figures/Magistrale/env_1_temp.png Graphic file (type bmp)
-<figures/Magistrale/env_1_temp.png>
+File: figures/Magistrale/env_fin_1.png Graphic file (type bmp)
+<figures/Magistrale/env_fin_1.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: Reference `fig:env_1' on page 28 undefined on input line 23.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 23--26
@@ -2210,12 +2142,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
 
 ]
-
-LaTeX Warning: Reference `fig:blocks_example' on page 29 undefined on input lin
-e 40.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--41
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
 
  []
 
@@ -2223,110 +2150,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
 <figures/Magistrale/blocks_example.png>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
-(Font)              scaled to size 7.89734pt on input line 47.
+(Font)              scaled to size 7.89734pt on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--57
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 58--59
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
 [30]
-Underfull \hbox (badness 10000) in paragraph at lines 68--71
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--75
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+Underfull \hbox (badness 10000) in paragraph at lines 71--74
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 75--76
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
 
-LaTeX Warning: Reference `sec:KB_examples' on page 32 undefined on input line 1
-06.
-
-
-LaTeX Warning: Reference `sec:PDDL' on page 32 undefined on input line 112.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--115
+Underfull \hbox (badness 10000) in paragraph at lines 109--114
 
  []
 
-[32] [33]
 
-LaTeX Warning: Reference `sec:action_atomese' on page 34 undefined on input lin
-e 181.
+Underfull \vbox (badness 8000) has occurred while \output is active []
 
+ [32]
+[33]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 184.
-[34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
+(Font)              scaled to size 10.0pt on input line 183.
+ [34] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
+Underfull \hbox (badness 10000) in paragraph at lines 279--287
 
-LaTeX Warning: Reference `sec:atoms' on page 37 undefined on input line 287.
+ []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 280--288
+[37]
+Underfull \hbox (badness 10000) in paragraph at lines 288--290
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 289--291
+Underfull \hbox (badness 10000) in paragraph at lines 301--306
 
  []
 
-
-Underfull \vbox (badness 4168) has occurred while \output is active []
-
- [37]
-Underfull \hbox (badness 10000) in paragraph at lines 302--307
-
- []
-
-[38]
-
-LaTeX Warning: Reference `sec:step_search' on page 39 undefined on input line 3
-11.
-
-) [39]
+[38]) [39]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-
-LaTeX Warning: Reference `fig:env_2_named' on page 40 undefined on input line 1
-3.
-
-File: figures/Magistrale/env_2_named.png Graphic file (type bmp)
-<figures/Magistrale/env_2_named.png>
+File: figures/Magistrale/env_objs.png Graphic file (type bmp)
+<figures/Magistrale/env_objs.png>
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -2339,89 +2240,105 @@ Underfull \vbox (badness 4940) has occurred while \output is active []
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 33--36
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
 
 [41]
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
-LaTeX Warning: Reference `sec:r2l' on page 42 undefined on input line 41.
-
-
-LaTeX Warning: Reference `sec:NLP' on page 42 undefined on input line 42.
+ []
 
 
-LaTeX Warning: Reference `sec:env_atomese' on page 42 undefined on input line 4
-2.
-
-
-Overfull \hbox (2.01692pt too wide) in paragraph at lines 40--43
+Overfull \hbox (2.01692pt too wide) in paragraph at lines 39--42
 \TU/EBGaramond(2)/m/n/12 This module applies Relex2Logic to these sentences, cr
 eating the hypergraph describing them
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 40--43
+Underfull \hbox (badness 10000) in paragraph at lines 39--42
+
+ []
+
+[42]
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
 
-LaTeX Warning: Reference `sec:r2l' on page 42 undefined on input line 45.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-Underfull \hbox (badness 10000) in paragraph at lines 59--63
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--67
-
- []
-
-
-LaTeX Warning: Reference `cha:problem_description' on page 43 undefined on inpu
-t line 74.
 
 [43]
-Underfull \hbox (badness 10000) in paragraph at lines 99--105
+Underfull \hbox (badness 10000) in paragraph at lines 98--104
 
  []
 
 [44]
-Overfull \hbox (0.31693pt too wide) in paragraph at lines 125--131
+Overfull \hbox (0.31693pt too wide) in paragraph at lines 124--130
 \TU/EBGaramond(2)/m/n/12 It is necessary to use AtomSpace copies because rule e
 xecution adds and removes atoms
  []
 
-[45]
-
-LaTeX Warning: Reference `sec:search' on page 46 undefined on input line 151.
-
-[46]
-
-LaTeX Warning: Reference `fig:BFS_1' on page 47 undefined on input line 192.
-
-[47]
+[45] [46] [47]
 File: figures/Magistrale/BFS_1_blue.png Graphic file (type bmp)
 <figures/Magistrale/BFS_1_blue.png>
- [48]) [49]
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [48] [49]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
 Chapter 5.
+
+Package fontspec Info: Font family 'EBGaramond(4)' created for font 'EB
+(fontspec)             Garamond' with options
+(fontspec)             [Ligatures=TeX,Numbers=OldStyle,Ligatures={Common,
+(fontspec)             TeX},Scale=1.0,RawFeature=+tnum].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.: <->s*[1.0]"EB
+(fontspec)             Garamond/OT:script=latn;language=dflt;+onum;+liga;+tnum;
+mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.: <->s*[1.0]"EB
+(fontspec)             Garamond/OT:script=latn;language=dflt;+onum;+liga;+tnum;
++smcp;mapping=tex-text;"
+(fontspec)             - 'bold' (b/n) with NFSS spec.: <->s*[1.0]"EB
+(fontspec)             Garamond/B/OT:script=latn;language=dflt;+onum;+liga;+tnu
+m;mapping=tex-text;"
+(fontspec)             - 'bold small caps'  (b/sc) with NFSS spec.:
+(fontspec)             <->s*[1.0]"EB
+(fontspec)             Garamond/B/OT:script=latn;language=dflt;+onum;+liga;+tnu
+m;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.: <->s*[1.0]"EB
+(fontspec)             Garamond/I/OT:script=latn;language=dflt;+onum;+liga;+tnu
+m;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.0]"EB
+(fontspec)             Garamond/I/OT:script=latn;language=dflt;+onum;+liga;+tnu
+m;+smcp;mapping=tex-text;"
+(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->s*[1.0]"EB
+(fontspec)             Garamond/BI/OT:script=latn;language=dflt;+onum;+liga;+tn
+um;mapping=tex-text;"
+(fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.:
+(fontspec)             <->s*[1.0]"EB
+(fontspec)             Garamond/BI/OT:script=latn;language=dflt;+onum;+liga;+tn
+um;+smcp;mapping=tex-text;"
+
+LaTeX Font Info:    Font shape `TU/EBGaramond(4)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 11.
+LaTeX Font Info:    Font shape `TU/EBGaramond(4)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 13.
 ) [50
 
 
@@ -2505,10 +2422,6 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [66]
-
-LaTeX Warning: Reference `sec:bfs_search' on page 67 undefined on input line 57
-5.
-
 [67] [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2632,9 +2545,6 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 100--100
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 
@@ -2643,24 +2553,19 @@ Package rerunfilecheck Warning: File `dissertation.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `dissertation.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3A76F60BDA33CF210527E7BCE75CD12D;5637.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                dissertation
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Before: 3A76F60BDA33CF210527E7BCE75CD12D;5637
+(rerunfilecheck)             After:  6B4D713B7743C07066C966EEDD68AE3E;5637.
 Package logreq Info: Writing requests to 'dissertation.run.xml'.
 \openout1 = `dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52371 strings out of 411335
- 1194486 string characters out of 2837817
- 2131858 words of memory out of 3000000
- 71888 multiletter control sequences out of 15000+600000
- 410750 words of font info for 131 fonts, out of 8000000 for 9000
+ 52458 strings out of 411335
+ 1196901 string characters out of 2837817
+ 2160132 words of memory out of 3000000
+ 71944 multiletter control sequences out of 15000+600000
+ 410766 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,8n,133p,1252b,5426s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,11n,133p,1252b,5425s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (84 pages).
+Output written on dissertation.pdf (85 pages).

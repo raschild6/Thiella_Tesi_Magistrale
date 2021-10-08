@@ -3,9 +3,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{II}{section*.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Figures}{IV}{chapter*.4}%
+\contentsline {chapter}{List of Figures}{V}{chapter*.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{List of Tables}{V}{chapter*.5}%
+\contentsline {chapter}{List of Tables}{VI}{chapter*.5}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -37,7 +37,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Knowledge Base in Atomese}{30}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Actions in Atomese}{32}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Actions in Atomese}{33}{section.3.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}The Algorithm}{40}{chapter.4}%
 \defcounter {refsection}{0}\relax 
@@ -75,4 +75,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {7.4}NLP Rules}{68}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{73}{section*.21}%
+\contentsline {chapter}{Bibliografia}{73}{section*.22}%
