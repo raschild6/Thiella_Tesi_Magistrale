@@ -88,7 +88,7 @@ The last figures represent the execution of the test in the simulated environmen
 	\item The final step, where the cubes are manually replaced with a single one that will be stacked on blockA, is omitted
 \end{enumerate}
 	
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockA Assembly Process}\label{tab:ass_A_1}
   \medskip
@@ -128,7 +128,7 @@ No. Iters. & 401 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockA Move Process}\label{tab:ass_A_2}
   \medskip
@@ -142,7 +142,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footnote{\ref{note_fixed} The additional information about table, workbench, PurpleBin, GreenBin, RedBin, BlueBin, YellowBin are not rewritten because they remain identical to those listed in Table \ref{tab:ass_table}} \\
 & The SnapRing1 is on the SnapRing2. \\
 & The BearingSleeve1 is on the BearingSleeve2. \\
 \rowcolor{gray!25}
@@ -156,7 +156,7 @@ No. Iters. & 3 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockB Assembly Process 1}\label{tab:ass_B_1}
   \medskip
@@ -170,7 +170,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The SnapRing1 is on the SnapRing2. \\
 & The BearingSleeve1 is on the BearingSleeve2. \\
 \rowcolor{gray!25}
@@ -188,7 +188,7 @@ No. Iters. & 493 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockB Assembly Process 2}\label{tab:ass_B_2}
   \medskip
@@ -202,7 +202,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The SnapRing1 is on the workbench. \\
 & The BearingSleeve1 is on the SnapRing1. \\
 \rowcolor{gray!25}
@@ -221,7 +221,7 @@ No. Iters. & 343 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockB Assembly Process 3}\label{tab:ass_B_3}
   \medskip
@@ -235,7 +235,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The SnapRing1 is on the workbench. \\
 & The BearingSleeve1 is on the SnapRing1. \\
 & The RecirculatingBallSleeve is on the BearingSleeve1. \\
@@ -251,7 +251,7 @@ No. Iters. & 3 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockB Move Process}\label{tab:ass_B_4}
   \medskip
@@ -263,7 +263,7 @@ No. Iters. & 3 \\
 Objects List &  BlockA, BlockB, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 \rowcolor{gray!25}
 Request & The BlockB is on the BlockA. \\
 Solution & (pickup (ConceptNode "BlockB")) \\
@@ -275,7 +275,7 @@ No. Iters. & 2 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockC Assembly Process 1}\label{tab:ass_C_1}
   \medskip
@@ -289,7 +289,7 @@ Objects List &  BlockA, BlockB, TCEIScrew, UpperBearingBracket, \\
 & RotatingBalancerSupport, Bearing, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The BlockB is on the BlockA. \\
 \rowcolor{gray!25}
 Request & The UpperBearingBracket is on the BlockC. \\
@@ -310,7 +310,7 @@ No. Iters. & 5853 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockC Assembly Process 2}\label{tab:ass_C_2}
   \medskip
@@ -324,7 +324,7 @@ Objects List &  BlockA, BlockB, TCEIScrew, UpperBearingBracket, \\
 & RotatingBalancerSupport, Bearing, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The BlockB is on the BlockA. \\
 & The UpperBearingBracket is on the BlockC. \\
 & The Bearing is on the UpperBearingBracket. \\
@@ -341,7 +341,7 @@ No. Iters. & 2 \\
 \end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[!htbp]
   \centering
   \caption{BlockC Move Process}\label{tab:ass_C_3}
   \medskip
@@ -353,7 +353,7 @@ No. Iters. & 2 \\
 Objects List &  BlockA, BlockB, BlockC, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnotemark{} \\
+Additional Info. & \footref{note_fixed} \\
 & The BlockB is on the BlockA. \\
 \rowcolor{gray!25}
 Request & The BlockC is on the BlockB. \\
@@ -366,9 +366,7 @@ No. Iters. & 3 \\
 \end{tabular}
 \end{table}
 
-\footnotetext{table, workbench, PurpleBin, GreenBin, RedBin, BlueBin, YellowBin}
-
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.25
 \textwidth]{figures/Magistrale/BRF_draw}
@@ -376,7 +374,7 @@ No. Iters. & 3 \\
 \label{fig:brf_draw}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_1}
@@ -384,7 +382,7 @@ No. Iters. & 3 \\
 \label{fig:ass_obj_1}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_2}
@@ -392,7 +390,7 @@ No. Iters. & 3 \\
 \label{fig:ass_obj_2}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_3}
@@ -400,7 +398,7 @@ No. Iters. & 3 \\
 \label{fig:ass_obj_3}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_1}
@@ -408,7 +406,7 @@ No. Iters. & 3 \\
 \label{fig:ass_1}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_2}
@@ -416,7 +414,7 @@ No. Iters. & 3 \\
 \label{fig:ass_2}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_3}
@@ -424,7 +422,7 @@ No. Iters. & 3 \\
 \label{fig:ass_3}}
 \end{figure} 
 
-\begin{figure} [h]
+\begin{figure} [!htbp]
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_4}
@@ -438,5 +436,8 @@ No. Iters. & 3 \\
 For this project, it is used a computer with Intel(R) Core(TM) i5-9300H CPU, NVIDIA GeForce GTX 1650 Max-Q graphics card and 8GB of RAM. 
 The operating system, Ubuntu 18.04, is installed on an external SSD connected with the USB 3.1 standard. \\
 The main performance issue comes from this setup. As described in the previous sections, the AtomSpace is an in-RAM knowledge representation database, which means it is completely contained in RAM. In addition, running the Ubuntu system on an external SSD also increases RAM occupancy. 
-The combination of these factors constantly pushes RAM to the limit and the swap area does not work effectively, as data must pass through a USB connection, severely degrading performance. \\
-Another aspect is the design of OpenCog: first of all, it is still in the development phase and it is only a few years since important considerations on the performance side are being made.
+The combination of these factors constantly pushes RAM to the limit and the Swap Area does not work effectively, as data must be transferred through a USB connection, significantly degrading performance. \\
+Another point is the design of OpenCog: it is still in the development phase and it is only a few years since important considerations on the performance side are being made. 
+The OpenCog team believes it has reached a point where it is necessary to improve the performance of the system, such as increasing the speed of creating and removing atoms from AtomSpace, decreasing memory occupation and improving the use of Distributed AtomSpaces (refer to the last paragraph of Section \ref{sec:atomese}), before proceeding with the AGI-directed architecture. \\
+These are the reasons why the assemblies of BlockB and BlockC were splitted and why the execution times are fairly high despite the simplicity of the request.
+Regarding the latter, however, it is not just a hardware problem, the OpenCog system is not focused on speed of resolution, rather it is trying to deal with the generality of the AGI problem. Thus, it will not achieve the best execution times, but it may be able to describe a much larger set of elements than all TAMP (Task and Motion Planning) systems.
