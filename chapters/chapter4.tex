@@ -82,12 +82,12 @@ The last figures represent the execution of the test in the simulated environmen
 \begin{enumerate}
 	\item The test starts with Figure \ref{fig:ass_1}
 	\item In Figure \ref{fig:ass_2}, the components of BlockA are assembled on top of the workbench 
-	\item They are manually replaced with a single cube, and finally it is moved over the table
+	\item Their respective cubes are manually replaced with a single cube (the yellow one), and finally it is moved over the table
 	\item Next, the first two components of BlockB are stacked (first split, Table \ref{tab:ass_B_1}) as in Figure \ref{fig:ass_3}
 	\item Finally in Figure \ref{fig:ass_4}, the second two components (second split, Table \ref{tab:ass_B_2}) and then the last one (third split, Table \ref{tab:ass_B_3}) are assembled. 
-	\item The final step, where they are manually replaced with a single cube that will be stacked on blockA, is omitted
+	\item The final step, where the cubes are manually replaced with a single one that will be stacked on blockA, is omitted
 \end{enumerate}
-
+	
 \begin{table}[htbp]
   \centering
   \caption{BlockA Assembly Process}\label{tab:ass_A_1}
@@ -142,7 +142,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The SnapRing1 is on the SnapRing2. \\
 & The BearingSleeve1 is on the BearingSleeve2. \\
 \rowcolor{gray!25}
@@ -170,7 +170,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The SnapRing1 is on the SnapRing2. \\
 & The BearingSleeve1 is on the BearingSleeve2. \\
 \rowcolor{gray!25}
@@ -202,7 +202,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The SnapRing1 is on the workbench. \\
 & The BearingSleeve1 is on the SnapRing1. \\
 \rowcolor{gray!25}
@@ -235,7 +235,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The SnapRing1 is on the workbench. \\
 & The BearingSleeve1 is on the SnapRing1. \\
 & The RecirculatingBallSleeve is on the BearingSleeve1. \\
@@ -263,7 +263,7 @@ No. Iters. & 3 \\
 Objects List &  BlockA, BlockB, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 \rowcolor{gray!25}
 Request & The BlockB is on the BlockA. \\
 Solution & (pickup (ConceptNode "BlockB")) \\
@@ -289,7 +289,7 @@ Objects List &  BlockA, BlockB, TCEIScrew, UpperBearingBracket, \\
 & RotatingBalancerSupport, Bearing, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The BlockB is on the BlockA. \\
 \rowcolor{gray!25}
 Request & The UpperBearingBracket is on the BlockC. \\
@@ -324,7 +324,7 @@ Objects List &  BlockA, BlockB, TCEIScrew, UpperBearingBracket, \\
 & RotatingBalancerSupport, Bearing, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The BlockB is on the BlockA. \\
 & The UpperBearingBracket is on the BlockC. \\
 & The Bearing is on the UpperBearingBracket. \\
@@ -353,7 +353,7 @@ No. Iters. & 2 \\
 Objects List &  BlockA, BlockB, BlockC, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & *** \\
+Additional Info. & \footnotemark{} \\
 & The BlockB is on the BlockA. \\
 \rowcolor{gray!25}
 Request & The BlockC is on the BlockB. \\
@@ -366,11 +366,13 @@ No. Iters. & 3 \\
 \end{tabular}
 \end{table}
 
+\footnotetext{table, workbench, PurpleBin, GreenBin, RedBin, BlueBin, YellowBin}
+
 \begin{figure} [h]
 \centering
 \includegraphics[width=0.25
 \textwidth]{figures/Magistrale/BRF_draw}
-\caption[Assembly Diagram]{
+\caption[Final Assembly Sketch]{Drawing of the complete assembly that has been carried out, corresponding to a part of the BNP orthogonal torque reaction arms.
 \label{fig:brf_draw}}
 \end{figure} 
 
@@ -378,7 +380,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_1}
-\caption[BlockA Assembly]{Assembly of BlockA
+\caption[BlockA Assembly]{Assembly layout of BlockA
 \label{fig:ass_obj_1}}
 \end{figure} 
 
@@ -386,7 +388,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_2}
-\caption[BlockB Assembly]{Assembly of BlockB
+\caption[BlockB Assembly]{Assembly layout of BlockB
 \label{fig:ass_obj_2}}
 \end{figure} 
 
@@ -394,7 +396,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_obj_3}
-\caption[BlockC Assembly]{Assembly of BlockC
+\caption[BlockC Assembly]{Assembly layout of BlockC
 \label{fig:ass_obj_3}}
 \end{figure} 
 
@@ -402,7 +404,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_1}
-\caption[Initial Assembly Test Environment]{
+\caption[Initial Assembly Test Environment]{Initial arrangement of objects in the various bins, before the robot begins the perception phase.
 \label{fig:ass_1}}
 \end{figure} 
 
@@ -410,7 +412,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_2}
-\caption[BlockA Assembly Simulation]{
+\caption[BlockA Assembly Simulation]{Assembly of BlockA on the workbench completed. 
 \label{fig:ass_2}}
 \end{figure} 
 
@@ -418,7 +420,7 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_3}
-\caption[First Part of BlockB Assembly Simulation]{
+\caption[First Part of BlockB Assembly Simulation]{BlockA moved over the table and first part of BlockB completed
 \label{fig:ass_3}}
 \end{figure} 
 
@@ -426,14 +428,15 @@ No. Iters. & 3 \\
 \centering
 \includegraphics[width=0.6
 \textwidth]{figures/Magistrale/ass_4}
-\caption[Second Part of BlockB Assembly Simulation]{
+\caption[Second Part of BlockB Assembly Simulation]{Assembly of BlockB on the workbench completed. 
 \label{fig:ass_4}}
 \end{figure} 
 
 
 \section{Performance Considerations}\label{sec:perf_consid}
 
-This project performs very simple tasks, since it only uses actions that pick up or place an object. 
-It also uses a deprecated version to do NLP, which contains bugs and is limited in its logical understanding of sentences.
-Consequently 
-
+For this project, it is used a computer with Intel(R) Core(TM) i5-9300H CPU, NVIDIA GeForce GTX 1650 Max-Q graphics card and 8GB of RAM. 
+The operating system, Ubuntu 18.04, is installed on an external SSD connected with the USB 3.1 standard. \\
+The main performance issue comes from this setup. As described in the previous sections, the AtomSpace is an in-RAM knowledge representation database, which means it is completely contained in RAM. In addition, running the Ubuntu system on an external SSD also increases RAM occupancy. 
+The combination of these factors constantly pushes RAM to the limit and the swap area does not work effectively, as data must pass through a USB connection, severely degrading performance. \\
+Another aspect is the design of OpenCog: first of all, it is still in the development phase and it is only a few years since important considerations on the performance side are being made.
