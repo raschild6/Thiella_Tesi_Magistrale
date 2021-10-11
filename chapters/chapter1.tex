@@ -33,20 +33,19 @@ The essential principles of Cognitive Synergy Theory (CST) can be summarized in 
 These points are implicit in the systems theory of mind given in \cite{goertzel2006the}, where more thorough characterizations of these ideas can be found.\\
 Interactions as mentioned in Points 4 and 5 are the conceptual core of CST. \\
 Most AI algorithms suffer from combinatorial explosions. In a “general intelligence” context, there is a lack of intrinsic constraint; consequently, the algorithms are unable to filter through all the possibilities (as opposed to a ANI problem like chessplaying, where the context is huge but constrained and hence restricts the scope of possible combinations that needs to be considered). \\
-To decrease the severity of combinatorial explosions, one can use an AGI architecture based on CST, in which the different learning mechanisms dealing with a certain sort of knowledge, are designed to synergize with ones dealing with other sorts of knowledge. \\
+To decrease the severity of combinatorial explosions, a CST-based AGI architecture can be used, in which several learning mechanisms, dealing with different types of knowledge, are designed to synergize with each other. \\
 It is necessary that each learning mechanism recognizes when it is \enquote{blocked}. Then, it can ask for help to the other complementary cognitive mechanisms. \\
-Figure \ref{fig:cognitive_processes} is proposed to give a general visual idea of these concepts. It shows an overview of the most important cognitive dynamics considered in CST and describes the behavior of a system as it pursues a set of goals, which are then refined by inference (through a logic engine or as an emergent process resulting from the dynamics of an Neural Network system), aided by other processes. \\
-
+Figure \ref{fig:cognitive_processes} is proposed to give a general visual idea of these concepts. It shows an overview of the most important cognitive dynamics considered in CST and describes the behavior of a system. This behavior pursues a set of goals, which are then refined by inference, aided by other processes. The term \enquote{Inference} here is no commitment to explicit use of a logic engine and it could just be carried out as an emergent process resulting from the dynamics of an Neural Network system. \\
 
 \begin{figure} [h]
 \centering
 \includegraphics[width=0.7
 \textwidth]{figures/Magistrale/04 - cognitive_processes_and_memory}
-\caption[Cognitive Processes.]{A high-level overview of the main types of cognitive process considered in Cognitive Synergy Theory, categorized according to the type of knowledge with which each process deals.
+\caption[Cognitive Processes.]{A high-level overview of the main types of cognitive process considered in Cognitive Synergy Theory, categorized according to the type of knowledge with which each process deals. \\Image source: \cite{inproceedings_cognitive_synergy}.
 \label{fig:cognitive_processes}}
 \end{figure} 
 
-The detailed argument explaining how the cognitive algorithm selection and integration methods, chosen by the OpenCog team, will have the desired effect, is sketched on the OpenCog wiki site\footnotemark{} and various previously-published conference papers. It has been presented more thoroughly in the 2014 books Engineering General Intelligence vol. 1 and 2 \cite{DBLP:series/atlantis/GoertzelPG14, DBLP:series/atlantis/GoertzelPG14a}.
+The detailed argument explaining the choices made by the OpenCog team concerning cognitive algorithm selection and integration methods is sketched on the OpenCog wiki site\footnotemark{} and various previously-published conference papers. It has been presented more thoroughly in the 2014 books Engineering General Intelligence vol. 1 and 2 \cite{DBLP:series/atlantis/GoertzelPG14, DBLP:series/atlantis/GoertzelPG14a}.
 \footnotetext{\url{https://wiki.opencog.org/w/Background_Publications}}
 
 \section{The OpenCog Architecture}\label{sec:opencog_architecture}
@@ -130,7 +129,7 @@ Figure \ref{fig:metagraph_table} shows the result.
 \end{figure}
 
 For convenience, the name \enquote{Atom} is given to something that is either a node or a link. Then, Links are sets of atoms. \\
-These concepts are described in \cite{Vep20a, metagraph_app}, where RAM-usage considerations, reasons why metagraphs offer more efficient, more flexible and more powerful ways of representing graphs and reasons why a metagraph store is better than a graph store and much more, can also be found. \\
+These concepts, along with considerations of RAM usage, reasons why metagraphs provide more efficient, more flexible and more powerful ways of representing graphs, reasons why a metagraph store is better than a graph store, and more, are described in \cite{Vep20a, metagraph_app}.
 
 Finally, some extensions of the metagraph are considered: Typed Metagraph (TMG) and Directed Typed Metagraph (DTMG). \\
 TMG are defined as hypergraphs with types assigned to hyperedges and their targets, and the potential to have targets of hyperedges connect to whole links, as well as targets. 
@@ -166,7 +165,8 @@ The vertices (nodes) and edges (links) of a graph (metagraph), known as Atoms, a
 Atoms are one of the main components of the AtomSpace. Atoms, together with Values are what the AtomSpace stores.  \\
 The two primary types of Atoms are Nodes and Links. They are used to represent anything that resembles a graph-theoretical graph. \\
 From the TMG definition above, Atoms are typed (in the sense of Type Theory) and thus, they can be used to store a large variety of information. 
-Values are used to assign \enquote{valuations} to Atoms to indicate the truth or likelihood of that Atom, or to hold other kinds of transient data. Every Atom has a key-value database attached to it, that can store any kind of information about that Atom. The distinction between the \enquote{shape of the graph} and its related \enquote{data} is central for allowing high-speed graph traversal and generalized graph query. Note that the name \enquote{Atom} was chosen because of the resemblance of OpenCog Atoms to the concept of atoms in mathematical logic. Moreover, in Ruby and Prolog programming languages, symbols are literally called atoms; in both LISP and Guile, allow parameters to be attached to symbols, as Values can be attached to Atoms. (TODO: ADD REFS)\\ 
+Values are used to assign \enquote{valuations} to Atoms to indicate the truth or likelihood of that Atom, or to hold other kinds of transient data. Every Atom has a key-value database attached to it, that can store any kind of information about that Atom. The distinction between the \enquote{shape of the graph} and its related \enquote{data} is central for allowing high-speed graph traversal and generalized graph query. Note that the name \enquote{Atom} was chosen because of the resemblance of OpenCog Atoms to the concept of atoms in mathematical logic. Moreover, in Ruby and Prolog programming languages, symbols are literally called atoms \cite{wilson_2020}; in both LISP and Guile, allow parameters to be attached to symbols \cite{Lisp, lisp_symbols, starynkevitch_2019}, as Values can be attached to Atoms. \\ 
+% in Ruby sono chiamati atomi nel linguaggio comune,  symbols come from Lisp and are considered a form of atoms
 
 When an atom is placed in the AtomSpace, it becomes unique: it gets a single, unique ID. Thus, in comparison to other programming languages\footnotemark{}, Atoms can be understood to be the same thing as symbols. The AtomSpace is essentially a symbol table, which commonly has the unique-symbols property. \footnotetext{Section \ref{sec:atomese} explains why it is possible to talk about programming languages}\\
 The atom ID is the string name of a Node and the outgoing set of a Link. Specifically: Nodes are identified by their names or labels, that is the only property that they have. Links are identified by their contents, which are ordered or unordered sets of other atoms. Links do not have any name or label other than their contents: a link is uniquely identified by it's type and it's contents.\\
@@ -179,7 +179,7 @@ All TruthValues (tv) expose at least two parameters, representative of the Simpl
 \end{enumerate}
 
 The set of types forms a type hierarchy: all atoms inherit from the type \enquote{Atom}, and the type Atom itself inherits from ProtoAtom. The ProtoAtom is itself the base type for Values as well as Atoms.
-The atom type category site\footnotemark{} lists all documented theorized, proposed, currently in use, deprecated and obsolete atoms. \\
+The atom type category site\footnotemark{} contains documentation of all atoms that are currently in use and that have been theorised, proposed, deprecated and labelled as obsolete.
 It is not a complete list: new types are easily invented, and the various OpenCog books mention Atom types that are not implemented or have been implemented in a different way. This reflects a more general point: the specific collection of Atom types in an OpenCog system is bound to change as the system is developed and experimented with. In the current system, it does not necessarily have a profound and lasting significance. \footnotetext{\url{https://wiki.opencog.org/w/Category:Atom_Types}}\\
 
 A descriptive list of the main types of atoms used for this project follows:

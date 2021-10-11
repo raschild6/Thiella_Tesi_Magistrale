@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  11 OCT 2021 14:17
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  11 OCT 2021 16:16
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1841,10 +1841,6 @@ Overfull \hbox (1.23131pt too wide) in paragraph at lines 18--20
 ow Intelligence (ANI or Narrow-
  []
 
-
-LaTeX Warning: Citation 'dambrot2019symbiotic' on page 2 undefined on input lin
-e 28.
-
 [2]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 45.
@@ -1852,12 +1848,6 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 46.
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 46.
-
-Overfull \hbox (1.03531pt too wide) in paragraph at lines 48--52
-\TU/EBGaramond(2)/m/n/12 its AI system that translates natural language to code
- [[][]9[][]], CLIP (Contrastive Language-Image
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 48--52
 
@@ -1940,30 +1930,24 @@ File: figures/Magistrale/04 - cognitive_processes_and_memory.png Graphic file (
 type bmp)
 <figures/Magistrale/04 - cognitive_processes_and_memory.png>
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 8.33328pt on input line 50.
+(Font)              scaled to size 8.33328pt on input line 49.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceCodePro' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-
-Overfull \hbox (13.76494pt too wide) in paragraph at lines 49--51
-\TU/EBGaramond(2)/m/n/12 methods, chosen by the OpenCog team, will have the des
-ired effect, is sketched on the OpenCog
- []
-
-[9]
-Overfull \hbox (7.13611pt too wide) in paragraph at lines 59--64
+ [9]
+Overfull \hbox (7.13611pt too wide) in paragraph at lines 58--63
 \TU/EBGaramond(2)/m/n/12 More specifically, the OpenCog AtomSpace is an in-RAM 
 knowledge representation database,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 59--64
+Underfull \hbox (badness 10000) in paragraph at lines 58--63
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
+Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
@@ -1971,7 +1955,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
 File: figures/Magistrale/atomspace_table.png Graphic file (type bmp)
 <figures/Magistrale/atomspace_table.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
 
  []
 
@@ -1993,18 +1977,7 @@ File: figures/Magistrale/metagraph_table.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (0.83289pt too wide) in paragraph at lines 132--134
-\TU/EBGaramond(2)/m/n/12 metagraphs offer more efficient, more flexible and mor
-e powerful ways of representing graphs
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--134
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--138
+Underfull \hbox (badness 10000) in paragraph at lines 134--137
 
  []
 
@@ -2019,7 +1992,7 @@ File: figures/Magistrale/typed_edge.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (3.20888pt too wide) in paragraph at lines 147--154
+Overfull \hbox (3.20888pt too wide) in paragraph at lines 146--153
 \TU/EBGaramond(2)/m/n/12 anamorphisms, histomorphisms, futumorphisms, hylomorph
 isms, chronomorphisms, meta-
  []
@@ -2032,35 +2005,52 @@ File: figures/Magistrale/typed_metapath.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--170
+LaTeX Warning: Citation 'wilson_2020' on page 14 undefined on input line 168.
+
+
+LaTeX Warning: Citation 'neukirchen_2005' on page 14 undefined on input line 16
+8.
+
+
+LaTeX Warning: Citation 'Lisp' on page 14 undefined on input line 168.
+
+
+LaTeX Warning: Citation 'lisp_symbols' on page 14 undefined on input line 168.
+
+
+LaTeX Warning: Citation 'starynkevitch_2019' on page 14 undefined on input line
+ 168.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--169
 
  []
 
 [14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 181--184
+Underfull \hbox (badness 10000) in paragraph at lines 180--183
 
  []
 
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 193.
+(Font)              scaled to size 10.0pt on input line 192.
 (D:\Programmi\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 ) [16] [17]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 240.
+(Font)              scaled to size 6.0pt on input line 239.
  [18] [19]
-Overfull \hbox (4.42892pt too wide) in paragraph at lines 283--284
+Overfull \hbox (4.42892pt too wide) in paragraph at lines 282--283
 []\TU/EBGaramond(2)/m/n/12 Atom types to perform searches over the AtomSpace (J
 oinLink, QueryLink, MeetLink,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
@@ -2070,43 +2060,43 @@ File: figures/Magistrale/atomspace_explorer.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 305--309
+Underfull \hbox (badness 10000) in paragraph at lines 304--308
 
  []
 
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 310--313
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+Underfull \hbox (badness 10000) in paragraph at lines 313--314
 
  []
 
 [21]
-Overfull \hbox (27.28496pt too wide) in paragraph at lines 320--323
+Overfull \hbox (27.28496pt too wide) in paragraph at lines 319--322
 \TU/EBGaramond(2)/m/n/12 mostly built on top of the Pattern Matcher and it is a
 pplicable to rules written in a Scheme/Atomese
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 326--331
+Underfull \hbox (badness 10000) in paragraph at lines 325--330
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 355--359
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 360--361
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 [24]
-Overfull \hbox (0.69417pt too wide) in paragraph at lines 403--404
+Overfull \hbox (0.69417pt too wide) in paragraph at lines 402--403
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][] 
  []
@@ -2116,25 +2106,25 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [25]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 425.
+(Font)              scaled to size 12.0pt on input line 424.
 
-Underfull \hbox (badness 10000) in paragraph at lines 425--428
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 424--427
 
  []
 
 
-Overfull \hbox (8.00142pt too wide) in paragraph at lines 438--441
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+
+Overfull \hbox (8.00142pt too wide) in paragraph at lines 437--440
 \TU/EBGaramond(2)/m/n/12 This converter is called RelEx, a Narrow-AI component 
 of OpenCog. It is an English-language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--441
+Underfull \hbox (badness 10000) in paragraph at lines 437--440
 
  []
 
@@ -2380,24 +2370,10 @@ Overfull \hbox (53.78082pt too wide) in paragraph at lines 99--131
  [][] 
  []
 
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 147.
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 147.
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 175.
-
 
 Overfull \hbox (39.94884pt too wide) in paragraph at lines 165--191
  [][] 
  []
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 207.
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 240.
 
 
 Overfull \hbox (13.32083pt too wide) in paragraph at lines 230--254
@@ -2405,21 +2381,9 @@ Overfull \hbox (13.32083pt too wide) in paragraph at lines 230--254
  []
 
 
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 268.
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 294.
-
-
 Overfull \hbox (47.04082pt too wide) in paragraph at lines 284--313
  [][] 
  []
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 329.
-
-
-LaTeX Warning: Reference `note_fixed' on page 54 undefined on input line 358.
 
 File: figures/Magistrale/BRF_draw.png Graphic file (type bmp)
 <figures/Magistrale/BRF_draw.png>
@@ -2631,7 +2595,7 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 102--102
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[88] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[88] [89] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/chapter4.aux)
 (chapters/conclusion.aux) (chapters/conclusionDue.aux) (chapters/AppendixA.aux)
 )
@@ -2640,9 +2604,6 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
 (rerunfilecheck)             Checksum: 592F963E182FBA51251AABD41067C4D3;6282.
@@ -2656,12 +2617,12 @@ Package logreq Info: Writing requests to 'dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52779 strings out of 411335
- 1204941 string characters out of 2837817
- 2164854 words of memory out of 3000000
+ 52778 strings out of 411335
+ 1204915 string characters out of 2837817
+ 2165836 words of memory out of 3000000
  72249 multiletter control sequences out of 15000+600000
- 410774 words of font info for 134 fonts, out of 8000000 for 9000
+ 410766 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 103i,14n,133p,1252b,5425s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 103i,14n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (97 pages).
+Output written on dissertation.pdf (98 pages).

@@ -1381,8 +1381,8 @@
       \strng{authornamehash}{161e3c89bd9f0fcf72b80f2e99707711}
       \strng{authorfullhash}{161e3c89bd9f0fcf72b80f2e99707711}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-94-6239-026-3}
@@ -1428,8 +1428,8 @@
       \strng{authornamehash}{161e3c89bd9f0fcf72b80f2e99707711}
       \strng{authorfullhash}{161e3c89bd9f0fcf72b80f2e99707711}
       \field{extraname}{2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-94-6239-029-4}
@@ -1537,6 +1537,101 @@
       \endverb
       \verb{url}
       \verb https://arxiv.org/abs/2012.01759
+      \endverb
+    \endentry
+    \entry{wilson_2020}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b97b8d98e0ae5e720ca046591cadcc81}{%
+           family={Wilson},
+           familyi={W\bibinitperiod},
+           given={Bill},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \strng{fullhash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \strng{bibnamehash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \strng{authorbibnamehash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \strng{authornamehash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \strng{authorfullhash}{b97b8d98e0ae5e720ca046591cadcc81}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{The Prolog Dictionary}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://www.cse.unsw.edu.au/~billw/dictionaries/prolog/atom.html
+      \endverb
+      \verb{url}
+      \verb http://www.cse.unsw.edu.au/~billw/dictionaries/prolog/atom.html
+      \endverb
+    \endentry
+    \entry{Lisp}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=ef97c43efdc5a755acd02ac7b9926dfa}{%
+           family={Contributors},
+           familyi={C\bibinitperiod},
+           given={Stack\bibnamedelima Overflow},
+           giveni={S\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \strng{fullhash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \strng{bibnamehash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \strng{authorbibnamehash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \strng{authornamehash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \strng{authorfullhash}{ef97c43efdc5a755acd02ac7b9926dfa}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{common-lisp Tutorial - Functions as first class values}
+      \field{title}{Common-lisp tutorial - functions as First class values}
+      \verb{urlraw}
+      \verb https://sodocumentation.net/common-lisp/topic/1259/functions-as-first-class-values
+      \endverb
+      \verb{url}
+      \verb https://sodocumentation.net/common-lisp/topic/1259/functions-as-first-class-values
+      \endverb
+    \endentry
+    \entry{lisp_symbols}{misc}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{title}{LISP Tutorial}
+      \verb{urlraw}
+      \verb https://www.tutorialspoint.com/lisp/lisp_symbols.htm
+      \endverb
+      \verb{url}
+      \verb https://www.tutorialspoint.com/lisp/lisp_symbols.htm
+      \endverb
+    \endentry
+    \entry{starynkevitch_2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9b6d1f55693012956c277f7520af8828}{%
+           family={Starynkevitch},
+           familyi={S\bibinitperiod},
+           given={Basile},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b6d1f55693012956c277f7520af8828}
+      \strng{fullhash}{9b6d1f55693012956c277f7520af8828}
+      \strng{bibnamehash}{9b6d1f55693012956c277f7520af8828}
+      \strng{authorbibnamehash}{9b6d1f55693012956c277f7520af8828}
+      \strng{authornamehash}{9b6d1f55693012956c277f7520af8828}
+      \strng{authorfullhash}{9b6d1f55693012956c277f7520af8828}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{A Guile/scheme mini-tutorial for linux developers (2)}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb http://starynkevitch.net/Basile/guile-tutorial-2.html
+      \endverb
+      \verb{url}
+      \verb http://starynkevitch.net/Basile/guile-tutorial-2.html
       \endverb
     \endentry
     \entry{goertzel2008probabilistic}{book}{}
@@ -1830,8 +1925,8 @@
       \strng{authorbibnamehash}{b6672240c8c6757a029975c2f947a068}
       \strng{authornamehash}{b6672240c8c6757a029975c2f947a068}
       \strng{authorfullhash}{b6672240c8c6757a029975c2f947a068}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenCog}
@@ -1864,8 +1959,8 @@
       \strng{authorbibnamehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
       \strng{authornamehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
       \strng{authorfullhash}{0c298c9a19bea3d90d3c83f1ec57a45e}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{AAAI}
@@ -1886,8 +1981,8 @@
       \strng{authorbibnamehash}{5435da4a0a2b418315a44738d27c0078}
       \strng{authornamehash}{5435da4a0a2b418315a44738d27c0078}
       \strng{authorfullhash}{5435da4a0a2b418315a44738d27c0078}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{AAAI}
@@ -1911,8 +2006,8 @@
       \strng{authorbibnamehash}{8f743eebb2f64f75592e54ba06f94320}
       \strng{authornamehash}{8f743eebb2f64f75592e54ba06f94320}
       \strng{authorfullhash}{8f743eebb2f64f75592e54ba06f94320}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the {IEEE} International Conference on Robotics and Automation ({ICRA})}
@@ -1942,8 +2037,8 @@
       \strng{authorbibnamehash}{8f9eb108db0b2c60537d5a530b64d28a}
       \strng{authornamehash}{8f9eb108db0b2c60537d5a530b64d28a}
       \strng{authorfullhash}{8f9eb108db0b2c60537d5a530b64d28a}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{Proceedings of the {IEEE/RSJ} International Conference on Intelligent Robots and Systems {(IROS)}}
@@ -1992,6 +2087,7 @@
       \field{year}{1999}
     \endentry
   \enddatalist
+  \missing{neukirchen_2005}
 \endrefsection
 \endinput
 
