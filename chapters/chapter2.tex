@@ -23,7 +23,6 @@ First of all, the environment consists of:
 Figure \ref{fig:env_1} illustrates a possible configuration of the environment, which is the one used in this project. \\
 Compared to the state-of-the-art, where the robot arm has to pick and place the blocks and the goal is to build one or more vertical stacks of them, the goal is generalized in a way that any arrangement of the blocks can be achieved. 
 That is, given any initial arrangement of the blocks in the environment, the goal is finding the shortest sequence of actions that the robot has to perform to achieve the target arrangement. \\
-
 To define the implementation, it is first necessary to explain the constraints of this problem:
 
 \begin{itemize}
@@ -35,7 +34,7 @@ To define the implementation, it is first necessary to explain the constraints o
 \end{itemize}
 
 The \textit{Pickup} action is the opposite of \textit{Putdown} and they are used to take/place a block from/on a fixed object. The \textit{Stack} action is the opposite of \textit{Unstack} and they are used to put/take a block on/from another block or a fixed object. \\
-Figure \ref{fig:blocks_example} illustrates an example: consider two blocks (A and B) on a table and block A is \textit{on} block B: to pick up block B, that block must be \textit{clear} and the hand must be free. Initially, block A is \textit{clear}, while B is not (Subfigure 1 of Figure \ref{fig:blocks_example}). Thus, one can do \textit{Unstack} of blocks A and B, getting block B \textit{clear} and block A \textit{in-hand} (Subfigure 2 of Figure \ref{fig:blocks_example}), then do \textit{Putdown} of block A (Subfigure 3 of Figure \ref{fig:blocks_example}) and finally do \textit{Pickup} of block B, achieving the goal (Subfigure 4 of Figure \ref{fig:blocks_example}).
+Figure \ref{fig:blocks_example} illustrates an example. Consider two blocks (A and B) on a table and block A is \textit{on} block B: to pick up block B, that block must be \textit{clear} and the hand must be free. Initially, block A is \textit{clear}, while B is not (Subfigure 1 of Figure \ref{fig:blocks_example}). Thus, one can do \textit{Unstack} of blocks A and B, getting block B \textit{clear} and block A \textit{in-hand} (Subfigure 2 of Figure \ref{fig:blocks_example}), then do \textit{Putdown} of block A (Subfigure 3 of Figure \ref{fig:blocks_example}) and finally do \textit{Pickup} of block B, achieving the goal (Subfigure 4 of Figure \ref{fig:blocks_example}).
 
 \begin{figure} [h]
 \centering
@@ -111,7 +110,7 @@ Before exposing them, Section \ref{sec:PDDL} in Appendix A provides the domain a
 Automated planning and scheduling problems are usually described in the PDDL notation, which is an AI planning language for symbolic manipulation tasks.
 Starting from those definitions of the various actions, one can better understand how they are created in Atomese. \\
 
-Each action used in this project, as in the PDDL notation, requires preconditions and applies effects, which are listed as follow:
+Each action used in this project, as in the PDDL notation, requires preconditions and applies effects, which are described as follow:
 
 \begin{itemize}
 

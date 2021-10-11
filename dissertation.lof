@@ -7,53 +7,53 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Cognitive Processes.}}{9}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Cognitive Processes.}}{10}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Hypergraph edge table}}{11}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Hypergraph edge table}}{12}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Hypergraph as bipartite graph}}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Hypergraph as bipartite graph}}{13}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Directed Acyclic Graph }}{13}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Directed Acyclic Graph }}{14}{figure.caption.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Metagraph link table}}{14}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Metagraph link table}}{15}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Typed Directed Edge}}{14}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Typed Directed Edge}}{15}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Metapath}}{15}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Metapath}}{16}{figure.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.8}{\ignorespaces AtomSpace Explorer }}{21}{figure.caption.16}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Environment Configuration}}{29}{figure.caption.17}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Blocks world example}}{30}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces AtomSpace Explorer }}{22}{figure.caption.16}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Environment Components Description}}{41}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Environment Configuration}}{30}{figure.caption.17}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces BFS Example}}{49}{figure.caption.20}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Blocks world example}}{31}{figure.caption.18}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces BNP Orthogonal Torque Reaction Arms}}{52}{figure.caption.22}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Environment Components Description}}{42}{figure.caption.19}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Final Assembly Sketch}}{59}{figure.caption.32}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces BFS Example}}{50}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces BlockA Assembly}}{59}{figure.caption.33}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces BlockB Assembly}}{60}{figure.caption.34}%
+\contentsline {figure}{\numberline {5.1}{\ignorespaces BNP Orthogonal Torque Reaction Arms}}{53}{figure.caption.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces BlockC Assembly}}{60}{figure.caption.35}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Final Assembly Sketch}}{60}{figure.caption.32}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Initial Assembly Test Environment}}{61}{figure.caption.36}%
+\contentsline {figure}{\numberline {5.3}{\ignorespaces BlockA Assembly}}{60}{figure.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces BlockA Assembly Simulation}}{61}{figure.caption.37}%
+\contentsline {figure}{\numberline {5.4}{\ignorespaces BlockB Assembly}}{61}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces First Part of BlockB Assembly Simulation}}{61}{figure.caption.38}%
+\contentsline {figure}{\numberline {5.5}{\ignorespaces BlockC Assembly}}{61}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Second Part of BlockB Assembly Simulation}}{62}{figure.caption.39}%
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Initial Assembly Test Environment}}{62}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces BlockA Assembly Simulation}}{62}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces First Part of BlockB Assembly Simulation}}{62}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Second Part of BlockB Assembly Simulation}}{63}{figure.caption.39}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

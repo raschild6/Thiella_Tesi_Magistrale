@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  11 OCT 2021 16:16
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  11 OCT 2021 23:45
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1842,25 +1842,35 @@ ow Intelligence (ANI or Narrow-
  []
 
 [2]
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 45.
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 46.
-LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 46.
 
-Underfull \hbox (badness 10000) in paragraph at lines 48--52
+LaTeX Warning: Citation 'DBLP:journals/corr/abs-1804-08229' on page 3 undefined
+ on input line 40.
+
+
+Overfull \hbox (98.56094pt too wide) in paragraph at lines 39--45
+\TU/EBGaramond(2)/m/n/12 ful consideration needs to be given to the selection o
+f language and solver [[]].
+ []
+
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 55.
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 56.
+LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
+(Font)              scaled to size 7.0pt on input line 56.
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
 
-[3]
-Overfull \hbox (1.08093pt too wide) in paragraph at lines 53--58
+
+Overfull \hbox (1.08093pt too wide) in paragraph at lines 63--68
 \TU/EBGaramond(2)/m/n/12 (Deep Neural Networks, Probabilistic Logic Theorem Pro
 ving, Evolutionary Learning, Con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--58
+Underfull \hbox (badness 10000) in paragraph at lines 63--68
 
  []
 
@@ -1869,41 +1879,41 @@ File: figures/Magistrale/02 - neural-networks-development-process.jpg Graphic f
 ile (type bmp)
 <figures/Magistrale/02 - neural-networks-development-process.jpg>
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 78.
+(Font)              scaled to size 10.95pt on input line 88.
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 78.
+(Font)              scaled to size 10.95pt on input line 88.
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/b/n' will be
-(Font)              scaled to size 8.53796pt on input line 78.
+(Font)              scaled to size 8.53796pt on input line 88.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LatoRegular' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/b/n' will be
-(Font)              scaled to size 7.79724pt on input line 78.
+(Font)              scaled to size 7.79724pt on input line 88.
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/n' will be
-(Font)              scaled to size 8.64758pt on input line 78.
+(Font)              scaled to size 8.64758pt on input line 88.
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/n' will be
-(Font)              scaled to size 7.89734pt on input line 78.
+(Font)              scaled to size 7.89734pt on input line 88.
 File: figures/Magistrale/03 - neural-networks-data-process.png Graphic file (ty
 pe bmp)
 <figures/Magistrale/03 - neural-networks-data-process.png>
 File: figures/Magistrale/05 - adversarial-examples.jpg Graphic file (type bmp)
 <figures/Magistrale/05 - adversarial-examples.jpg>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/b/n' will be
-(Font)              scaled to size 9.35669pt on input line 92.
+(Font)              scaled to size 9.35669pt on input line 102.
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/n' will be
-(Font)              scaled to size 9.4768pt on input line 92.
+(Font)              scaled to size 9.4768pt on input line 102.
 
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-) [5] [6]
+[5] [6]) [7]
 \openout2 = `chapters/chapter1.aux'.
 
  (chapters/chapter1.tex
 Chapter 2.
-[7
+[8
 
 
 
@@ -1925,7 +1935,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--39
 
  []
 
-[8]
+[9]
 File: figures/Magistrale/04 - cognitive_processes_and_memory.png Graphic file (
 type bmp)
 <figures/Magistrale/04 - cognitive_processes_and_memory.png>
@@ -1935,7 +1945,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `SourceCodePro' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9]
+ [10]
 Overfull \hbox (7.13611pt too wide) in paragraph at lines 58--63
 \TU/EBGaramond(2)/m/n/12 More specifically, the OpenCog AtomSpace is an in-RAM 
 knowledge representation database,
@@ -1951,7 +1961,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
 
  []
 
-[10]
+[11]
 File: figures/Magistrale/atomspace_table.png Graphic file (type bmp)
 <figures/Magistrale/atomspace_table.png>
 
@@ -1964,7 +1974,7 @@ File: figures/Magistrale/hypergraph_graph.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11]
+[12]
 File: figures/Magistrale/metagraph_graph.png Graphic file (type bmp)
 <figures/Magistrale/metagraph_graph.png>
 
@@ -1984,7 +1994,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--137
 
 Underfull \vbox (badness 1102) has occurred while \output is active []
 
- [12]
+ [13]
 File: figures/Magistrale/typed_edge.png Graphic file (type bmp)
 <figures/Magistrale/typed_edge.png>
 
@@ -1997,7 +2007,7 @@ Overfull \hbox (3.20888pt too wide) in paragraph at lines 146--153
 isms, chronomorphisms, meta-
  []
 
-[13]
+[14]
 File: figures/Magistrale/typed_metapath.png Graphic file (type bmp)
 <figures/Magistrale/typed_metapath.png>
 
@@ -2005,52 +2015,35 @@ File: figures/Magistrale/typed_metapath.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: Citation 'wilson_2020' on page 14 undefined on input line 168.
-
-
-LaTeX Warning: Citation 'neukirchen_2005' on page 14 undefined on input line 16
-8.
-
-
-LaTeX Warning: Citation 'Lisp' on page 14 undefined on input line 168.
-
-
-LaTeX Warning: Citation 'lisp_symbols' on page 14 undefined on input line 168.
-
-
-LaTeX Warning: Citation 'starynkevitch_2019' on page 14 undefined on input line
- 168.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--169
+Underfull \hbox (badness 10000) in paragraph at lines 164--170
 
  []
 
-[14] [15]
-Underfull \hbox (badness 10000) in paragraph at lines 180--183
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
 
  []
 
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 192.
+(Font)              scaled to size 10.0pt on input line 193.
 (D:\Programmi\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [16] [17]
+) [17] [18]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 239.
- [18] [19]
-Overfull \hbox (4.42892pt too wide) in paragraph at lines 282--283
+(Font)              scaled to size 6.0pt on input line 240.
+ [19]
+Overfull \hbox (4.42892pt too wide) in paragraph at lines 283--284
 []\TU/EBGaramond(2)/m/n/12 Atom types to perform searches over the AtomSpace (J
 oinLink, QueryLink, MeetLink,
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
 
  []
 
@@ -2060,43 +2053,43 @@ File: figures/Magistrale/atomspace_explorer.png Graphic file (type bmp)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 304--308
-
- []
-
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 309--312
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 313--314
+Underfull \hbox (badness 10000) in paragraph at lines 305--309
 
  []
 
 [21]
-Overfull \hbox (27.28496pt too wide) in paragraph at lines 319--322
+Underfull \hbox (badness 10000) in paragraph at lines 310--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
+
+ []
+
+[22]
+Overfull \hbox (27.28496pt too wide) in paragraph at lines 320--323
 \TU/EBGaramond(2)/m/n/12 mostly built on top of the Pattern Matcher and it is a
 pplicable to rules written in a Scheme/Atomese
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 325--330
-
- []
-
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 354--358
+Underfull \hbox (badness 10000) in paragraph at lines 326--331
 
  []
 
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 355--359
 
  []
 
 [24]
-Overfull \hbox (0.69417pt too wide) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
+
+ []
+
+[25]
+Overfull \hbox (0.69417pt too wide) in paragraph at lines 403--404
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][] 
  []
@@ -2104,31 +2097,31 @@ Overfull \hbox (0.69417pt too wide) in paragraph at lines 402--403
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [25]
+ [26]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 424.
+(Font)              scaled to size 12.0pt on input line 425.
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--427
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 435--436
+Underfull \hbox (badness 10000) in paragraph at lines 425--428
 
  []
 
 
-Overfull \hbox (8.00142pt too wide) in paragraph at lines 437--440
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+
+ []
+
+
+Overfull \hbox (8.00142pt too wide) in paragraph at lines 438--441
 \TU/EBGaramond(2)/m/n/12 This converter is called RelEx, a Narrow-AI component 
 of OpenCog. It is an English-language
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--440
+Underfull \hbox (badness 10000) in paragraph at lines 438--441
 
  []
 
-[26]) [27]
+) [27] [28]
 \openout2 = `chapters/chapter2.aux'.
 
  (chapters/chapter2.tex
@@ -2145,87 +2138,84 @@ File: figures/Magistrale/env_fin_1.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--26
-
- []
-
-[28
+[29
 
 
 
 
-] [29]
+] [30]
 File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
 <figures/Magistrale/blocks_example.png>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
-(Font)              scaled to size 7.89734pt on input line 45.
+(Font)              scaled to size 7.89734pt on input line 44.
 
-Underfull \hbox (badness 10000) in paragraph at lines 53--55
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 56--57
+Underfull \hbox (badness 10000) in paragraph at lines 52--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
+Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
 [31]
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 87--88
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--113
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
 
-Underfull \vbox (badness 8000) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
- [32]
-[33]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--112
+
+ []
+
+[33] [34]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 10.0pt on input line 182.
- [34] [35]
+(Font)              scaled to size 10.0pt on input line 181.
+ [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
-Underfull \hbox (badness 10000) in paragraph at lines 278--286
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 277--285
 
  []
 
-[37]
-Underfull \hbox (badness 10000) in paragraph at lines 287--289
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 300--305
+Underfull \vbox (badness 4168) has occurred while \output is active []
+
+ [38]
+Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
-[38]) [39]
+[39]) [40]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex
@@ -2240,7 +2230,7 @@ File: figures/Magistrale/env_objs.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[40
+[41
 
 
 
@@ -2250,7 +2240,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
 
-[41]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
@@ -2266,7 +2256,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-[42]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
@@ -2281,25 +2271,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
 
-[43]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 98--104
 
  []
 
-[44]
+[45]
 Overfull \hbox (0.31693pt too wide) in paragraph at lines 124--130
 \TU/EBGaramond(2)/m/n/12 It is necessary to use AtomSpace copies because rule e
 xecution adds and removes atoms
  []
 
-[45] [46] [47]
+[46] [47] [48]
 File: figures/Magistrale/BFS_1_blue.png Graphic file (type bmp)
 <figures/Magistrale/BFS_1_blue.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [48] [49]
+) [49] [50]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
@@ -2353,7 +2343,7 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(4)/b/n' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50
+ [51
 
 
 
@@ -2365,7 +2355,7 @@ File: figures/Magistrale/BRF.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51] [52] [53]
+[52] [53] [54]
 Overfull \hbox (53.78082pt too wide) in paragraph at lines 99--131
  [][] 
  []
@@ -2401,7 +2391,7 @@ File: figures/Magistrale/ass_3.png Graphic file (type bmp)
 <figures/Magistrale/ass_3.png>
 File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 <figures/Magistrale/ass_4.png>
-[54] [55] [56] [57] [58] [59] [60] [61]) [62]
+[55] [56] [57] [58] [59] [60] [61] [62]) [63]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex)
@@ -2410,7 +2400,7 @@ File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 
 (chapters/conclusionDue.tex
 Chapter 6.
-) [63
+) [64
 
 
 
@@ -2428,7 +2418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[64
+[65
 
 
 
@@ -2448,47 +2438,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
 
-[65]
+[66]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[66] [67] [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
+[67] [68] [69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
-[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [72]
+ [71]
+[72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
-[75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [76]
+ [75]
+[76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
-[79] [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [81]
-[82]
+ [79]
+[80] [81]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83])
-[84]
+ [82]
+[83]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [84])
+[85]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.99994pt on input line 101.
 
@@ -2520,7 +2510,7 @@ Overfull \hbox (17.90956pt too wide) in paragraph at lines 102--102
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[85
+[86
 
 
 
@@ -2562,7 +2552,7 @@ Survey”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.
 2116
  []
 
-[86]
+[87]
 Overfull \hbox (0.57768pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 Yuan Gong and Christian Poellabauer. “  An Overview 
 of Vulnerabilities of Voice Con-
@@ -2582,7 +2572,14 @@ t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
 /EBGaramond(2)/m/sc/12 isbn\TU/EBGaramond(2)/m/n/12 :
  []
 
-[87]
+
+Overfull \hbox (4.35509pt too wide) in paragraph at lines 102--102
+\TU/EBGaramond(2)/m/sc/12 url\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [
+] [][][][][][][][][][][][][][][] [] [][][] [] [][][][][][] [][] [][][][] [] [][
+][][][] [] [][][][] [] [][][][][][][][][] [][]
+ []
+
+[88]
 Overfull \hbox (1.64275pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 André Senna. Aug. 2018. \TU/EBGaramond(2)/m/sc/12 ur
 l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
@@ -2595,7 +2592,7 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 102--102
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[88] [89] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[89] [90] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/chapter4.aux)
 (chapters/conclusion.aux) (chapters/conclusionDue.aux) (chapters/AppendixA.aux)
 )
@@ -2606,7 +2603,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 592F963E182FBA51251AABD41067C4D3;6282.
+(rerunfilecheck)             Checksum: 0EC397B7D0B6C961F45143EEF4FEB5B3;6618.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                dissertation
@@ -2617,12 +2614,12 @@ Package logreq Info: Writing requests to 'dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52778 strings out of 411335
- 1204915 string characters out of 2837817
- 2165836 words of memory out of 3000000
- 72249 multiletter control sequences out of 15000+600000
+ 52788 strings out of 411335
+ 1205304 string characters out of 2837817
+ 2167535 words of memory out of 3000000
+ 72259 multiletter control sequences out of 15000+600000
  410766 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (98 pages).
+Output written on dissertation.pdf (99 pages).

@@ -261,6 +261,54 @@
       \verb https://research.aimultiple.com/artificial-general-intelligence-singularity-timing/
       \endverb
     \endentry
+    \entry{DBLP:journals/corr/abs-1804-08229}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fe135d8ef2682096de0a82c07461d16c}{%
+           family={Jiang},
+           familyi={J\bibinitperiod},
+           given={Yuqian},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=32a87172065ad08fcde987f9bc4473f7}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Shiqi},
+           giveni={S\bibinitperiod}}}%
+        {{hash=ba53c526b1a2fc53b09537b9a89bda3c}{%
+           family={Khandelwal},
+           familyi={K\bibinitperiod},
+           given={Piyush},
+           giveni={P\bibinitperiod}}}%
+        {{hash=3f42a499da2cddc0bae71b76c81f7c46}{%
+           family={Stone},
+           familyi={S\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{a92f63380b9d4f5779a7d79fbd1eb168}
+      \strng{fullhash}{99cc370e8cd3bd3f2be3cf6cec250786}
+      \strng{bibnamehash}{a92f63380b9d4f5779a7d79fbd1eb168}
+      \strng{authorbibnamehash}{a92f63380b9d4f5779a7d79fbd1eb168}
+      \strng{authornamehash}{a92f63380b9d4f5779a7d79fbd1eb168}
+      \strng{authorfullhash}{99cc370e8cd3bd3f2be3cf6cec250786}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{An Empirical Comparison of PDDL-based and ASP-based Task Planners}
+      \field{volume}{abs/1804.08229}
+      \field{year}{2018}
+      \verb{eprint}
+      \verb 1804.08229
+      \endverb
+      \verb{urlraw}
+      \verb http://arxiv.org/abs/1804.08229
+      \endverb
+      \verb{url}
+      \verb http://arxiv.org/abs/1804.08229
+      \endverb
+    \endentry
     \entry{DBLP:journals/corr/abs-2107-03374}{article}{}
       \name{author}{58}{}{%
         {{hash=fb15a691583ec94aafe0be6e7da4878f}{%
@@ -562,8 +610,8 @@
       \strng{authorbibnamehash}{2fd8085024f85a70768cd686d429090e}
       \strng{authornamehash}{2fd8085024f85a70768cd686d429090e}
       \strng{authorfullhash}{d55fcd2ce32d5bc2a052c65d4fcbda69}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -650,8 +698,8 @@
       \strng{authorbibnamehash}{ca3baa5a22057195db1c71be39b4c922}
       \strng{authornamehash}{ca3baa5a22057195db1c71be39b4c922}
       \strng{authorfullhash}{de02402f48bd17333411ead3b5ca6de9}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -833,8 +881,8 @@
       \strng{authorbibnamehash}{0884233a667161739ddd01569813457f}
       \strng{authornamehash}{0884233a667161739ddd01569813457f}
       \strng{authorfullhash}{b108601e4cbc36ef53b96ac01974e069}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -869,8 +917,8 @@
       \strng{authorbibnamehash}{356c423e1ae93c707749defec5a34ce7}
       \strng{authornamehash}{356c423e1ae93c707749defec5a34ce7}
       \strng{authorfullhash}{356c423e1ae93c707749defec5a34ce7}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -1901,8 +1949,8 @@
       \strng{authorbibnamehash}{7c162a27477975bdbd4d5a893377eb14}
       \strng{authornamehash}{7c162a27477975bdbd4d5a893377eb14}
       \strng{authorfullhash}{7c162a27477975bdbd4d5a893377eb14}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Term Rewriting and All That}
@@ -2087,7 +2135,6 @@
       \field{year}{1999}
     \endentry
   \enddatalist
-  \missing{neukirchen_2005}
 \endrefsection
 \endinput
 

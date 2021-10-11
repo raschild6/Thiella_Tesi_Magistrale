@@ -31,7 +31,17 @@ The final step that AI could hypothetically achieve is Artificial Super Intellig
 The most important differences, easily deduced from the definitions above, are between ANI and AGI, partly because ASI will only be considered when AGI exists. 
 The timing forecasts and the difficulties of that step can be found in \cite{995_experts_opinions}. \\
 These differences immediately lead into much wider contexts than industry, as AGI seems focused on complex environments such as real-world and human-computer interaction. \\
-However, using an AGI system in an industrial setting can have many benefits:
+However, using an AGI system in an industrial setting can have many benefits, as explained in the next section.
+
+
+\section{Motivation and Challenges}\label{sec:motivation} %% TODO: Magari aggiungi un ref a opencog advantages
+
+In order to design a general purpose planning system, a declarative language for formalizing the domain first needs to be selected, followed by the selection of a suitable solver which supports this language. Many different factors affect this selection process.
+For this reason, careful consideration needs to be given to the selection of language and solver \cite{DBLP:journals/corr/abs-1804-08229}.
+However, in general, these considerations tend, either voluntarily or involuntarily, to restrict the possible domains or to force the description of the domain using only the features supported by the solver.
+In this project, it is proposed to use an AGI-Based system for Task Planning, to generalise as much as possible the domains and the problems to be solved.
+Consequently, the aim of this proposal is to obtain a system capable of solving any manipulation problem that has a domain with four specific actions (see Section \ref{sec:domain_atomese}).  
+That is, a Task Planning system developed starting from the classical blocks world problem, but which is also strongly oriented towards its expansion (e.g., to easily add further actions or more detailed domain description), and from which the following features can be obtained:
 
 \begin{itemize}
 	\item Having a general knowledge base for the robot, which can be shared with other ones;
@@ -94,7 +104,14 @@ Figure \ref{fig:nn_development_process} gives a general idea of a NN development
 \end{figure} 
 
 
-The disadvantages of an NN-based approach like OpenAI have been mentioned. Now, to understand the advantages of a human-like approach like OpenCog, it is necessary to explain the OpenCog system. Therefore, these advantages are postponed to the Section \ref{sec:opencog advantages}. \\
+The disadvantages of an NN-based approach like OpenAI have been mentioned. Now, to understand the advantages of a human-like approach like OpenCog, it is necessary to explain the OpenCog system. Therefore, these advantages are postponed to the Section \ref{sec:opencog_advantages}. \\
 
 \textbf{Update:}
 
+
+
+\section{Contributions}\label{sec:contributions}
+
+Many tests and attempts have been made to achieve this goal. Together with some members of the OpenCog team, different strategies for solving the problem were analysed. The first one tried to be developed was based on inference by Backward Chaining (see Section \ref{sec:ure}), but was abandoned due to conceptual and practical problems. Subsequently, the one proposed in this paper was reached, while the first one was revisited and some solutions to its problems were sketched (Section \ref{sec:future_devel})
+
+Contributions ...
