@@ -6,43 +6,43 @@ As industrial robots become faster, smarter, and cheaper, more and more companie
 Nowadays, robots have a range of applications that cover many different areas. These applications are no longer limited in structured environments, where the robot behavior could be directly specified by a human. \\
 Where early robots blindly followed the same path, and later iterations used lasers or vision systems to detect the orientation of parts and materials, the latest generations of robots can integrate information from multiple sensors and adapt their movements in real time. They can also make use of more powerful computer technology and big data–style analysis. \\
 Advances in artificial intelligence and sensor technologies allow robots to cope with a far greater degree of task-to-task variability. However, their ability to adapt to different tasks is still a long way from a general level of adaptability. \\
-Until now, for example, every industrial robot is designed with a specific purpose. Therefore, a new robot is often needed to perform a new task. Even the most advanced robots, which exploit Neural Networks (NN) and Artificial Intelligence (AI), are unable to easily learn a new task. \\
+Until now, for example, every industrial robot is designed with a specific purpose. Even the most advanced robots, which exploit Neural Networks (NN) and Artificial Intelligence (AI), are unable to easily learn a new task. \\
 It is necessary to design the AI architecture carefully and, to be successful, people must stop misusing the term AI. This term is used by generalizing those that are the three types of AI: Narrow-AI, General-AI, and Super-AI. The distinction between them is the key to technological progress, especially in the robotic field. 
 
 
 \section{Artificial Intelligence}\label{sec:ai}
 
-The following is a brief description of these three AI types, the Articles \cite{davidson_2019, edi_weekly, lawtomated_2020, allan_2018, astute_solutions_2020, bhatia_2021} talk more about this. 
+The following is a brief description of these three AI types, the Articles \cite{davidson_2019, edi_weekly, lawtomated_2020, allan_2018, astute_solutions_2020} talk more about this. 
 
 \begin{enumerate}
 \item Narrow-AI: \\
-Current AI technologies all fall under the Artificial Narrow Intelligence (ANI or Narrow-AI) category, which means they are very good at only one or a few closely related tasks. This type of AI has a limited range of abilities, specifically designed for a narrow use. It is able to reach a level of performance of a human, and even better, but only within this limited field that is its specialty. Examples of ANI include everything from Siri, Face ID and the Google Assistant, to self-driving cars and DeepMind’s board game playing program. This is the only form of AI that has been developed so far.
+Current AI technologies fall under the Artificial Narrow Intelligence (ANI or Narrow-AI) category, which means they are very good at only one or a few closely related tasks. This type of AI has a limited range of abilities, specifically designed for a narrow use. It is able to reach a level of performance of a human, and even better, but only within this limited field that is its specialty. Examples of ANI are Siri, Face ID, Google's assistant, self-driving cars and DeepMind's board game playing program \cite{bhatia_2021}. This is the only form of AI that has been developed so far.
 
 \item General-AI: \\
-The next step after ANI is Artificial General Intelligence (AGI or General-AI), much more similar to human intelligence and not focused on specific tasks. It would be similar to a human mind and in theory, it should be able to think and function like it, being able to make sense of different content, understand issues and decide what is best in a complex situation. 
+The next step after ANI is Artificial General Intelligence (AGI or General-AI), much more similar to human intelligence and not focused on specific tasks. It would be similar to a human mind and, in theory, it should be able to think and function like it, being able to make sense of different content, understand issues, and decide what is best in a complex situation. 
 AGI hasn’t been achieved yet. There isn't the technical capacity of producing something as complex yet, and there is also no certain knowledge of how the human brain actually works either. 
 AGI is a relatively logical and rational future though, and it could be attained at some point if humans develop their knowledge and understanding, as well as technical skills to a high enough level. \\
-An overview of AGI, including important reflections, written by Ben Goertzel, can be found here: \cite{goertzel_AGI}.
+An overview of AGI, including important reflections written by Ben Goertzel, can be found in \cite{goertzel_AGI}.
 
 \item Super-AI: \\
-When AGI is achieved and computers are able to learn independently at a very quick rate, and exponentially improve on their own without human intervention or help, the final step that AI could hypothetically reach is Artificial Super Intelligence (ASI or Super-AI). At this stage AI would be capable of vastly outperforming the best human brains in practically every field. The evolution from AGI to ASI would in theory be fast, since AGI would allow computers to “think” and exponentially improve themselves once they are able to really learn from experience and by trial and error.
+The final step that AI could hypothetically achieve is Artificial Super Intelligence (ASI or Super-AI). This can only happen when AGI will be achieved and computers will be able to learn autonomously at a very fast rate and exponentially improve their capabilities on their own, without human intervention. At this stage, AI would be capable of vastly outperforming the best human brains in practically every field. The evolution from AGI to ASI would in theory be fast, since AGI would allow computers to “think” and exponentially improve themselves once they are able to really learn from experience and by trial and error \cite{dambrot2019symbiotic}.
 \end{enumerate}
 
-The most important differences, easily understood from the definitions above, are between ANI and AGI, partly because ASI will only be considered when AGI exists. 
+The most important differences, easily deduced from the definitions above, are between ANI and AGI, partly because ASI will only be considered when AGI exists. 
 The timing forecasts and the difficulties of that step can be found in \cite{995_experts_opinions}. \\
 These differences immediately lead into much wider contexts than industry, as AGI seems focused on complex environments such as real-world and human-computer interaction. \\
 However, using an AGI system in an industrial setting can have many benefits:
 
 \begin{itemize}
-	\item Having a general knowledge base for the robot, which can be shared with other ones. 
-	\item Use the robot(s) to cover multiple and more complex tasks.
-	\item Make cooperation with humans natural and encourage learning from them.
-	\item Robot(s) is robust to changes in the environment, its state and its task.
-	\item Easier implementation of new modules and their merge into the system.
-	\item Not only maintain, but rather exploit existing Narrow-AI systems as modules of the AGI system, in order to take advantage of their potential and allow interaction between them in a \enquote{single} large knowledge base.
+	\item Having a general knowledge base for the robot, which can be shared with other ones;
+	\item Use the robot(s) to cover multiple and complex tasks;
+	\item Make cooperation with humans operators and encourage learning from them;
+	\item Robot(s) is robust to changes in the environment, its state, and its task;
+	\item Easier implementation of new modules and their merge into the system;
+	\item Not only maintain, but rather exploit, existing Narrow-AI systems as modules of the AGI system to take advantage of their potential and allow interaction between them in a \enquote{single} large knowledge base.
 \end{itemize}
 
-For this project, one of the proto-AGI\footnotemark{} systems currently under research is used, which proposes a concrete system that demonstrates the feasibility of the concepts just listed, and more. \\ 
+For this project, one of the proto-AGI\footnotemark{} systems currently under research is used, which proposes a concrete system that demonstrates the feasibility of the concepts just listed, but aims at a much higher purpose. Being able to go into new situations, understand them and create new patterns of behaviour based on what has been learned. This means being able to deal with situations of a radically different nature from those that existed at the time of its creation. \\
 \footnotetext{Any current theoretical or practical concept about AGI falls into a category that is called proto-AGI for now. However, in this paper the two terms are considered interchangeable.}
 
 There are several projects and researches that want to achieve the AGI goal. One of these is the Elon Musk and Sam Altman's OpenAI Project. 
@@ -56,8 +56,9 @@ On the other hand, OpenCog is founded based on a comprehensive model of human-li
 It is not about building more accurate classification algorithms, or more efficient computer vision systems, or better language processing or boutique information retrieval algorithms, diagnosing diseases, answering trivial questions or driving a car, etc. It is concerned with generic intelligence and the inter-related cognitive processes it entails. It is about making software that perform specific tasks, using structures and processes that appear capable of being extended to more and more general tasks. \\
 The OpenCog system is explained in detail later, in the Chapter \textbf{\ref{cha:opencog_system}}. \\
 
-OpenAI and OpenCog are two distinct ways, both valid. However, we believe that the AGI architecture shouldn't be based on Neural Networks, for several reasons (in addition to the general problems as in \cite{323037}):
-%% forse togli sta citazione
+OpenAI and OpenCog are two distinct ways, both valid. However, we believe that the AGI architecture shouldn't be based on Neural Networks, both because of the general problems as in \cite{323037}, but especially for the following reasons (Figure \ref{fig:disadvantages_nn}):
+
+%Vengono delineati alcuni dei problemi specifici che l'autore ha dovuto affrontare nell'utilizzo delle reti neurali in diverse aree applicative. Riguardano la giustificazione dell'uso delle reti neurali: l'apparente natura ad hoc del metodo; la mancanza di dati di formazione sufficienti; la mancanza di una procedura di convalida accettabile; la necessità di mettere in relazione i pesi della rete con i parametri fisici; le diffuse disparità nei tempi di formazione (tempi di apprendimento) nella risoluzione di problemi apparentemente semplici; la necessità di progressi nell'area dell'implementazione dell'hardware; la necessità di sviluppare sistemi di controllo adattativi basati su prototipi biologici e la necessità di una procedura di sintesi nella ricerca sulle reti neurali.
 
 \begin{itemize}
 	\item A huge amount of data is required. \\

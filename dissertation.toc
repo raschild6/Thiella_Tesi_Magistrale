@@ -11,11 +11,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.1}Artificial Intelligence}{2}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}OpenCog System}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}OpenCog}{7}{chapter.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Cognitive Synergy}{7}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}OpenCog Architecture}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.2}The OpenCog Architecture}{9}{section.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.2.1}Atomspace}{10}{subsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
@@ -63,16 +63,24 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Tests and Results}{50}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{51}{chapter.6}%
+\contentsline {section}{\numberline {5.1}Assembling Objects Test}{50}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Appendix A}{52}{chapter.7}%
+\contentsline {section}{\numberline {5.2}Performance Considerations}{62}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Knowledge Base Examples}{52}{section.7.1}%
+\contentsline {chapter}{\numberline {6}Conclusion}{63}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}PDDL Problem and Domain}{54}{section.7.2}%
+\contentsline {section}{\numberline {6.1}OpenCog Advantages}{63}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Action Rules}{56}{section.7.3}%
+\contentsline {section}{\numberline {6.2}Future Development}{63}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}NLP Rules}{68}{section.7.4}%
+\contentsline {chapter}{\numberline {7}Appendix A}{64}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{73}{section*.22}%
+\contentsline {section}{\numberline {7.1}Knowledge Base Examples}{64}{section.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.2}PDDL Problem and Domain}{66}{section.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.3}Action Rules}{68}{section.7.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {7.4}NLP Rules}{80}{section.7.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliografia}{85}{section*.40}%

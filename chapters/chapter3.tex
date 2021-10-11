@@ -25,7 +25,7 @@ Finally, the main AtomSpace is created and the actions rules are loaded into it.
 \section{Perception Phase}\label{sec:perception}
 
 The perception phase, like the remaining phases, is written in Python code and sends commands via a Python client to the C++ server mentioned above. These commands move the robot and allow it to scan its surrounding area for possible objects (related AprilTags are recognised), thanks to the camera attached to the top of it. \\
-Of each AprilTag found, its associated semantic representation (i.e. English word describing the object, as well as the name of its relative ConceptNode, thus, for example: \enquote{table}, \enquote{workbench}, etc.) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list, found in the environment.
+Of each AprilTag found, its associated semantic representation (i.e., English word describing the object, as well as the name of its relative ConceptNode, thus, for example: \enquote{table}, \enquote{workbench}, etc.) is returned by the server to the client, which in turn returns it to the main Python code that begins the initialization of the objects list, found in the environment.
 
 \section{Learning Phase}\label{sec:learning}
 
@@ -58,7 +58,7 @@ To find a solution, the AtomSpace of the final arrangement must contain every at
 Since each atom is unique in the AtomSpace, two AtomSpaces describing the same arrangement and state of objects have the same atoms, thus they are identical. 
 Consequently, each possible arrangement of objects in the environment can be associated with one and only one AtomSpace, making it a de facto state of a Finite State Machine (FSM).
 Moreover, each of the four actions available to the robot can be seen as a step of this FSM. 
-Starting from a certain state, performing an action leads that state (i.e. that AtomSpace) into a new one. However, from each state, one or more actions can be performed and thus, one or more states can be reached. \\
+Starting from a certain state, performing an action leads that state (i.e., that AtomSpace) into a new one. However, from each state, one or more actions can be performed and thus, one or more states can be reached. \\
 
 One of the best ways to handle this structure is through a tree that has AtomSpaces as tree-nodes (to distinguish them from Nodes in Atomese) and available actions as tree-edges.
 In addition, each tree-node has a label describing the action used, and on which objects, by its parent to create it.
@@ -89,10 +89,10 @@ Instead, following this design simplifies the rules, speeds up the algorithm and
 Some additional parameters are defined to limit and improve the search. As a result, it is possible to use 4 different searches:
 
 \begin{enumerate}
-	\item Search until a first solution is found
-	\item Search restricted to a maximum number of iterations 
-	\item Explore the whole tree
-	\item Quick search
+	\item Search until a first solution is found.
+	\item Search restricted to a maximum number of iterations.
+	\item Explore the whole tree.
+	\item Quick search.
 \end{enumerate}
 
 The quick search finds a solution, decreasing the number of iterations in most situations.
@@ -105,7 +105,7 @@ It still works well for most initial arrangements and goal lists and if it fails
 Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a tree-node. \\
 Furthermore, the first solution found will certainly be the optimal solution, i.e. the solution that uses the minimum number of actions to go from the initial arrangement of objects to the goal one.
 This is because for each tree-node, before being expanded, its AtomSpace is compared with the one of any tree-node belonging to its same branch.
-If a match is found (i.e. they are identical), then the algorithm has come back to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of this tree-node ends.
+If a match is found (i.e., they are identical), then the algorithm has come back to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of this tree-node ends.
 
 
 \subsubsection{Steps of the BFS-Based Algorithm}\label{sec:step_search}
@@ -158,7 +158,7 @@ The following steps provide a simple practical example in order to clarify and c
 \begin{enumerate}
 
 	\item Initial Phase: \\
-Loading environment (Ros, Gazebo, Relex2Logic Server, Cubes, AprilTags, etc.)
+Loading environment (Ros, Gazebo, Relex2Logic Server, Cubes, AprilTags, etc.).
 
 	\item Perception Phase: \\
 Assume that four AprilTags are detected. Assume also that the AprilTags associate tree objects with a semantic meaning corresponding to parts of an industrial product to be assembled and the fourth with \enquote{workbench}. For simplicity in this example, the parts will be called \enquote{screw}, \enquote{bolt} and \enquote{washer}.

@@ -165,8 +165,8 @@
       \strng{authorbibnamehash}{b4f8a9846a9375486d56da321f50cf5c}
       \strng{authornamehash}{b4f8a9846a9375486d56da321f50cf5c}
       \strng{authorfullhash}{b4f8a9846a9375486d56da321f50cf5c}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Analytics India Magazine}
@@ -195,8 +195,8 @@
       \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
       \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenCog}
@@ -207,6 +207,30 @@
       \verb{url}
       \verb https://wiki.opencog.org/w/Artificial_General_Intelligence#:~:text=types%20of%20problems.-,Overview%20of%20AGI,-edit
       \endverb
+    \endentry
+    \entry{dambrot2019symbiotic}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e9199580af8f87ea3997646c437d46dd}{%
+           family={Dambrot},
+           familyi={D\bibinitperiod},
+           given={S\bibnamedelima Mason},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9199580af8f87ea3997646c437d46dd}
+      \strng{fullhash}{e9199580af8f87ea3997646c437d46dd}
+      \strng{bibnamehash}{e9199580af8f87ea3997646c437d46dd}
+      \strng{authorbibnamehash}{e9199580af8f87ea3997646c437d46dd}
+      \strng{authornamehash}{e9199580af8f87ea3997646c437d46dd}
+      \strng{authorfullhash}{e9199580af8f87ea3997646c437d46dd}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mondo Digitale}
+      \field{title}{Symbiotic Autonomous Systems, Digital Twins and Artificial Intelligence: Emergence and Evolution}
+      \field{year}{2019}
+      \field{pages}{8\bibrangedash 11}
+      \range{pages}{4}
     \endentry
     \entry{995_experts_opinions}{misc}{}
       \name{author}{1}{}{%
@@ -222,8 +246,8 @@
       \strng{authorbibnamehash}{c6996972108b0b0fd4a6e33b99346476}
       \strng{authornamehash}{c6996972108b0b0fd4a6e33b99346476}
       \strng{authorfullhash}{c6996972108b0b0fd4a6e33b99346476}
-      \field{sortinit}{3}
-      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{AIMultiple}
@@ -538,8 +562,8 @@
       \strng{authorbibnamehash}{2fd8085024f85a70768cd686d429090e}
       \strng{authornamehash}{2fd8085024f85a70768cd686d429090e}
       \strng{authorfullhash}{d55fcd2ce32d5bc2a052c65d4fcbda69}
-      \field{sortinit}{4}
-      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -626,8 +650,8 @@
       \strng{authorbibnamehash}{ca3baa5a22057195db1c71be39b4c922}
       \strng{authornamehash}{ca3baa5a22057195db1c71be39b4c922}
       \strng{authorfullhash}{de02402f48bd17333411ead3b5ca6de9}
-      \field{sortinit}{5}
-      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -809,8 +833,8 @@
       \strng{authorbibnamehash}{0884233a667161739ddd01569813457f}
       \strng{authornamehash}{0884233a667161739ddd01569813457f}
       \strng{authorfullhash}{b108601e4cbc36ef53b96ac01974e069}
-      \field{sortinit}{6}
-      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -845,8 +869,8 @@
       \strng{authorbibnamehash}{356c423e1ae93c707749defec5a34ce7}
       \strng{authornamehash}{356c423e1ae93c707749defec5a34ce7}
       \strng{authorfullhash}{356c423e1ae93c707749defec5a34ce7}
-      \field{sortinit}{7}
-      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Medium}
@@ -880,8 +904,8 @@
       \strng{authorbibnamehash}{b52d676783ecf6f0a1f947dfe9b8bc7b}
       \strng{authornamehash}{b52d676783ecf6f0a1f947dfe9b8bc7b}
       \strng{authorfullhash}{b52d676783ecf6f0a1f947dfe9b8bc7b}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{1993 First New Zealand International Two-Stream Conference on Artificial Neural Networks and Expert Systems}
@@ -945,8 +969,8 @@
       \strng{authorbibnamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authornamehash}{80f8e6bfc3aff3e75b2807a6f6962740}
       \strng{authorfullhash}{c8c3e9b8f095d055ce92294b35ff475c}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{International Conference on Learning Representations}
@@ -998,8 +1022,8 @@
       \strng{authorbibnamehash}{23de2d798ba9a5a61371e3275f7b780c}
       \strng{authornamehash}{23de2d798ba9a5a61371e3275f7b780c}
       \strng{authorfullhash}{96f4f7c04e0d287cb55f6a8dc1b5e3f2}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -1056,8 +1080,8 @@
       \strng{authorbibnamehash}{9085ed4e8c2d74ca7918f23e1db31d8c}
       \strng{authornamehash}{9085ed4e8c2d74ca7918f23e1db31d8c}
       \strng{authorfullhash}{23c954487dc85bd2a559b6c7506a2cba}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2016 IEEE European Symposium on Security and Privacy (EuroS P)}
@@ -1086,8 +1110,8 @@
       \strng{authorbibnamehash}{5d2585c11210cf1d4512e6e0a03ec315}
       \strng{authornamehash}{5d2585c11210cf1d4512e6e0a03ec315}
       \strng{authorfullhash}{5d2585c11210cf1d4512e6e0a03ec315}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{OpenAI}
@@ -1437,8 +1461,8 @@
       \strng{authorbibnamehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
       \strng{authornamehash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
       \strng{authorfullhash}{e4b4203adb33e0d3e3d6dc851c8f99f2}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Graphs, metagraphs, ram, cpu}
@@ -1469,8 +1493,8 @@
       \strng{authorbibnamehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
       \strng{authornamehash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
       \strng{authorfullhash}{bbffb4d6d4a9a9fbd5e4b2e0ad9be85b}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{978-0-387-37233-4}
@@ -1496,8 +1520,8 @@
       \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
       \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
       \field{extraname}{4}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{eprinttype}{arXiv}
@@ -1821,6 +1845,55 @@
       \verb https://wiki.opencog.org/w/Unified_rule_engine
       \endverb
     \endentry
+    \entry{Gupta1991ComplexityRF}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=15e761617399b4edaf2a8b253954a29b}{%
+           family={Gupta},
+           familyi={G\bibinitperiod},
+           given={Naresh},
+           giveni={N\bibinitperiod}}}%
+        {{hash=421078458c7133ed3265f02c8d2fd2f0}{%
+           family={Nau},
+           familyi={N\bibinitperiod},
+           given={Dana\bibnamedelima S.},
+           giveni={D\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \strng{fullhash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \strng{bibnamehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \strng{authorbibnamehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \strng{authornamehash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \strng{authorfullhash}{0c298c9a19bea3d90d3c83f1ec57a45e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{Complexity Results for Blocks-World Planning}
+      \field{year}{1991}
+    \endentry
+    \entry{Chenoweth1991OnTN}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=5435da4a0a2b418315a44738d27c0078}{%
+           family={Chenoweth},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima V.},
+           giveni={S\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \strng{namehash}{5435da4a0a2b418315a44738d27c0078}
+      \strng{fullhash}{5435da4a0a2b418315a44738d27c0078}
+      \strng{bibnamehash}{5435da4a0a2b418315a44738d27c0078}
+      \strng{authorbibnamehash}{5435da4a0a2b418315a44738d27c0078}
+      \strng{authornamehash}{5435da4a0a2b418315a44738d27c0078}
+      \strng{authorfullhash}{5435da4a0a2b418315a44738d27c0078}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{AAAI}
+      \field{title}{On the NP-Hardness of Blocks World}
+      \field{year}{1991}
+    \endentry
     \entry{olson2011tags}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=8f743eebb2f64f75592e54ba06f94320}{%
@@ -1882,8 +1955,8 @@
       \list{publisher}{1}{%
         {Wikimedia Foundation}%
       }
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wikipedia}
       \field{month}{9}
@@ -1910,8 +1983,8 @@
       \strng{authorbibnamehash}{304533c2b267a0573fb30d7e91ae7d50}
       \strng{authornamehash}{304533c2b267a0573fb30d7e91ae7d50}
       \strng{authorfullhash}{304533c2b267a0573fb30d7e91ae7d50}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{month}{02}

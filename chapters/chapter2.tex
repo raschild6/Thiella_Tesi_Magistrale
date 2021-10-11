@@ -1,15 +1,15 @@
 %!TEX root = ../dissertation.tex
 \chapter{Problem Description} \label{cha:problem_description}
 
-The problem addressed in this project is based on the classic blocks world problem\footnotemark{}. 
+The problem addressed in this project takes inspitaion from the classical blocks world problem\footnotemark{}. 
 \footnotetext{\url{https://en.wikipedia.org/wiki/Blocks_world\#:~:text=In\%20its\%20basic\%20form\%2C\%20the,different\%20sizes\%2C\%20shapes\%20and\%20colors.}}
-The blocks world is a planning domain in artificial intelligence and is used as a toy problem. From an algorithm perspective, it is an NP-Hard search and planning problem.
+The blocks world is a planning domain in artificial intelligence and is used as a toy problem. From an algorithm perspective, it is an NP-Hard search and planning problem \cite{Gupta1991ComplexityRF, Chenoweth1991OnTN}.
 Here, a more general version of it is presented. \\
 First of all, the environment consists of:
 \begin{itemize}
-	\item A robot manipulator, equipped with a video camera
-	\item Blocks (cubes) in the same size, which all have an AprilTag \cite{olson2011tags, wang2016iros} attached to one of the faces
-	\item Zero or more fixed objects, also with AprilTags
+	\item A robot manipulator, equipped with a video camera;
+	\item Blocks (cubes) of the same size, which all have an AprilTag \cite{olson2011tags, wang2016iros} marker attached to one of their faces;
+	\item Zero or more fixed objects, also equipped with the AprilTag markers.
 \end{itemize}
 
 \begin{figure} [h]
@@ -22,21 +22,20 @@ First of all, the environment consists of:
 
 Figure \ref{fig:env_1} illustrates a possible configuration of the environment, which is the one used in this project. \\
 Compared to the state-of-the-art, where the robot arm has to pick and place the blocks and the goal is to build one or more vertical stacks of them, the goal is generalized in a way that any arrangement of the blocks can be achieved. 
-That is, given any initial arrangement of the blocks in the environment, find the shortest sequence of actions that the robot has to perform in order to achieve the required arrangement. \\
+That is, given any initial arrangement of the blocks in the environment, the goal is finding the shortest sequence of actions that the robot has to perform to achieve the target arrangement. \\
 
-In order to define the implementation, it is first necessary to explain the constraints of this problem:
+To define the implementation, it is first necessary to explain the constraints of this problem:
 
 \begin{itemize}
-	\item The robot knows only four actions: \textit{Pickup}, \textit{Putdown}, \textit{Stack}, \textit{Unstack}.
-	\item Each block is \textit{clear} if and only if it has no object on it and is not \textit{in-hand} (i.e., the robot's hand can take it with a single action).
-	\item Each block can be \textit{on} the table, on top of another object or \textit{in-hand}
-	\item The robot's hand may be busy (it is holding a block) or free (it holds nothing)
+	\item The robot knows only four actions: \textit{Pickup}, \textit{Putdown}, \textit{Stack}, \textit{Unstack};
+	\item Each block is \textit{clear} if and only if it has no object on it and is not \textit{in-hand} (i.e., the robot's hand can take it with a single action);
+	\item Each block can be \textit{on} the table, on the top of another object or \textit{in-hand};
+	\item The robot's hand may be busy (it is holding a block) or free (it holds nothing);
 	\item Only one block can be picked up at a time, putting it down before the next. It is not possible to pick up a block that is under another one (because it is not considered \textit{clear}) or to move a fixed object.
 \end{itemize}
 
 The \textit{Pickup} action is the opposite of \textit{Putdown} and they are used to take/place a block from/on a fixed object. The \textit{Stack} action is the opposite of \textit{Unstack} and they are used to put/take a block on/from another block or a fixed object. \\
-Basically these actions mirror physics. \\
-For example, consider two blocks (A and B) on a table and block A is \textit{on} block B: to pick up block B, that block must be \textit{clear} and the hand must be free. Initially, block A is \textit{clear}, while B is not. Thus, one can do \textit{Unstack} of blocks A and B, getting block B \textit{clear} and block A \textit{in-hand}, then do \textit{Putdown} of block A and finally do \textit{Pickup} of block B, achieving the goal. Figure \ref{fig:blocks_example} illustrates these steps. \\
+Figure \ref{fig:blocks_example} illustrates an example: consider two blocks (A and B) on a table and block A is \textit{on} block B: to pick up block B, that block must be \textit{clear} and the hand must be free. Initially, block A is \textit{clear}, while B is not (Subfigure 1 of Figure \ref{fig:blocks_example}). Thus, one can do \textit{Unstack} of blocks A and B, getting block B \textit{clear} and block A \textit{in-hand} (Subfigure 2 of Figure \ref{fig:blocks_example}), then do \textit{Putdown} of block A (Subfigure 3 of Figure \ref{fig:blocks_example}) and finally do \textit{Pickup} of block B, achieving the goal (Subfigure 4 of Figure \ref{fig:blocks_example}).
 
 \begin{figure} [h]
 \centering
@@ -51,10 +50,10 @@ Since it is possible to have more fixed objects (such as tables, workbench, etc.
 
 \section{Knowledge Base in Atomese}\label{sec:env_atomese}
 
-Any aspect of the environment, the problem, the robot or anything else can be represented in the form of atoms, which will populate the AtomSpace (i.e. the hypergraph of the KB). \\
+Any aspect of the environment, the problem, the robot or anything else can be represented in the form of atoms, which will populate the AtomSpace (i.e., the hypergraph of the KB). \\
 There are many different ways of encoding these aspects. The one used in this project is proposed below. \\
 
-Firstly, the Atomese representation of the objects: \\
+Firstly, the Atomese representation of the objects is \\
 \begin{python}
 	(InheritanceLink
 		(ConceptNode "screw")
@@ -64,7 +63,7 @@ Firstly, the Atomese representation of the objects: \\
 		(ConceptNode "table")
 		(ConceptNode "fixed-object"))
 \end{python}
-On a practical (physical) level, the objects will all be cubes, except for the fixed ones. At the conceptual level, a semantic meaning will be associated to the AprilTags of each cube. In this way, and thanks to the AprilTags, it is possible to simplify the perception and manipulation of objects by replacing each different object with a cube. \\
+On a practical (physical) level, the objects will all be cubes, except for the fixed ones. At the conceptual level, a semantic meaning will be associated to the AprilTag marker of each cube. In this way, and thanks to the AprilTags, it is possible to simplify the perception and manipulation of objects by replacing each different object with a cube. \\
 In other words, it will be possible to \enquote{simulate} working with any kind of object, and thus demonstrate the potential of the NLP aspect of this project, leaving out perception and manipulation, which do not concern it at the moment. \\
 For this reason, the code above speaks of \textit{screw} and not \textit{cube\_1}. \\
 
@@ -108,15 +107,15 @@ In Appendix A, Section \ref{sec:KB_examples}, a complete examples have been adde
 \section{Actions in Atomese}\label{sec:domain_atomese}
 Once the atoms relative to the objects have been defined, the robot's actions must also be defined as hypergraphs. 
 From this point on in the paper, these actions will also be called \enquote{rules}, being called rules the ones that are executed within AtomSpace for pattern matching. \\
-Before exposing them, Section \ref{sec:PDDL} in Appendix A, provides the domain and problem in Planning Domain Definition Language (PDDL) notation of the standard block world problem.
+Before exposing them, Section \ref{sec:PDDL} in Appendix A provides the domain and problem in Planning Domain Definition Language (PDDL) notation of the standard block world problem.
 Automated planning and scheduling problems are usually described in the PDDL notation, which is an AI planning language for symbolic manipulation tasks.
 Starting from those definitions of the various actions, one can better understand how they are created in Atomese. \\
 
-Each action used in this project, as in the PDDL notation, requires preconditions and applies effects. Below is a list of these, for each of them:
+Each action used in this project, as in the PDDL notation, requires preconditions and applies effects, which are listed as follow:
 
 \begin{itemize}
 
-	\item \textbf{Pickup} a block from the intial fixed object. \\
+	\item \textbf{Pickup} a block from the initial fixed object. \\
 Preconditions:
 	\begin{itemize}
 		\item block must be clear

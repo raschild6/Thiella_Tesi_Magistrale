@@ -1,17 +1,18 @@
 %!TEX root = ../dissertation.tex
-\chapter{OpenCog System} \label{cha:opencog_system}
+\chapter{OpenCog} \label{cha:opencog_system}
 
 The OpenCog design aims to capture the spirit of the architecture and dynamics of the brain without imitating the details (which are largely unknown) via:
 \begin{itemize}
-	\item Integrating together a carefully selected combination of cognitive algorithms acting on different kinds of knowledge.
-	\item A scalable, robust and flexible C++ software architecture.
+	\item Integrating together a carefully selected combination of cognitive algorithms acting on different kinds of knowledge;
+	\item A scalable, robust and flexible C++ software architecture;
 	\item A manner specifically designed:
 	\begin{itemize}	
-	\item To cooperate together with “cognitive synergy” for the scope of tasks characteristic of human intelligence. 
+	\item To cooperate together with “cognitive synergy” for the scope of tasks characteristic of human intelligence;
 	\item To give rise to the emergence of an effectively functioning knowledge network in the AI system’s mind, as it interacts with the world, including a self-updating hierarchical/heterarchical ontology and models of itself and others.
 	\end{itemize}
 \end{itemize}
-Following section, Section \ref{sec:cognitive_synergy}, elaborates on the new concepts introduced in these points.
+
+The following sections elaborate the concepts introduced in these points.
 
 
 \section{Cognitive Synergy}\label{sec:cognitive_synergy}  %% slide 4 tua presentazione, magari aggiungi le parte in basso
@@ -33,8 +34,8 @@ These points are implicit in the systems theory of mind given in \cite{goertzel2
 Interactions as mentioned in Points 4 and 5 are the conceptual core of CST. \\
 Most AI algorithms suffer from combinatorial explosions. In a “general intelligence” context, there is a lack of intrinsic constraint; consequently, the algorithms are unable to filter through all the possibilities (as opposed to a ANI problem like chessplaying, where the context is huge but constrained and hence restricts the scope of possible combinations that needs to be considered). \\
 To decrease the severity of combinatorial explosions, one can use an AGI architecture based on CST, in which the different learning mechanisms dealing with a certain sort of knowledge, are designed to synergize with ones dealing with other sorts of knowledge. \\
-It is necessary that each learning mechanism recognizes when it is \enquote{blocked} and then, it can ask for help to the other complementary cognitive mechanisms. \\
-The Figure \ref{fig:cognitive_processes} is proposed to give a general visual idea of these concepts. It shows an overview of the most important cognitive dynamics considered in Cognitive Synergy Theory and describes the behavior of a system as it pursues a set of goals, which are then refined by inference (through a logic engine or as an emergent process resulting from the dynamics of an Neural Network system), aided by other processes. \\
+It is necessary that each learning mechanism recognizes when it is \enquote{blocked}. Then, it can ask for help to the other complementary cognitive mechanisms. \\
+Figure \ref{fig:cognitive_processes} is proposed to give a general visual idea of these concepts. It shows an overview of the most important cognitive dynamics considered in CST and describes the behavior of a system as it pursues a set of goals, which are then refined by inference (through a logic engine or as an emergent process resulting from the dynamics of an Neural Network system), aided by other processes. \\
 
 
 \begin{figure} [h]
@@ -48,7 +49,7 @@ The Figure \ref{fig:cognitive_processes} is proposed to give a general visual id
 The detailed argument explaining how the cognitive algorithm selection and integration methods, chosen by the OpenCog team, will have the desired effect, is sketched on the OpenCog wiki site\footnotemark{} and various previously-published conference papers. It has been presented more thoroughly in the 2014 books Engineering General Intelligence vol. 1 and 2 \cite{DBLP:series/atlantis/GoertzelPG14, DBLP:series/atlantis/GoertzelPG14a}.
 \footnotetext{\url{https://wiki.opencog.org/w/Background_Publications}}
 
-\section{OpenCog Architecture}\label{sec:opencog_architecture}
+\section{The OpenCog Architecture}\label{sec:opencog_architecture}
 
 There are several components that make up the basic architecture of OpenCog. In the following sections, they will be described, more or less independently, before being concatenated and contextualized into the problem considered in this project. \\
 Currently, the OpenCog project is under strong development and some of the concepts presented here may be obsolete, improved or evolved, or being redesigned. However, much of the basic infrastructure and theory remains unchanged.  
@@ -58,14 +59,14 @@ Currently, the OpenCog project is under strong development and some of the conce
 The AtomSpace is a platform for building Artificial General Intelligence (AGI) systems. It provides the central knowledge representation component for OpenCog. As such, it is a fairly mature component, on which a lot of other systems are built, and which depend on it for stable, correct operation in a day-to-day production environment. \\
 It is a mashup of a large variety of concepts from mathematical logic, theorem proving, graph theory, database theory, type theory, model theory and knowledge representation. \\
 More specifically, the OpenCog AtomSpace is an in-RAM knowledge representation database, an associated query engine and graph-re-writing system, and a rule-driven inferencing engine that can apply and manipulate sequences of rules to perform reasoning. \\
-The best way to capture all of this, is a kind of in-RAM Generalized Hypergraph (Metagraph) Database. \\
-On top of this, the Atomspace provides a variety of advanced features not available anywhere else. It is currently used to store natural language grammars, dictionaries and parsers, to store biochemical and biomedical data, robot control algorithms, machine learning algorithms, audio/video processing pipelines and deep learning neural networks.\\
+The best way to capture all of this is a kind of in-RAM Generalized Hypergraph (Metagraph) Database. \\
+On top of this, the AtomSpace provides a variety of advanced features not available anywhere else. It is currently used to store natural language grammars, dictionaries and parsers, to preserve biochemical and biomedical data, robot control algorithms, machine learning algorithms, audio/video processing pipelines and deep learning neural networks.\\
 
 \subsubsection{Metagraph: a Generalized Hypergraph}\label{sec:gen_hypergraph}
 
 Formally, a graph is:
 \begin{itemize}
-	\item A set of vertexes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$
+	\item A set of vertexes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$;
 	\item A set of edges $E=\left\{e_{1}, e_{2}, \cdots, e_{N}\right\}$ where each edge $e_{k}$ is an ordered pair of vertexes drawn from the set $V$.
 \end{itemize}
 Since edges are ordered pairs, it is conventional to denote them with arrows. In practice, one wishes to associate a label to each vertex, and also some additional attribute data (e.g. weight); likewise for the edges. \\
@@ -74,8 +75,8 @@ A hypergraph is very similar to a graph, except for the edges.
 \enquote{Hyperedges} are defined as edges that can contain more than two vertices. That is, the hyperedge, rather than being an ordered pair of vertices, is an ordered list of vertices. \\
 Formally, a hypergraph is:
 \begin{itemize}
-	\item A set of vertexes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$
-	\item A set of hyperedges $E=\left\{e_{1}, e_{2}, \cdots, e_{N}\right\}$ where each hyperedge $e_{k}$ is an ordered list of vertexes drawn from the set $V$. This list may be empty, or have one, or two, or more members.
+	\item A set of vertexes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$;
+	\item A set of hyperedges $E=\left\{e_{1}, e_{2}, \cdots, e_{N}\right\}$ where each hyperedge $e_{k}$ is an ordered list of vertexes drawn from the set $V$. This list may be empty, or have one, two, or more members.
 \end{itemize}
 
 A good representation of a hypergraph is the one proposed in Figure \ref{fig:atomspace_table}. 
@@ -99,10 +100,10 @@ The vertex table looks like the edge table, but the vertex-list is an ordered li
 \label{fig:hypergraph_graph}}
 \end{figure}
 
-Before define a Metagraph, a change of terminology is useful: the basic objects are now called \enquote{Nodes} and \enquote{Links} instead of \enquote{vertexes} and \enquote{edges}. \\
+Before defining a Metagraph, a change of terminology is useful: the basic objects are now called \enquote{Nodes} and \enquote{Links} instead of \enquote{vertexes} and \enquote{edges}. \\
 Thus, a Metagraph is:
 \begin{itemize}
-	\item A set of nodes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$
+	\item A set of nodes $V=\left\{v_{1}, v_{2}, \cdots, v_{M}\right\}$;
 	\item A set of links $E=\left\{e_{1}, e_{2}, \cdots, e_{N}\right\}$ where each hyperedge $e_{k}$ is an ordered list of nodes, or other links, or a mixture. They are arranged to be acyclic (to form a directed acyclic graph).
 \end{itemize}
 
@@ -116,7 +117,7 @@ The metagraph is a generalization of a hypergraph, in the sense that now a hyper
 \label{fig:metagraph_graph}}
 \end{figure}
 
-But in Metagraph, links are ordered lists, represented as boxes. Thus, to convert it in a DAG it is possible to collapse the boxes to single points or to dissolve the boxes entirely and replace a single arrow, from point-to-box, by many arrows, from point to each of the box elements.  \\
+In Metagraph, links are ordered lists represented as boxes. Thus, to convert it in a DAG, it is possible to collapse the boxes to single points or to dissolve the boxes entirely and replace a single arrow, from point-to-box, by many arrows, from point to each of the box elements.  \\
 Whereas the node table is the same as the vertex table for the hypergraph, nevertheless the link table now requires both an outgoing-atom list and an incoming-link set.
 Figure \ref{fig:metagraph_table} shows the result.
 
@@ -128,11 +129,11 @@ Figure \ref{fig:metagraph_table} shows the result.
 \label{fig:metagraph_table}}
 \end{figure}
 
-For convenience, the name \enquote{Atom} is given to something that is either a node or a link. Links are then, sets of atoms. \\
+For convenience, the name \enquote{Atom} is given to something that is either a node or a link. Then, Links are sets of atoms. \\
 These concepts are described in \cite{Vep20a, metagraph_app}, where RAM-usage considerations, reasons why metagraphs offer more efficient, more flexible and more powerful ways of representing graphs and reasons why a metagraph store is better than a graph store and much more, can also be found. \\
 
 Finally, some extensions of the metagraph are considered: Typed Metagraph (TMG) and Directed Typed Metagraph (DTMG). \\
-Typed metagraphs are defined as hypergraphs with types assigned to hyperedges and their targets, and the potential to have targets of hyperedges connect to whole links, as well as targets. 
+TMG are defined as hypergraphs with types assigned to hyperedges and their targets, and the potential to have targets of hyperedges connect to whole links, as well as targets. 
 An example can be found in Figure \ref{fig:typed_edge}. \\
 
 \begin{figure}[h]
@@ -143,10 +144,10 @@ An example can be found in Figure \ref{fig:typed_edge}. \\
 \label{fig:typed_edge}}
 \end{figure}
 
-A natural extension of a TMG is the Probabilistically TMG, based on probabilistic dependent types. Thus, one can assign a probability (or an entire probability distribution) to each connection between edges, thanks to the probabilistic type inheritance relations. In this way, it is possible to obtain a KB that can work with probabilistic logic, fuzzy logic, make uncertain inferences and much more. \\
-Atomic Directed Typed Metagraphs (atomic DTMG) are introduced via partitioning the targets of each edge in a typed metagraph into input, output and lateral sets; one can then look at \enquote{metapaths} in which edges' output-sets are linked to other edges' input-sets (Figure \ref{fig:typed_metapath}). Thus, a DTMG is generally defined as a TMG composed by connecting DTMGs via metapaths, a recursive definition that bottoms out on the definition of atomic DTMGs. \\
+A natural extension of a TMG is the Probabilistically TMG, based on probabilistic dependent types. Thus, one can assign a probability (or an entire probability distribution) to each connection between edges thanks to the probabilistic type inheritance relations. In this way, it is possible to obtain a KB that can work with probabilistic logic, fuzzy logic, make uncertain inferences and much more. \\
+Atomic Directed Typed Metagraphs (atomic DTMG) are introduced via partitioning the targets of each edge in a typed metagraph into input, output, and lateral sets. One can then look at \enquote{metapaths} in which edges' output-sets are linked to other edges' input-sets (Figure \ref{fig:typed_metapath}). Thus, a DTMG is generally defined as a TMG composed by connecting DTMGs via metapaths, a recursive definition that bottoms out on the definition of atomic DTMGs. \\
 For the whole theoretical formalism concerning TMG and DTMG refer to \cite{DBLP:journals/corr/abs-2012-01759}. 
-That paper concludes by also describing useful types of morphisms that can be defined on a DTMG (catamorphisms, anamorphisms, histomorphisms, futumorphisms, hylomorphisms, chrono\-morphisms, metamorphisms and metachronomorphisms). 
+That paper also describes useful types of morphisms that can be defined on a DTMG (catamorphisms, anamorphisms, histomorphisms, futumorphisms, hylomorphisms, chrono\-morphisms, metamorphisms and metachronomorphisms). 
 They allow to formulate a wide variety of operations on metagraphs, which will not be described here. \\
 The important thing to keep in mind is that the KB is used for AGI, so there will be many metagraphs and very large ones. Morphisms allow you to obtain simple and complex results by mutating/transforming/stretching/compressing the metagraph quickly and cleanly. \\
 Lastly, it is also useful to associate metagraph edges $E_{i}$ with nite lists $V_{i}$ of Values, each of which may be integer, floating-point or more complex in structure. The reason for these Values will be mentioned later.
@@ -165,23 +166,23 @@ The vertices (nodes) and edges (links) of a graph (metagraph), known as Atoms, a
 Atoms are one of the main components of the AtomSpace. Atoms, together with Values are what the AtomSpace stores.  \\
 The two primary types of Atoms are Nodes and Links. They are used to represent anything that resembles a graph-theoretical graph. \\
 From the TMG definition above, Atoms are typed (in the sense of Type Theory) and thus, they can be used to store a large variety of information. 
-Values are used to assign \enquote{valuations} to Atoms, to indicate the truth or likelihood of that Atom, or to hold other kinds of transient data. Every Atom has a key-value database attached to it, that can store any kind of information about that Atom. The distinction between the \enquote{shape of the graph}, and its related \enquote{data} is central for allowing high-speed graph traversal and generalized graph query. Note that, the name \enquote{Atom} was chosen because of the resemblance of OpenCog Atoms to the concept of atoms in mathematical logic. Moreover, in Ruby and Prolog programming languages, symbols are literally called atoms; in both LISP and Guile, allow parameters to be attached to symbols, as Values can be attached to Atoms. \\
+Values are used to assign \enquote{valuations} to Atoms to indicate the truth or likelihood of that Atom, or to hold other kinds of transient data. Every Atom has a key-value database attached to it, that can store any kind of information about that Atom. The distinction between the \enquote{shape of the graph} and its related \enquote{data} is central for allowing high-speed graph traversal and generalized graph query. Note that the name \enquote{Atom} was chosen because of the resemblance of OpenCog Atoms to the concept of atoms in mathematical logic. Moreover, in Ruby and Prolog programming languages, symbols are literally called atoms; in both LISP and Guile, allow parameters to be attached to symbols, as Values can be attached to Atoms. (TODO: ADD REFS)\\ 
 
-When an atom are placed in the AtomSpace, it becomes unique: it gets a single, unique ID. Thus, in comparison to other programming languages\footnotemark{}, Atoms can be understood to be the same thing as symbols. The AtomSpace is essentially a symbol table, which commonly has the unique-symbols property. \footnotetext{Section \ref{sec:atomese} explains why it is possible to talk about programming languages}\\
+When an atom is placed in the AtomSpace, it becomes unique: it gets a single, unique ID. Thus, in comparison to other programming languages\footnotemark{}, Atoms can be understood to be the same thing as symbols. The AtomSpace is essentially a symbol table, which commonly has the unique-symbols property. \footnotetext{Section \ref{sec:atomese} explains why it is possible to talk about programming languages}\\
 The atom ID is the string name of a Node and the outgoing set of a Link. Specifically: Nodes are identified by their names or labels, that is the only property that they have. Links are identified by their contents, which are ordered or unordered sets of other atoms. Links do not have any name or label other than their contents: a link is uniquely identified by it's type and it's contents.\\
-A TruthValue (a certain type of Values) gives each Atom a valuation or an interpretation and conseguently, all Atoms in a given, fixed AtomSpace always carry a default valuation/interpretation (i.e. a SimpleTruthValue) along with them. Naturally, an Atom may have one or more different kinds of TruthValues. \\
+A TruthValue (a certain type of Value) gives each Atom a valuation or an interpretation and, conseguently, all Atoms in a given fixed AtomSpace always carry a default valuation/interpretation along with them (i.e., a SimpleTruthValue) . Naturally, an Atom may have one or more different kinds of TruthValues. \\
 All TruthValues (tv) expose at least two parameters, representative of the SimpleTruthValue (stv):
 
 \begin{enumerate}
-	\item Strength: it represents a probability estimate of the true unknown probability. It is a floating-point value ranging from 0 to 1, with 0 denoting the classical Boolean false, and 1.0 denoting true.
+	\item Strength: it represents a probability estimate of the true unknown probability. It is a floating-point value ranging from 0 to 1, with 0 denoting the classical Boolean false, and 1 denoting true.
 	\item Confidence: it captures the spread of the second order distribution over the true unknown probability. It is a floating point value ranging from 0 to 1, expressing the certainty of the strength, with 0 denoting completely uncertain, and 1 denoting completely confident.
 \end{enumerate}
 
-The types form a type hierarchy: all atoms inherit from the type \enquote{Atom}, and the type Atom itself inherits from ProtoAtom. The ProtoAtom is itself the base type for Values as well as Atoms.
+The set of types forms a type hierarchy: all atoms inherit from the type \enquote{Atom}, and the type Atom itself inherits from ProtoAtom. The ProtoAtom is itself the base type for Values as well as Atoms.
 The atom type category site\footnotemark{} lists all documented theorized, proposed, currently in use, deprecated and obsolete atoms. \\
 It is not a complete list: new types are easily invented, and the various OpenCog books mention Atom types that are not implemented or have been implemented in a different way. This reflects a more general point: the specific collection of Atom types in an OpenCog system is bound to change as the system is developed and experimented with. In the current system, it does not necessarily have a profound and lasting significance. \footnotetext{\url{https://wiki.opencog.org/w/Category:Atom_Types}}\\
 
-Following a descriptive list of the main types of atoms used for this project:
+A descriptive list of the main types of atoms used for this project follows:
 
 \begin{itemize}
 	\item \textbf{ConceptNode}: a Node representing any concept. \\
@@ -196,10 +197,10 @@ ConceptNode example.\end{footnotesize}
 	ConceptNode "cat" (stv 0.5 0.001)
 \end{python}
 
-Since the agent has only observed two concepts in its universe, it will split in two the universe (and Strength accordingly): half (0.5) consists of men and the other half (0.5) consists of cats.
+Since the agent has only observed two concepts in its universe, it will split in two the universe (and Strength accordingly): one half (0.5) consists of men and the other half (0.5) consists of cats.
 Because the agent has not made a lot of observations yet, it may assign a low Confidence to these values.
 
-	\item \textbf{InheritanceLink}: a Link specify is-a relationships. \\
+	\item \textbf{InheritanceLink}: a Link specifing is-a relationships. \\
 In the OpenCog system, basic InheritanceLinks are used to specify both intensional (is-a) and extensional (is-an-instance-of) relationships.
 
 \begin{footnotesize}\textbf{Code in Scheme notation:} \\
@@ -215,9 +216,9 @@ In this case, the TruthValue associated to InheritanceLink should be 0, if it is
 
 	\item \textbf{PredicateNode}: it names the predicate of a relation. \\
 Predicates are functions that have arguments, and produce a truth value as output. Predicates in OpenCog roughly resemble the predicate of first-order logic, but more general. It is very similar to a characteristic function in probability theory, which helps assign a floating-point truth value to a declaration. Its usege will be understood at later points. \\
-Two interesting type of Atom that are derived from PredicateNode are \textbf{DefinedPredicateNode} and \textbf{GroundedPredicateNode}. \\
-The first is a single atom that is attached to a more complex definition. During the evaluation of the predicate, its definition (typically some formula or other complex expression, constituted entirely of Atoms) is looked up and is used during evaluation. \\
-The second specifies a predicate whose truth value is updated by the evaluation of a scheme, python or C++ code snippet. It is a \enquote{black box} from the point of view of logical inference and knowledge representation and it is used to interface to external data systems, for example, to robot motor control systems, or to sensory input systems. It is impossible to reason with it, as opposed to DefinedPredicateNodes, which are \enquote{clear boxes} whose inner workings are visible to inference, learning and analysis algorithms.
+Two interesting types of Atom that are derived from PredicateNode are \textbf{DefinedPredicateNode} and \textbf{GroundedPredicateNode}. \\
+The first is a single atom that is attached to a more complex definition. During the evaluation of the predicate, its definition (typically some formula or other complex expression constituted entirely of Atoms) is looked up and is used during evaluation. \\
+The second specifies a predicate whose truth value is updated by the evaluation of a Scheme, Python or C++ code snippet. It is a \enquote{black box} from the point of view of logical inference and knowledge representation, and it is used to interface to external data systems (e.g., to robot motor control systems or sensory input systems). It is impossible to reason with it, as opposed to DefinedPredicateNodes, which are \enquote{clear boxes} whose inner workings are visible to inference, learning, and analysis algorithms.
 
 	\item \textbf{ListLink}: a Link used for grouping Atoms for some purpose, typically to specify a set of arguments to some function or relation. \\
 The ListLink is best understood as a Cartesian product\footnotemark{}, because all of its uses involve passing an ordered sequence of arguments to some function or predicate. Ordered sequences can be naturally understood as Cartesian products, which is extremely general, cutting across all branches of mathematics.
@@ -274,12 +275,12 @@ There are other atom types used here. A more general list of Opencog atom types,
 \begin{itemize}
 \item Arithmetic Atom Types: EqualLink, GreaterThanLink, NumberNode, IntervalLink, etc.
 \item Boolean Atom Types: AndLink, OrLink, NotLink, etc. 
-\item All atom types used for Natural Language Processing (NLP)
-\item Atom types for the OpenCog Probabilist Logic Network
-\item Atom types to perform Pattern Matching (PresentLink, AbsentLink, VariableList / VariableSet / VariableNode, etc.) 
-\item Atom types for the threading 
-\item Set-theoretical Atom Types: types having some form of set-theoretical signficance (MemberLink, SetLink, SubsetLink, etc.)
-\item Atom types to perform searches over the AtomSpace (JoinLink, QueryLink, MeetLink, etc.) 
+\item All atom types used for Natural Language Processing (NLP).
+\item Atom types for the OpenCog Probabilist Logic Network.
+\item Atom types to perform Pattern Matching (PresentLink, AbsentLink, VariableList / VariableSet / VariableNode, etc.).
+\item Atom types for the threading.
+\item Set-theoretical Atom Types: types having some form of set-theoretical signficance (MemberLink, SetLink, SubsetLink, etc.).
+\item Atom types to perform searches over the AtomSpace (JoinLink, QueryLink, MeetLink, etc.).
 \end{itemize}
 
 There is a type system for working with atom types: that is, the type of an atom can itself be specified using other atoms, which also applies to the polymorphic types. The type system allows for basic error checking, such as with the type checker, and more generally, it allows type-logical reasoning and inference to be performed on atom signatures. \\
@@ -340,9 +341,9 @@ The Unified Rule Engine (URE) is a generic OpenCog rule engine operating on the 
 Two chaining modes are currently supported, Forward Chaining and Backward Chaining. \\
 The strengths of the URE are:
 \begin{itemize}
-	\item Reads/writes knowledge directly from/to the AtomSpace
-	\item It is generic, can be used to implement any logic, even higher order logics with some limitations
-	\item Comes with a powerful control mechanism to speed up reasoning
+	\item Reads/writes knowledge directly from/to the AtomSpace;
+	\item It is generic, can be used to implement any logic, even higher order logics with some limitations;
+	\item Comes with a powerful control mechanism to speed up reasoning.
 \end{itemize}
 
 It was used as a first approach to solve the problem faced in this project. It was later abandoned due to conceptual and practical problems in favour of a new approach (Section \ref{sec:search}), although, in the end, good ideas emerged that could solve these problems. See related Section \ref{sec:future_devel}. \\
@@ -351,7 +352,7 @@ For these reasons, any other information related to URE is referred to \cite{gei
 
 \subsubsection{Relex2Logic}\label{sec:r2l}
 
-This project handles a Natural Language Processing (NLP) module. Here, some components of OpenCog this module superficially uses, are very briefly presented. \\
+This project handles a Natural Language Processing (NLP) module. Here, some components of OpenCog used by NLP are very briefly presented. \\
 The component on the top is called Relex2Logic (R2L). \\
 R2L produces a certain form of predicate-argument structure for an English-language sentence. That structure roughly resembles classical propositional or predicate logic, thus the name. \\
 It is pointless to go into the details of this module because, first of all, it became obsolete because its java rule engine and representation scheme were inadequate and knowledge extraction was too far removed from the reasoning and anaphora components; secondly, because the predicate-argument structure is produced by applying a set of rules to the RelEx format (see below), using the forward chainer provided by URE, which require a very good knowledge of the topic in order to be understood. \\

@@ -52,27 +52,29 @@ The Table \ref{tab:ass_table} summarises the characteristics of the components t
 The arm assembly is schematically shown in Figure \ref{fig:brf_draw} and has been divided into three sub-assemblies:
 
 \begin{enumerate}
-	\item BlockA: the Bett clamp and the induction hardened rod are taken from their respective bins and mounted on top of the workbench (Figure \ref{fig:ass_obj_1}). Next, the resulting component will be called BlockA and will be represented by a single cube. Finally, it will be moved from the workbench to the table
+	\item BlockA: the Bett clamp and the induction hardened rod are taken from their respective bins and mounted on top of the workbench (Figure \ref{fig:ass_obj_1}). Next, the resulting component will be called BlockA and will be represented by a single cube. Finally, it will be moved from the workbench to the table.
 
-	\item BlockB: Once the workbench is freed, the second piece is assembled, using two snap rings, two bearing sleeves and one recirculating ball sleeve (Figure \ref{fig:ass_obj_2}). It will be called BlockB and will then be assembled with BlockA (\enquote{stack BlockA BlockB}) above the table
+	\item BlockB: Once the workbench is freed, the second piece is assembled, using two snap rings, two bearing sleeves and one recirculating ball sleeve (Figure \ref{fig:ass_obj_2}). It will be called BlockB and will then be assembled with BlockA (\enquote{stack BlockA BlockB}) above the table.
 
-	\item BlockC: Finally, the last component, consisting of an upper bearing bracket, a bearing, a rotating balancer support and a TCEI screw, is mounted (Figure \ref{fig:ass_obj_2}). This will be BlockC and will be stacked on top of BlockB
+	\item BlockC: Finally, the last component, consisting of an upper bearing bracket, a bearing, a rotating balancer support and a TCEI screw, is mounted (Figure \ref{fig:ass_obj_2}). This will be BlockC and will be stacked on top of BlockB.
 \end{enumerate}
 
-The block assembly tables describe the steps that are performed to create BlocksA, BlocksB and BlocksC. A description of their parameters is as follows:
+The block assembly tables describe the steps that are performed to create BlocksA, BlocksB and BlocksC. A description of their parameters is as follows
+(in some of these tables certain additional information has been omitted\footnotemark{}):
+\footnotetext{\label{note_fixed} The additional information about table, workbench, PurpleBin, GreenBin, RedBin, BlueBin, YellowBin are not rewritten, because they remain identical to those listed in Table \ref{tab:ass_table}} 
 
 \begin{itemize}
-	\item Objects List: this is the list of objects that have been detected through the AprilTags or extracted from the additional information
-	\item Additional Info.: each line corresponds to a sentence inserted during the learning phase
-	\item Request: each line corresponds to a sentence inserted during the request phase, that is a goal to be reached
-	\item Solution: each line corresponds to an action that is executed. These scripts are both the exact lines of Scheme code used to call the respective rules in Atomese, and the information passed to the ROS client, after the search phase, to move the robot
-	\item Exec. Time: execution time of the search phase. It does not include any of the other phases and indeed corresponds to the time needed to expand the tree until a solution is found.
-	\item No. Iters: number of recursive calls performed by the algorithm
+	\item Objects List: this is the list of objects that have been detected through the AprilTags or extracted from the additional information;
+	\item Additional Info.: each line corresponds to a sentence inserted during the learning phase;
+	\item Request: each line corresponds to a sentence inserted during the request phase, that is a goal to be reached;
+	\item Solution: each line corresponds to an action that is executed. These scripts are both the exact lines of Scheme code used to call the respective rules in Atomese, and the information passed to the ROS client, after the search phase, to move the robot;
+	\item Exec. Time: execution time of the search phase. It does not include any of the other phases and indeed corresponds to the time needed to expand the tree until a solution is found;
+	\item No. Iters: number of recursive calls performed by the algorithm.
 \end{itemize} 
 
 It is important to point out a few considerations concerning this test. First of all, the concept of \enquote{assembly} in this project simply corresponds to a stack action. \\
 Assembly took place in a simulated environment, starting with the configuration shown in Figure \ref{fig:ass_1}. 
-Inside each bin, there are one or more cubes representing assemblable objects. Objects without Colour Cube (i.e. those in BlockC) are not shown in the simulation figures, both because BlockC is assembled in a similar way to BlockB, and to keep the illustrations clearer. \\
+Inside each bin, there are one or more cubes representing assemblable objects. Objects without Colour Cube (i.e., those in BlockC) are not shown in the simulation figures, both because BlockC is assembled in a similar way to BlockB, and to keep the illustrations clearer. \\
 Moreover, BlockA is solved in two runs of the algorithm (Tables \ref{tab:ass_A_1} and \ref{tab:ass_A_2}). 
 The first one assembles the objects and the second one reconsiders them as a single cube and moves it. This is because the environment and \enquote{senses} of the robot are simplified, thus, the cubes do not \enquote{join} together and it is not possible to pick up two or more at a time. \\
 For example, BlockA, which is mounted on the workbench and then moved to the table, could be mounted directly on the table. However, a future development of the system may be able to work with real objects, which means real assemblies (and not just stacking), grabbing complex objects, etc.. Therefore, the first way was preferred and is also valid for BlockB and BlockC (Tables \ref{tab:ass_B_4} and \ref{tab:ass_C_3}). \\
@@ -80,12 +82,12 @@ Another consideration concerns multiple executions of the algorithm to solve Blo
 Excluding the last run to move the single cube, BlockB required three runs of the algorithm (Tables \ref{tab:ass_B_1}, \ref{tab:ass_B_2}, \ref{tab:ass_B_3}), while BlockC required two (Tables \ref{tab:ass_C_1}, \ref{tab:ass_C_2}). \\
 The last figures represent the execution of the test in the simulated environment for BlockA and BlockB:
 \begin{enumerate}
-	\item The test starts with Figure \ref{fig:ass_1}
-	\item In Figure \ref{fig:ass_2}, the components of BlockA are assembled on top of the workbench 
-	\item Their respective cubes are manually replaced with a single cube (the yellow one), and finally it is moved over the table
-	\item Next, the first two components of BlockB are stacked (first split, Table \ref{tab:ass_B_1}) as in Figure \ref{fig:ass_3}
-	\item Finally in Figure \ref{fig:ass_4}, the second two components (second split, Table \ref{tab:ass_B_2}) and then the last one (third split, Table \ref{tab:ass_B_3}) are assembled. 
-	\item The final step, where the cubes are manually replaced with a single one that will be stacked on blockA, is omitted
+	\item The test starts with Figure \ref{fig:ass_1};
+	\item In Figure \ref{fig:ass_2}, the components of BlockA are assembled on top of the workbench;
+	\item Their respective cubes are manually replaced with a single cube (the yellow one), and finally it is moved over the table;
+	\item Next, the first two components of BlockB are stacked (first split, Table \ref{tab:ass_B_1}) as in Figure \ref{fig:ass_3};
+	\item Finally in Figure \ref{fig:ass_4}, the second two components (second split, Table \ref{tab:ass_B_2}) and then the last one (third split, Table \ref{tab:ass_B_3}) are assembled; 
+	\item The final step, where the cubes are manually replaced with a single one that will be stacked on blockA, is omitted.
 \end{enumerate}
 	
 \begin{table}[!htbp]
@@ -142,7 +144,7 @@ Objects List &  BlockA, SnapRing1, SnapRing2, RecirculatingBallSleeve, \\
 & BearingSleeve1, BearingSleeve2, table, workbench, \\
 \rowcolor{gray!25}
 &  PurpleBin, GreenBin, RedBin, BlueBin, YellowBin \\
-Additional Info. & \footnote{\ref{note_fixed} The additional information about table, workbench, PurpleBin, GreenBin, RedBin, BlueBin, YellowBin are not rewritten because they remain identical to those listed in Table \ref{tab:ass_table}} \\
+Additional Info. & \footref{note_fixed}\\
 & The SnapRing1 is on the SnapRing2. \\
 & The BearingSleeve1 is on the BearingSleeve2. \\
 \rowcolor{gray!25}
@@ -440,4 +442,4 @@ The combination of these factors constantly pushes RAM to the limit and the Swap
 Another point is the design of OpenCog: it is still in the development phase and it is only a few years since important considerations on the performance side are being made. 
 The OpenCog team believes it has reached a point where it is necessary to improve the performance of the system, such as increasing the speed of creating and removing atoms from AtomSpace, decreasing memory occupation and improving the use of Distributed AtomSpaces (refer to the last paragraph of Section \ref{sec:atomese}), before proceeding with the AGI-directed architecture. \\
 These are the reasons why the assemblies of BlockB and BlockC were splitted and why the execution times are fairly high despite the simplicity of the request.
-Regarding the latter, however, it is not just a hardware problem, the OpenCog system is not focused on speed of resolution, rather it is trying to deal with the generality of the AGI problem. Thus, it will not achieve the best execution times, but it may be able to describe a much larger set of elements than all TAMP (Task and Motion Planning) systems.
+Regarding the latter, however, it is not just a hardware problem, the OpenCog system is not focused on speed of resolution, rather it is trying to deal with the generality of the AGI problem. Thus, it will not achieve the best execution times, but it may be able to describe a much larger set of elements than all Task Planning systems.
