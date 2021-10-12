@@ -8,10 +8,10 @@ It is possible to divide the entire project into 6 phases: initial, perception, 
 
 \section{Initial Phase}\label{sec:init}
 
-The initial phase concerns the initialization of the simulated environment. The framework used for the development and programming of the robot is the well-known ROS, Melodic version, and the Gazebo 9 system handles the simulation. \\
+The initial phase concerns the initialization of the simulated environment. The framework used for the development and programming of the robot is the well-known ROS, Melodic version, and the Gazebo 9 system handles the simulation. 
 Therefore, the world as in Figure \ref{fig:env_2_named} is loaded into Gazebo. 
-It consists of a robot manipulator with an attached camera, some fixed objects (such as tables, workbench and bins) and cubes, both with their AprilTags used for detection and semantic assignment. \\
-Then, a server in C++ code is activated and the nodes of the ROS system for robot control and object perception become available for listening. \\
+It consists of a robot manipulator with an attached camera, some fixed objects (such as tables, workbench and bins) and cubes, both with their AprilTags used for detection and semantic assignment. 
+Then, a server in C++ code is activated and the nodes of the ROS system for robot control and object perception become available for listening. 
 Finally, the main AtomSpace is created and the actions rules are loaded into it. 
 
 \begin{figure} [h]
@@ -29,25 +29,25 @@ Of each AprilTag found, its associated semantic representation (i.e., English wo
 
 \section{Learning Phase}\label{sec:learning}
 
-The learning phase is used to provide additional information. \\
-The perception algorithm is extremely simple and does not deal with information processing. Consequently, it is not able to distinguish an object from a fixed object or to infer that an object is placed on top of another. Surely, with a perception processing module all of this, and much more, could be managed. \\
+The learning phase is used to provide additional information. 
+The perception algorithm is extremely simple and does not deal with information processing. Consequently, it is not able to distinguish an object from a fixed object or to infer that an object is placed on top of another. Surely, with a perception processing module all of this, and much more, could be managed. 
 However, this project shows the simplicity of integration and the potential of the learning with the OpenCog system. \\
 
 This phase was created to tell the robot which objects are fixed, which are on top of others (fixed objects excluded) or which one is in the robot's hand. That is, to provide the necessary additional information, which the simple perception phase does not perceive, to describe the initial situation of the environment.
 This is done by a module using NLP, consisting of the Relex2Logic OpenCog module and a post-processing phase. \\
 
-Additional information is provided to the system via English sentences. \\
-This module applies Relex2Logic to these sentences, creating the hypergraph describing them within a new empty AtomSpace (process explained in Section \ref{sec:r2l}).  \\
+Additional information is provided to the system via English sentences. 
+This module applies Relex2Logic to these sentences, creating the hypergraph describing them within a new empty AtomSpace (process explained in Section \ref{sec:r2l}).  
 Next, the post-processing phase loads the rules presented in Section \ref{sec:NLP} and executes them within that AtomSpace. Those rules look for patterns corresponding to the possible information that the system might need and create summary atoms that can be easily used by the algorithm. Thus, from the results obtained by Relex2Logic, they infer atoms such as the ones shown in Section \ref{sec:env_atomese}, which are then added to the main AtomSpace. \\
 
-Moreover, from the information learned in this phase, the \textit{clear} state atoms of the effectively free objects and the \textit{object} inheritance atoms of the non-fixed objects are created.  \\
-Finally, the last atoms of the initial KB are added to the main AtomSpace. They are all possible simple combinations (without repetition) from the objects list taken two at a time (explained in Section \ref{sec:r2l}, too). \\
+Moreover, from the information learned in this phase, the \textit{clear} state atoms of the effectively free objects and the \textit{object} inheritance atoms of the non-fixed objects are created.  
+Finally, the last atoms of the initial KB are added to the main AtomSpace. They are all possible simple combinations (without repetition) from the objects list taken two at a time (explained in Section \ref{sec:r2l}, too). 
 The main AtomSpace is now complete and fully describes the initial situation. 
 
 \section{Request Phase}\label{sec:request}
 
-The request phase behaves like the previous one, except for the aim. Whereas before, English sentences are used to give additional information, now new English sentences are requested to define the goal to be achieved. \\
-In order to define the goal it is not necessary to describe the final complete arrangement of objects in the environment, but just the states of the objects one wants to achieve. \\
+The request phase behaves like the previous one, except for the aim. Whereas before, English sentences are used to give additional information, now new English sentences are requested to define the goal to be achieved. 
+To define the goal it is not necessary to describe the final complete arrangement of objects in the environment, but just the states of the objects one wants to achieve. 
 Thus, the same steps used in the learning phase are performed here. That is, the English sentences are processed to obtain the corresponding set of atoms that describes them. Then, these atoms are added to a goal list used by the algorithm to find a solution.
 
 \section{Search Phase}\label{sec:search}
@@ -64,12 +64,12 @@ One of the best ways to handle this structure is through a tree that has AtomSpa
 In addition, each tree-node has a label describing the action used, and on which objects, by its parent to create it.
 In this way, each branch of the tree describes a different sequence of actions. They can be derived by starting with a solution tree-node and reading the labels of the parent tree-nodes backwards until the root, adding each label to a list. Finally, reversing the list.  \\
 
-After the request phase, the root of the tree, containing the main AtomSpace and a \textit{NULL} label, is created. \\
+After the request phase, the root of the tree, containing the main AtomSpace and a \textit{NULL} label, is created. 
 Next, the search algorithm, based on the well-known Breadth-First Search (BFS) (more details in \cite{BFS-wiki, BFS}), expands the tree in search of a solution.
 
 \subsection{BFS-Based Algorithm}\label{sec:bfs_search}
 
-The BFS-based algorithm is recursive and accepts as arguments a tree-node and a variable, which limits the actions to be performed. \\
+The BFS-based algorithm is recursive and accepts as arguments a tree-node and a variable, which limits the actions to be performed. 
 Following the rules of the problem (Secion \ref{cha:problem_description}), it is trivial to deduce that the actions alternate for each step of the algorithm.
 That is, starting from the root:
 
@@ -79,7 +79,7 @@ That is, starting from the root:
 	\item From this first intuition, follows the one applicable to each step: given a certain tree-node, if the action \textit{Stack} or \textit{Putdown} created it, then the children of that node can only be created by \textit{Pickup} or \textit{Unstack} actions, otherwise vice versa.
 \end{enumerate}
 
-This is the reason why the BFS-algorithm has a variable as the second argument, it holds the action used to create the node in the first argument. \\
+This is the reason why the BFS-algorithm has a variable as the second argument, it holds the action used to create the node in the first argument. 
 Trying all the actions at each step would also give the same result, but additional atoms would have to be added to the rule pattern to check whether the hand is free or busy.
 Instead, following this design simplifies the rules, speeds up the algorithm and avoids unnecessary code execution.
 
@@ -97,12 +97,12 @@ Some additional parameters are defined to limit and improve the search. As a res
 
 The quick search finds a solution, decreasing the number of iterations in most situations.
 As this type of problems suffers from combinatorial explosion\footnotemark{}, the number of tree-nodes grows exponentially as the tree expands.
-\footnotetext{\url{https://en.wikipedia.org/wiki/Combinatorial_explosion}} \\
+\footnotetext{\url{https://en.wikipedia.org/wiki/Combinatorial_explosion}} 
 One way to reduce this expansion is to limit the available actions to only those that interact with one or more objects appearing in the goal list.
 Many unnecessary actions are avoided, however this makes the algorithm incorrect, since the certainty of finding a solution is lost.
 It still works well for most initial arrangements and goal lists and if it fails, the search in point 1 (which is correct if a solution exists, like searches in points 2 and 3) can be used. \\
 
-Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a tree-node. \\
+Finally, a solution is found when all the atoms composing the goal list are within the AtomSpace of a tree-node. 
 Furthermore, the first solution found will certainly be the optimal solution, i.e. the solution that uses the minimum number of actions to go from the initial arrangement of objects to the goal one.
 This is because for each tree-node, before being expanded, its AtomSpace is compared with the one of any tree-node belonging to its same branch.
 If a match is found (i.e., they are identical), then the algorithm has come back to an arrangement of objects it has already encountered and thus, the sequence of subsequent actions would be a repetition of that associated with the matched tree-node. Consequently, the expansion of this tree-node ends.
@@ -110,7 +110,7 @@ If a match is found (i.e., they are identical), then the algorithm has come back
 
 \subsubsection{Steps of the BFS-Based Algorithm}\label{sec:step_search}
 
-From the definitions above, it is now possible to list the steps that the BFS-based algorithm goes through. \\
+From the definitions above, it is now possible to list the steps that the BFS-based algorithm goes through. 
 The first recursive call has as arguments the root node (containing the main AtomSpace) and the variable defined according to the state of the hand.
 Inside each call:
 
@@ -121,11 +121,11 @@ Inside each call:
 	
 	\item It is checked that the AtomSpace, contained in the tree-node argument, has not been encountered before. If encountered, this tree-node is not expanded and the algorithm moves on to the next one (Go back to point 1), otherwise its expansion begins.
 	
-	\item Now that the checks have been passed, the expansion of the tree-node argument occurs. \\
+	\item Now that the checks have been passed, the expansion of the tree-node argument occurs. 
 According to the variable argument, only two of the four actions can be executed.
 Thus, from the AtomSpace of the current tree-node, two AtomSpace children (two copies of the parent) are created, one for each action. \\
 Then, for each action (rule), the respective QueryLink without argument (i.e., the one that returns all possible objects that match the pattern; i.e., the objects on which that action can be performed), is executed within the AtomSpace assigned to it. \\
-It is necessary to use AtomSpace copies because rule execution adds and removes atoms within AtomSpace and thus, modifies it. This means that executing a QueryLink without arguments modifies the AtomSpace as if the related action had been executed on all the matched objects at the same time, leading the AtomSpace into an incorrect state. \\
+It is necessary to use AtomSpace copies because rule execution adds and removes atoms within AtomSpace and thus, modifies it. This means that executing a QueryLink without arguments modifies the AtomSpace as if the related action had been executed on all the matched objects at the same time, leading the AtomSpace into an incorrect state. 
 To summarise: 
 
 	\begin{enumerate}
@@ -135,11 +135,11 @@ To summarise:
 		\item AtomSpace copies are cleaned up and deleted.
 	\end{enumerate}
 
-	\item Finally, for each object found, a copy of the AtomSpace of the tree-node argument is created again. Based on the list to which the object belongs, the corresponding action is executed in that AtomSpace, but this time using the QueryLink with the argument, which corresponds to that object. That is, the action is only executed on that object. \\
+	\item Finally, for each object found, a copy of the AtomSpace of the tree-node argument is created again. Based on the list to which the object belongs, the corresponding action is executed in that AtomSpace, but this time using the QueryLink with the argument, which corresponds to that object. That is, the action is only executed on that object. 
 The resulting AtomSpaces are associated with new tree-nodes and become the children of the tree-node argument.
 	
 	\item At last, these new tree-nodes, obtained by executing the two actions available to each object on which they are applicable, are then added to a FIFO queue.
-This queue is used for BFS. \\
+This queue is used for BFS. 
 The expansion of this tree-node is finished and the tree-node at the top of the queue is extracted and passed to a new recursive call of this algorithm, together with the variable describing the action used previously in its branch. 
 \end{enumerate}
 
@@ -195,6 +195,7 @@ The \textit{workbench} is a fixed object, thus it is not found as a solution of 
 \\Subsequently, these tree-nodes are analysed following the order corresponding to the blue numbers in the figure. None of them is a solution tree-node or has an AtomSpace already encountered, thus, their children are created. \\
 Tree-node number 4 is obtained by making \textit{Pickup} of A and then \textit{Putdown} of the same, so its AtomSpace will correspond to the one of the root. Consequently, its expansion ends. \\
 The expansions continue until the yellow tree-node is reached, which has an AtomSpace containing all the atoms in the goal list. Therefore, a solution is found and the search ends (Quick search).
+The sequence of actions from the initial arrangement to the goal arrangement can easily be read from the tree-edges, going up the branch from the yellow tree-node to the root.
 
 \begin{figure} [h]
 \centering
@@ -208,8 +209,6 @@ The legend on the top simplifies the labels in the tree by using the letters A, 
 \label{fig:BFS_1}}
 \end{figure} 
 
-The sequence of actions from the initial arrangement to the goal arrangement can easily be read from the tree-edges, going up the branch from the yellow tree-node to the root.
-	
 	\item Results Execution Phase: \\
 The following sequence of actions will be performed by the robot, satisfying the initial request:
 \begin{python}
