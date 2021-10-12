@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  11 OCT 2021 23:45
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  12 OCT 2021 10:25
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1842,23 +1842,13 @@ ow Intelligence (ANI or Narrow-
  []
 
 [2]
-
-LaTeX Warning: Citation 'DBLP:journals/corr/abs-1804-08229' on page 3 undefined
- on input line 40.
-
-
-Overfull \hbox (98.56094pt too wide) in paragraph at lines 39--45
-\TU/EBGaramond(2)/m/n/12 ful consideration needs to be given to the selection o
-f language and solver [[]].
- []
-
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 8.0pt on input line 55.
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 56.
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 56.
-[3]
+ [3]
 Underfull \hbox (badness 10000) in paragraph at lines 58--62
 
  []
@@ -1908,7 +1898,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-[5] [6]) [7]
+
+LaTeX Warning: Citation 'wiggers_openai_2021' on page 5 undefined on input line
+ 111.
+
+[5] [6]
+LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 8.33328pt on input line 117.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `SourceCodePro' (encoding: TU).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+) [7]
 \openout2 = `chapters/chapter1.aux'.
 
  (chapters/chapter1.tex
@@ -1939,12 +1940,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 33--39
 File: figures/Magistrale/04 - cognitive_processes_and_memory.png Graphic file (
 type bmp)
 <figures/Magistrale/04 - cognitive_processes_and_memory.png>
-LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 8.33328pt on input line 49.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `SourceCodePro' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
  [10]
 Overfull \hbox (7.13611pt too wide) in paragraph at lines 58--63
 \TU/EBGaramond(2)/m/n/12 More specifically, the OpenCog AtomSpace is an in-RAM 
@@ -2121,7 +2116,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 438--441
 
  []
 
-) [27] [28]
+) [27]
 \openout2 = `chapters/chapter2.aux'.
 
  (chapters/chapter2.tex
@@ -2138,12 +2133,12 @@ File: figures/Magistrale/env_fin_1.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[29
+[28
 
 
 
 
-] [30]
+] [29]
 File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
 <figures/Magistrale/blocks_example.png>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
@@ -2158,7 +2153,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 
  []
 
-[31]
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
@@ -2173,7 +2168,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[32]
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
@@ -2188,16 +2183,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--112
 
  []
 
-[33] [34]
+[32] [33]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 181.
+ [34]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
 Underfull \hbox (badness 10000) in paragraph at lines 277--285
 
  []
@@ -2210,12 +2205,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
 Underfull \vbox (badness 4168) has occurred while \output is active []
 
- [38]
+ [37]
 Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
-[39]) [40]
+[38]) [39]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex
@@ -2230,7 +2225,7 @@ File: figures/Magistrale/env_objs.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[41
+[40
 
 
 
@@ -2240,7 +2235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
 
-[42]
+[41]
 Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
@@ -2256,7 +2251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-[43]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
@@ -2271,25 +2266,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
 
-[44]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 98--104
 
  []
 
-[45]
+[44]
 Overfull \hbox (0.31693pt too wide) in paragraph at lines 124--130
 \TU/EBGaramond(2)/m/n/12 It is necessary to use AtomSpace copies because rule e
 xecution adds and removes atoms
  []
 
-[46] [47] [48]
+[45] [46] [47]
 File: figures/Magistrale/BFS_1_blue.png Graphic file (type bmp)
 <figures/Magistrale/BFS_1_blue.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [49] [50]
+) [48] [49]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
@@ -2343,7 +2338,7 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(4)/b/n' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51
+ [50
 
 
 
@@ -2355,7 +2350,7 @@ File: figures/Magistrale/BRF.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[52] [53] [54]
+[51] [52] [53]
 Overfull \hbox (53.78082pt too wide) in paragraph at lines 99--131
  [][] 
  []
@@ -2391,7 +2386,7 @@ File: figures/Magistrale/ass_3.png Graphic file (type bmp)
 <figures/Magistrale/ass_3.png>
 File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 <figures/Magistrale/ass_4.png>
-[55] [56] [57] [58] [59] [60] [61] [62]) [63]
+[54] [55] [56] [57] [58] [59] [60] [61]) [62]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex)
@@ -2400,7 +2395,7 @@ File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 
 (chapters/conclusionDue.tex
 Chapter 6.
-) [64
+) [63
 
 
 
@@ -2418,7 +2413,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[65
+[64
 
 
 
@@ -2438,47 +2433,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
 
-[66]
+[65]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[67] [68] [69]
+[66] [67] [68]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [70]
+[71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [71]
-[72]
+ [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [74]
+[75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [75]
-[76]
+ [76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [78]
+[79] [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
-[80] [81]
+ [81]
+[82]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [82]
-[83]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [84])
-[85]
+ [83])
+[84]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.99994pt on input line 101.
 
@@ -2510,7 +2505,7 @@ Overfull \hbox (17.90956pt too wide) in paragraph at lines 102--102
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[86
+[85
 
 
 
@@ -2545,17 +2540,24 @@ sium on Security and Privacy (EuroS P)\TU/EBGaramond(2)/m/n/12 . 2016, pp. 372�
 
  []
 
-
+[86]
 Overfull \hbox (40.65767pt too wide) in paragraph at lines 102--102
 \TU/EBGaramond(2)/m/n/12 Black Box Deep Neural Networks for Computer Vision: A 
 Survey”. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.1
 2116
  []
 
-[87]
+
 Overfull \hbox (0.57768pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 Yuan Gong and Christian Poellabauer. “  An Overview 
 of Vulnerabilities of Voice Con-
+ []
+
+
+Overfull \hbox (10.57083pt too wide) in paragraph at lines 102--102
+[][]$[][][][][] [] [] [] [][][] [] [][][][][][][][][][][][][][] [] [][][] [] []
+[][][][][] [][] [][][][][][][][] [][] [][][][][][][][] [][] [][][][][][][][][]$
+[][]\TU/EBGaramond(2)/m/n/12 . 
  []
 
 
@@ -2565,7 +2567,7 @@ attern : a patternist philosophy of mind\TU/EBGaramond(2)/m/n/12 . Boca Raton:
 Brown-
  []
 
-
+[87]
 Overfull \hbox (0.94882pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 Amit Basu and Robert Blanning. \TU/EBGaramond(2)/m/i
 t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
@@ -2579,7 +2581,7 @@ Overfull \hbox (4.35509pt too wide) in paragraph at lines 102--102
 ][][][] [] [][][][] [] [][][][][][][][][] [][]
  []
 
-[88]
+
 Overfull \hbox (1.64275pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 André Senna. Aug. 2018. \TU/EBGaramond(2)/m/sc/12 ur
 l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
@@ -2592,7 +2594,7 @@ Overfull \hbox (13.70285pt too wide) in paragraph at lines 102--102
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[89] [90] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[88] [89] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/chapter4.aux)
 (chapters/conclusion.aux) (chapters/conclusionDue.aux) (chapters/AppendixA.aux)
 )
@@ -2614,12 +2616,12 @@ Package logreq Info: Writing requests to 'dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52788 strings out of 411335
- 1205304 string characters out of 2837817
- 2167535 words of memory out of 3000000
- 72259 multiletter control sequences out of 15000+600000
+ 52794 strings out of 411335
+ 1205612 string characters out of 2837817
+ 2170253 words of memory out of 3000000
+ 72265 multiletter control sequences out of 15000+600000
  410766 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (99 pages).
+Output written on dissertation.pdf (98 pages).

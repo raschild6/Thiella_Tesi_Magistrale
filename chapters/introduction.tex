@@ -40,7 +40,7 @@ In order to design a general purpose planning system, a declarative language for
 For this reason, careful consideration needs to be given to the selection of language and solver \cite{DBLP:journals/corr/abs-1804-08229}.
 However, in general, these considerations tend, either voluntarily or involuntarily, to restrict the possible domains or to force the description of the domain using only the features supported by the solver.
 In this project, it is proposed to use an AGI-Based system for Task Planning, to generalise as much as possible the domains and the problems to be solved.
-Consequently, the aim of this proposal is to obtain a system capable of solving any manipulation problem that has a domain with four specific actions (see Section \ref{sec:domain_atomese}).  
+Consequently, the aim of this proposal is to obtain a system capable of solving any manipulation problem that has a domain with four specific actions: Pick, Place, Stack and Unstack (see Section \ref{sec:domain_atomese}).  
 That is, a Task Planning system developed starting from the classical blocks world problem, but which is also strongly oriented towards its expansion (e.g., to easily add further actions or more detailed domain description), and from which the following features can be obtained:
 
 \begin{itemize}
@@ -106,12 +106,14 @@ Figure \ref{fig:nn_development_process} gives a general idea of a NN development
 
 The disadvantages of an NN-based approach like OpenAI have been mentioned. Now, to understand the advantages of a human-like approach like OpenCog, it is necessary to explain the OpenCog system. Therefore, these advantages are postponed to the Section \ref{sec:opencog_advantages}. \\
 
-\textbf{Update:}
-
+\textbf{Update:} OpenAI shuts down robotics team because it doesn't have enough data yet.\\
+In June 2021, on a podcast hosted by startup Weights \& Biases, Wojciech Zaremba, co-founder of OpenAI, who led the robotics group confirmed that the company recently broke up the team to focus working on more promising areas of artificial general intelligence research.
+Zaremba said: \enquote{there wasn't enough information (lack of training data) on hand to teach the systems to the level of intelligence desired. From the perspective of what we want to achieve, which is to build AGI, I think there was actually some components missing} \cite{wiggers_openai_2021,oitzman_2021,quach_2021}.
 
 
 \section{Contributions}\label{sec:contributions}
 
-Many tests and attempts have been made to achieve this goal. Together with some members of the OpenCog team, different strategies for solving the problem were analysed. The first one tried to be developed was based on inference by Backward Chaining (see Section \ref{sec:ure}), but was abandoned due to conceptual and practical problems. Subsequently, the one proposed in this paper was reached, while the first one was revisited and some solutions to its problems were sketched (Section \ref{sec:future_devel})
-
-Contributions ...
+Many tests and attempts have been made to achieve this goal. Together with some members of the OpenCog team, different strategies to solve the problem were analysed\footnotemark{}. The first development attempt was based on Backward Chaining inference strategy (see Section \ref{sec:ure}), but was abandoned due to conceptual and practical problems. Subsequently, the one proposed in this paper was implemented, while the first one was revisited and some solutions to its problems were sketched (Section \ref{sec:future_devel}).
+\footnotetext{\url{https://groups.google.com/g/opencog/c/WUOIi1CHqos}}
+The main contributions, therefore, correspond to the search for the best way to describe these problems (any manipulation problem that has a domain with the four specific actions) within the AGI-based system and the implementation of a suprasystem using it, which through an algorithm (introduced in Section \ref{sec:bfs_search}) is able to solve these problems.
+Since this is an unexplored area of research for the AGI-based system used, a few external modules (i.e., the vision system, for object recognition, and the manipulation system, for interaction with them) were simplified, without loss of generality, to focus on the main objective.  

@@ -1219,6 +1219,7 @@
       \strng{authorbibnamehash}{b3480ba90a54e0eeb1bb12457a2635ea}
       \strng{authornamehash}{b3480ba90a54e0eeb1bb12457a2635ea}
       \strng{authorfullhash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -1344,6 +1345,100 @@
       \field{title}{An Overview of Vulnerabilities of Voice Controlled Systems}
       \field{year}{2018}
     \endentry
+    \entry{wiggers_openai_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b3480ba90a54e0eeb1bb12457a2635ea}{%
+           family={Wiggers},
+           familyi={W\bibinitperiod},
+           given={Kyle},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {VentureBeat}%
+      }
+      \strng{namehash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \strng{fullhash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \strng{bibnamehash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \strng{authorbibnamehash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \strng{authornamehash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \strng{authorfullhash}{b3480ba90a54e0eeb1bb12457a2635ea}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{VentureBeat}
+      \field{month}{07}
+      \field{title}{OpenAI disbands its robotics research team}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/
+      \endverb
+      \verb{url}
+      \verb https://venturebeat.com/2021/07/16/openai-disbands-its-robotics-research-team/
+      \endverb
+    \endentry
+    \entry{oitzman_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c25d10275663779dfc22a97ef876cbf8}{%
+           family={Oitzman},
+           familyi={O\bibinitperiod},
+           given={Mike},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{c25d10275663779dfc22a97ef876cbf8}
+      \strng{fullhash}{c25d10275663779dfc22a97ef876cbf8}
+      \strng{bibnamehash}{c25d10275663779dfc22a97ef876cbf8}
+      \strng{authorbibnamehash}{c25d10275663779dfc22a97ef876cbf8}
+      \strng{authornamehash}{c25d10275663779dfc22a97ef876cbf8}
+      \strng{authorfullhash}{c25d10275663779dfc22a97ef876cbf8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Robot Report}
+      \field{month}{07}
+      \field{title}{Why openai decided to abandon robotics research}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.therobotreport.com/openai-abandons-robotics-research/
+      \endverb
+      \verb{url}
+      \verb https://www.therobotreport.com/openai-abandons-robotics-research/
+      \endverb
+    \endentry
+    \entry{quach_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=21c14a4b92de61b60ac682ef754392da}{%
+           family={Quach},
+           familyi={Q\bibinitperiod},
+           given={Katyanna},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The Register}%
+      }
+      \strng{namehash}{21c14a4b92de61b60ac682ef754392da}
+      \strng{fullhash}{21c14a4b92de61b60ac682ef754392da}
+      \strng{bibnamehash}{21c14a4b92de61b60ac682ef754392da}
+      \strng{authorbibnamehash}{21c14a4b92de61b60ac682ef754392da}
+      \strng{authornamehash}{21c14a4b92de61b60ac682ef754392da}
+      \strng{authorfullhash}{21c14a4b92de61b60ac682ef754392da}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Register® - Biting the hand that feeds IT}
+      \field{month}{07}
+      \field{title}{OpenAI shuts down robotics team because it doesn't have enough data yet}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://www.theregister.com/2021/07/18/in_brief_ai/
+      \endverb
+      \verb{url}
+      \verb https://www.theregister.com/2021/07/18/in_brief_ai/
+      \endverb
+    \endentry
     \entry{inproceedings_cognitive_synergy}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=d00baed2f90b47ae52840783b7ac55e4}{%
@@ -1393,8 +1488,8 @@
       \strng{authornamehash}{d00baed2f90b47ae52840783b7ac55e4}
       \strng{authorfullhash}{d00baed2f90b47ae52840783b7ac55e4}
       \field{extraname}{3}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{isbn}{1581129890}
@@ -1832,8 +1927,8 @@
       \endverb
     \endentry
     \entry{distributed_2017}{misc}{}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{journaltitle}{Distributed Atom Space - Requirements and Ideas}
       \field{month}{07}
       \field{year}{2017}
@@ -1858,8 +1953,8 @@
       \strng{authorbibnamehash}{dca028172c56b9b6e4b2258834a60eee}
       \strng{authornamehash}{dca028172c56b9b6e4b2258834a60eee}
       \strng{authorfullhash}{dca028172c56b9b6e4b2258834a60eee}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{journaltitle}{Distributed Atom Space - Architecture}
       \field{month}{08}
@@ -1886,8 +1981,8 @@
       \strng{authornamehash}{67e62ad273be6573a755f5a1fc704d81}
       \strng{authorfullhash}{67e62ad273be6573a755f5a1fc704d81}
       \field{extraname}{1}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{journaltitle}{AtomSpace 2.0 and graph DBs: differences}
       \field{month}{03}
@@ -1914,8 +2009,8 @@
       \strng{authornamehash}{67e62ad273be6573a755f5a1fc704d81}
       \strng{authorfullhash}{67e62ad273be6573a755f5a1fc704d81}
       \field{extraname}{2}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{journaltitle}{Pattern Mining, Indexing and Generalized Hypergraph Representation}
       \field{month}{04}
