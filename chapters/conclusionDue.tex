@@ -34,7 +34,7 @@ As a result, its development remains important (particular attention to the modu
 		\item Finally, implement functions, tasks, and elements that enable cooperation between multiple robots.
 	\end{itemize}
 
-	\item Regarding new approaches to the problem, since AtomSpace is mostly used as a store of immutable data, especially about reasoning, the idea is to think of the problem as an immutable graph that needs to be traveled/unfolded according to URE rules. Thus, the URE query handed to the Backward Chainer should look like:
+	\item Regarding new approaches to the problem, since AtomSpace is mostly used as a store of immutable data, especially about reasoning, the idea is to think of the problem as an immutable graph that needs to be traveled/unfolded according to URE rules. Thus, the URE query, handed to the Backward Chainer, should look like:
 
 \begin{equation}
 Initial\_State \times Action\_Sequence \rightarrow Final\_State 
@@ -42,6 +42,6 @@ Initial\_State \times Action\_Sequence \rightarrow Final\_State
 
 where the $Action\_Sequence$ is the variable that the Backward Chainer has to fill in and the format of such relations and states can be chosen. 
 Probably, the best way is to use time (i.e., wrap the evaluated rules with AtTimeLink type atom and do temporal reasoning). 
-Alternatively, describe a state explicitly (as a sort of list of attribute states, such as hold, clear, etc.), and have rules that take that state in addition to its arguments (to be, again, immutable).
+Alternatively, describe a state explicitly (as a kind of list of attribute states, such as hold, clear, etc.), and have rules that take that state in addition to its arguments (to be, again, immutable).
 
 \end{enumerate}
