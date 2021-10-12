@@ -1,6 +1,6 @@
 %!TEX root = ../dissertation.tex
 
-\chapter{The Algorithm} \label{cha:algorithm}
+\chapter{System Implementation} \label{cha:algorithm}
 
 Having defined the OpenCog system and part of the implementation of the problem in the previous chapters, it is now possible to combine all the various modules and explain the functioning of the internal design and the main algorithm. \\
 
@@ -52,7 +52,7 @@ Thus, the same steps used in the learning phase are performed here. That is, the
 
 \section{Search Phase}\label{sec:search}
 
-The search phase is the core of the algorithm and tries to achieve an arrangement of objects in which all atoms in the goal list are satisfied.
+The search phase contains the actual implementation of the algorithm and corresponds to the core of the system. It tries to achieve an arrangement of objects in which all atoms in the goal list are satisfied.
 To find a solution, the AtomSpace of the final arrangement must contain every atom within the goal list. \\
 
 Since each atom is unique in the AtomSpace, two AtomSpaces describing the same arrangement and state of objects have the same atoms, thus they are identical. 
@@ -65,7 +65,7 @@ In addition, each tree-node has a label describing the action used, and on which
 In this way, each branch of the tree describes a different sequence of actions. They can be derived by starting with a solution tree-node and reading the labels of the parent tree-nodes backwards until the root, adding each label to a list. Finally, reversing the list.  \\
 
 After the request phase, the root of the tree, containing the main AtomSpace and a \textit{NULL} label, is created. \\
-Next, a search algorithm, based on the well-known Breadth-First Search (BFS) (more details in \cite{BFS-wiki, BFS}), expands the tree in search of a solution.
+Next, the search algorithm, based on the well-known Breadth-First Search (BFS) (more details in \cite{BFS-wiki, BFS}), expands the tree in search of a solution.
 
 \subsection{BFS-Based Algorithm}\label{sec:bfs_search}
 

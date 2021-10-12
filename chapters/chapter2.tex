@@ -1,10 +1,12 @@
 %!TEX root = ../dissertation.tex
-\chapter{Problem Description} \label{cha:problem_description}
+\chapter{Problem Formulation} \label{cha:problem_description}
 
 The problem addressed in this project takes inspitaion from the classical blocks world problem\footnotemark{}. 
 \footnotetext{\url{https://en.wikipedia.org/wiki/Blocks_world\#:~:text=In\%20its\%20basic\%20form\%2C\%20the,different\%20sizes\%2C\%20shapes\%20and\%20colors.}}
-The blocks world is a planning domain in artificial intelligence and is used as a toy problem. From an algorithm perspective, it is an NP-Hard search and planning problem \cite{Gupta1991ComplexityRF, Chenoweth1991OnTN}.
-Here, a more general version of it is presented. \\
+The blocks world is a planning domain in artificial intelligence and is used as a toy problem. From an algorithm perspective, it is an NP-Hard search and planning problem \cite{Gupta1991ComplexityRF, Chenoweth1991OnTN}. Here, a more general version of it is presented. \\
+Before proceeding with the description, there is an important aspect to keep in mind while reading this chapter: this description of the problem is only the formulation of a case study developed to test the goodness of the system. As will be explained in Section \ref{sec:env_atomese}, the aim remains to obtain a system capable of solving any manipulation problem that has a domain with the four actions. That is, the system is not limited to the domain of blocks, but uses blocks to simplify the work of the manipulation module. It is able to work with any domain with the four actions thanks to the use of semantic concepts that are associated with the AprilTag markers of each cube and that are detected by the perception module.
+In other words, by using cubes and AprilTags markers in this way, it is possible to "simulate" working with any kind of object, leaving out perception and manipulation, which do not concern it at the moment. These concepts are described and explained below. \\
+
 First of all, the environment consists of:
 \begin{itemize}
 	\item A robot manipulator, equipped with a video camera;
@@ -62,9 +64,7 @@ Firstly, the Atomese representation of the objects is \\
 		(ConceptNode "table")
 		(ConceptNode "fixed-object"))
 \end{python}
-On a practical (physical) level, the objects will all be cubes, except for the fixed ones. At the conceptual level, a semantic meaning will be associated to the AprilTag marker of each cube. In this way, and thanks to the AprilTags, it is possible to simplify the perception and manipulation of objects by replacing each different object with a cube. \\
-In other words, it will be possible to \enquote{simulate} working with any kind of object, and thus demonstrate the potential of the NLP aspect of this project, leaving out perception and manipulation, which do not concern it at the moment. \\
-For this reason, the code above speaks of \textit{screw} and not \textit{cube\_1}. \\
+At the practical (physical) level, the objects will all be cubes, except for the fixed ones, while, at the conceptual level, semantic concepts (meanings) are used. That is, the AprilTag of each cube will be associated with a semantic concept, which will correspond to the English word used to \enquote{trasform} that cube. Consequently, the physical cube will remain a cube only for the manipulation module, the associated AprilTag marker will allow to \enquote{simulate} the presence of any object in the environment, despite the perception module sees only cubes and AprilTag markers, while for all the remaining modules of the system (i.e., NLP processing, algorithm for solving the shortest sequence of actions, etc.) this cube will correspond only to its associated semantic concept. Thus, for example, if one wants to work with an induction hardened rod, simply use a cube with an AprilTag marker, associating with it the semantic meaning of induction hardened rod. \\
 
 In that code, the \textit{screw} has been defined as an \textit{object} and the \textit{table} as a \textit{fixed-object}. 
 ConceptNodes were used to refer to \enquote{concepts} and InheritanceLinks to connect two ConceptNodes with an \enquote{inheritance} meaning. This way, when the robot searches for which objects it can move, it will limit the pattern matching only to atoms that are objects (thus, only to the screw). \\
