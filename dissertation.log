@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  12 OCT 2021 10:25
+This is XeTeX, Version 3.141592653-2.6-0.999993 (MiKTeX 21.8) (preloaded format=xelatex 2021.9.9)  12 OCT 2021 14:01
 entering extended mode
 **./dissertation.tex
 (dissertation.tex
@@ -1898,10 +1898,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 107--108
 
  []
 
-
-LaTeX Warning: Citation 'wiggers_openai_2021' on page 5 undefined on input line
- 111.
-
 [5] [6]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 8.33328pt on input line 117.
@@ -2128,33 +2124,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 5--5
 ][][][][] [] [][][][][][] [] [][] []
  []
 
-File: figures/Magistrale/env_fin_1.png Graphic file (type bmp)
-<figures/Magistrale/env_fin_1.png>
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
+
+ []
 
 [28
 
 
 
 
-] [29]
+]
+File: figures/Magistrale/env_fin_1.png Graphic file (type bmp)
+<figures/Magistrale/env_fin_1.png>
+ [29]
 File: figures/Magistrale/blocks_example.png Graphic file (type bmp)
 <figures/Magistrale/blocks_example.png>
 LaTeX Font Info:    Font shape `TU/LatoRegular(0)/m/it' will be
-(Font)              scaled to size 7.89734pt on input line 44.
+(Font)              scaled to size 7.89734pt on input line 46.
+ [30]
+Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
-Underfull \hbox (badness 10000) in paragraph at lines 52--54
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 55--56
-
- []
-
-[30]
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
+Underfull \hbox (badness 10000) in paragraph at lines 67--68
 
  []
 
@@ -2163,12 +2162,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--72
 
  []
 
-
+[31]
 Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[31]
+
 Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
@@ -2178,17 +2177,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-
+[32]
 Underfull \hbox (badness 10000) in paragraph at lines 107--112
 
  []
 
-[32] [33]
+[33] [34]
 LaTeX Font Info:    Font shape `TU/EBGaramond(2)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 181.
- [34]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -2198,19 +2194,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 277--285
  []
 
 
+Underfull \vbox (badness 4303) has occurred while \output is active []
+
+ [37]
 Underfull \hbox (badness 10000) in paragraph at lines 286--288
 
  []
 
 
-Underfull \vbox (badness 4168) has occurred while \output is active []
-
- [37]
 Underfull \hbox (badness 10000) in paragraph at lines 299--304
 
  []
 
-[38]) [39]
+[38]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39])
+[40]
 \openout2 = `chapters/chapter3.aux'.
 
  (chapters/chapter3.tex
@@ -2225,7 +2225,7 @@ File: figures/Magistrale/env_objs.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[40
+[41
 
 
 
@@ -2235,7 +2235,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
 
-[41]
+[42]
 Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
@@ -2251,7 +2251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--42
 
  []
 
-[42]
+[43]
 Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
@@ -2266,25 +2266,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--66
 
  []
 
-[43]
+[44]
 Underfull \hbox (badness 10000) in paragraph at lines 98--104
 
  []
 
-[44]
+[45]
 Overfull \hbox (0.31693pt too wide) in paragraph at lines 124--130
 \TU/EBGaramond(2)/m/n/12 It is necessary to use AtomSpace copies because rule e
 xecution adds and removes atoms
  []
 
-[45] [46] [47]
+[46] [47] [48]
 File: figures/Magistrale/BFS_1_blue.png Graphic file (type bmp)
 <figures/Magistrale/BFS_1_blue.png>
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [48] [49]
+) [49] [50]
 \openout2 = `chapters/chapter4.aux'.
 
  (chapters/chapter4.tex
@@ -2338,7 +2338,7 @@ LaTeX Font Info:    Font shape `TU/EBGaramond(4)/b/n' will be
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [50
+ [51
 
 
 
@@ -2350,7 +2350,7 @@ File: figures/Magistrale/BRF.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[51] [52] [53]
+[52] [53] [54]
 Overfull \hbox (53.78082pt too wide) in paragraph at lines 99--131
  [][] 
  []
@@ -2386,7 +2386,7 @@ File: figures/Magistrale/ass_3.png Graphic file (type bmp)
 <figures/Magistrale/ass_3.png>
 File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 <figures/Magistrale/ass_4.png>
-[54] [55] [56] [57] [58] [59] [60] [61]) [62]
+[55] [56] [57] [58] [59] [60] [61] [62]) [63]
 \openout2 = `chapters/conclusion.aux'.
 
  (chapters/conclusion.tex)
@@ -2395,7 +2395,22 @@ File: figures/Magistrale/ass_4.png Graphic file (type bmp)
 
 (chapters/conclusionDue.tex
 Chapter 6.
-) [63
+
+Overfull \hbox (5.82224pt too wide) in paragraph at lines 6--10
+\TU/EBGaramond(2)/m/n/12 and diversity of data it should contain [[][]56[][]]. 
+Furthermore, current research on a new OpenCog
+ []
+
+
+Overfull \hbox (7.76491pt too wide) in paragraph at lines 6--10
+\TU/EBGaramond(2)/m/n/12 architecture, mentioned in Section [][]2.2.2[][], is i
+mproving the distributivity of the system, through
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64
 
 
 
@@ -2404,6 +2419,11 @@ Chapter 6.
 
 
 ]
+
+LaTeX Warning: Citation 'hollander_2021' on page 65 undefined on input line 23.
+
+
+[65]) [66]
 \openout2 = `chapters/AppendixA.aux'.
 
  (chapters/AppendixA.tex
@@ -2413,7 +2433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-[64
+[67
 
 
 
@@ -2433,47 +2453,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--56
 
  []
 
-[65]
+[68]
 Underfull \hbox (badness 10000) in paragraph at lines 57--58
 
  []
 
-[66] [67] [68]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [69]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [70]
-[71]
+[69] [70] [71]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [72]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [73]
+[74]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [74]
-[75]
+ [75]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [77]
+[78]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [78]
-[79] [80]
+ [79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
-[82]
+[82] [83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83])
-[84]
+ [84]
+[85]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86])
+[87]
 LaTeX Font Info:    Font shape `TU/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.99994pt on input line 101.
 
@@ -2505,7 +2525,7 @@ Overfull \hbox (17.90956pt too wide) in paragraph at lines 102--102
 ][] [] [][][] [][] [][] [][] [][][] [][] [][][][][][][][][][][][][] [][]
  []
 
-[85
+[88
 
 
 
@@ -2540,7 +2560,7 @@ sium on Security and Privacy (EuroS P)\TU/EBGaramond(2)/m/n/12 . 2016, pp. 372‚Ä
 
  []
 
-[86]
+[89]
 Overfull \hbox (40.65767pt too wide) in paragraph at lines 102--102
 \TU/EBGaramond(2)/m/n/12 Black Box Deep Neural Networks for Computer Vision: A 
 Survey‚Äù. In: \TU/EBGaramond(2)/m/it/12 CoRR \TU/EBGaramond(2)/m/n/12 abs/1911.1
@@ -2567,7 +2587,7 @@ attern : a patternist philosophy of mind\TU/EBGaramond(2)/m/n/12 . Boca Raton:
 Brown-
  []
 
-[87]
+[90]
 Overfull \hbox (0.94882pt too wide) in paragraph at lines 102--102
 []\TU/EBGaramond(2)/m/n/12 Amit Basu and Robert Blanning. \TU/EBGaramond(2)/m/i
 t/12 Metagraphs and Their Applications\TU/EBGaramond(2)/m/n/12 . Jan. 2007. \TU
@@ -2588,13 +2608,13 @@ l\TU/EBGaramond(2)/m/n/12 : [][]$[][][][][] [] [] [] [][][][] [] [][][][][][][]
  [] [][][] [] [][][][][][][][] [] [][][][][][] []
  []
 
-
+[91]
 Overfull \hbox (13.70285pt too wide) in paragraph at lines 102--102
 [][][][][][] [] [] [] [][] [] [][][][][][][] [] [][][][][][] [] [][] [] [][][][
 ][][][][] [] [][][] [] [][][][][][][][][][][] [] [][][][][][][][][][] []
  []
 
-[88] [89] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
+[92] [93] (dissertation.aux (chapters/introduction.aux) (chapters/chapter1.aux)
 (chapters/chapter2.aux) (chapters/chapter3.aux) (chapters/chapter4.aux)
 (chapters/conclusion.aux) (chapters/conclusionDue.aux) (chapters/AppendixA.aux)
 )
@@ -2605,7 +2625,7 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `dissertation.out' has not changed.
-(rerunfilecheck)             Checksum: 0EC397B7D0B6C961F45143EEF4FEB5B3;6618.
+(rerunfilecheck)             Checksum: 89AC0213D2CAF5048FCA54E2E96CFC5F;6663.
 
 Package biblatex Warning: Please (re)run Biber on the file:
 (biblatex)                dissertation
@@ -2616,12 +2636,12 @@ Package logreq Info: Writing requests to 'dissertation.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 52794 strings out of 411335
- 1205612 string characters out of 2837817
- 2170253 words of memory out of 3000000
- 72265 multiletter control sequences out of 15000+600000
+ 52804 strings out of 411335
+ 1206122 string characters out of 2837817
+ 2174617 words of memory out of 3000000
+ 72275 multiletter control sequences out of 15000+600000
  410766 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  103i,14n,133p,1252b,5423s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (98 pages).
+Output written on dissertation.pdf (102 pages).

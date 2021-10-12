@@ -1,23 +1,52 @@
 %!TEX root = ../dissertation.tex
 \chapter{Conclusion} \label{cha:conclusion}
 
-%%The purpose of this project is to show how a proto-AGI system such as OpenCog can be used 
-
 \section{OpenCog Advantages}\label{sec:opencog_advantages}
 
-...........
-
-The OpenCog system is focused on AGI and is therefore designed to be largely scalable, given the amount and diversity of data it should contain. 
+Now that the whole proposed system has been analysed, it is easier to understand the advantages of using the OpenCog system, in addition to those listed in Section \ref{sec:motivation}.
+The OpenCog system is focused on AGI and is therefore designed to be largely scalable, given the amount and diversity of data it should contain \cite{net_scalab_2021}.
+Furthermore, current research on a new OpenCog architecture, mentioned in Section \ref{sec:atomese}, is improving the distributivity of the system, through the use of Distributed AtomSpaces. The general idea is to have a decentralised structure, composed of many AtomSpaces around the world. External systems can access one or more of them, interacting with the information they need, and consequently, increasing overall knowledge. In this way, it might no longer be necessary to have a proprietary system that is used by robots to solve their tasks, but rather to use a small system that exploits the knowledge already contained in the various AtomSpaces and, if necessary, augments it with its own \enquote{experience}, or with the learned one. In some sense, they are trying to standardise knowledge to get a system that has enough data to achieve the prerequisites of AGI.
 The generalised hypergraph structure appears to be sufficiently generic for this purpose and the creation of new atom types is simple and effective. 
 
-...........
 
-\section{Future Development}\label{sec:future_devel}
 
-...........
+\section{Future Developments}\label{sec:future_devel}
+
 
 This project performs very simple tasks, as it only uses actions that pick up or place cubes. 
 It also uses Relex2Logic to do NLP, which is deprecated, contains bugs and is limited in logical understanding of sentences.
 Consequently 
 
-...........
+Possible future developments concerning this project can be summarized in three main lines: the OpenCog modules used, improvements to the proposed approach and new approaches to the problem.
+
+\begin{enumerate}
+	\item The OpenCog modules are the core of the development. The entire system is based on them and, moreover, its advances are also the most important ones from the theoretical point of view. From the practical point of view, some considerations can be made. The development of OpenCog is a long-term challenge and there is a relatively small probability that AGI will never be achieved (as explained in the Article \cite{hollander_2021} and many others). 
+As a result, its development remains important (particular attention to the module in \cite{linas_learn}, in my opinion the most state-of-the-art AGI-oriented module currently being developed), but it makes sense to also pursue the development of systems that use it to solve other current problems, which is what SingularityNet is doing (more details in \cite{kolonin_2018}). 
+
+	\item Improvements to the current project can be summarized as:
+
+	\begin{itemize}
+		\item A perception module that can recognize objects in the environment without the help of markers, e.g., by point cloud analysis via NN.
+
+		\item A manipulation module that attempts to learn how to grasp any object, e.g., through Deep Reinforcement Learning \cite{DBLP:journals/corr/abs-2007-04499}.
+
+		\item Replace Relex2Logic with a better NLP module, currently this is one of the short-term targets of OpenCog. Also, use speech recognition rather than writing.
+
+		\item Add new actions to the robot and add new features to the environment and objects.
+
+		\item Improve the code of the BFS-based algorithm to increase its performance and run new tests using a suitable computer.
+
+		\item Finally, implement functions, tasks, and elements that enable cooperation between multiple robots.
+	\end{itemize}
+
+	\item Regarding new approaches to the problem, since AtomSpace is mostly used as a store of immutable data, especially about reasoning, the idea is to think of the problem as an immutable graph that needs to be traveled/unfolded according to URE rules. Thus, the URE query handed to the Backward Chainer should look like:
+
+\begin{equation}
+Initial\_State \times Action\_Sequence \rightarrow Final\_State 
+\end{equation}
+
+where the $Action\_Sequence$ is the variable that the Backward Chainer has to fill in and the format of such relations and states can be chosen. 
+Probably, the best way is to use time (i.e., wrap the evaluated rules with AtTimeLink type atom and do temporal reasoning). 
+Alternatively, describe a state explicitly (as a sort of list of attribute states, such as hold, clear, etc.), and have rules that take that state in addition to its arguments (to be, again, immutable).
+
+\end{enumerate}

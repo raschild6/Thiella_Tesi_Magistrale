@@ -2400,6 +2400,11 @@
     <bcf:citekey order="34">wang2016iros</bcf:citekey>
     <bcf:citekey order="35">BFS-wiki</bcf:citekey>
     <bcf:citekey order="35">BFS</bcf:citekey>
+    <bcf:citekey order="36">net_scalab_2021</bcf:citekey>
+    <bcf:citekey order="37">hollander_2021</bcf:citekey>
+    <bcf:citekey order="38">linas_learn</bcf:citekey>
+    <bcf:citekey order="39">kolonin_2018</bcf:citekey>
+    <bcf:citekey order="40">DBLP:journals/corr/abs-2007-04499</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

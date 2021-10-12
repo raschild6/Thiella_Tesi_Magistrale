@@ -2229,6 +2229,170 @@
       \field{title}{The Nature of Breadth-First Search}
       \field{year}{1999}
     \endentry
+    \entry{net_scalab_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=21bf5f41bd8be9ac9874692996f83e83}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={OpenCog},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{fullhash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{bibnamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authorbibnamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authornamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authorfullhash}{21bf5f41bd8be9ac9874692996f83e83}
+      \field{extraname}{1}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{07}
+      \field{title}{Network scalability}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://wiki.opencog.org/w/Network_scalability
+      \endverb
+      \verb{url}
+      \verb https://wiki.opencog.org/w/Network_scalability
+      \endverb
+    \endentry
+    \entry{hollander_2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9a5637708f849c57d1bb73260b83b26b}{%
+           family={Holländer},
+           familyi={H\bibinitperiod},
+           given={Branislav},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Towards Data Science}%
+      }
+      \strng{namehash}{9a5637708f849c57d1bb73260b83b26b}
+      \strng{fullhash}{9a5637708f849c57d1bb73260b83b26b}
+      \strng{bibnamehash}{9a5637708f849c57d1bb73260b83b26b}
+      \strng{authorbibnamehash}{9a5637708f849c57d1bb73260b83b26b}
+      \strng{authornamehash}{9a5637708f849c57d1bb73260b83b26b}
+      \strng{authorfullhash}{9a5637708f849c57d1bb73260b83b26b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{01}
+      \field{title}{Why we may never develop strong AI}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://towardsdatascience.com/why-we-may-never-develop-strong-ai-e49c805480f
+      \endverb
+      \verb{url}
+      \verb https://towardsdatascience.com/why-we-may-never-develop-strong-ai-e49c805480f
+      \endverb
+    \endentry
+    \entry{linas_learn}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=21bf5f41bd8be9ac9874692996f83e83}{%
+           family={Team},
+           familyi={T\bibinitperiod},
+           given={OpenCog},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{fullhash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{bibnamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authorbibnamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authornamehash}{21bf5f41bd8be9ac9874692996f83e83}
+      \strng{authorfullhash}{21bf5f41bd8be9ac9874692996f83e83}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{GitHub}
+      \field{title}{Opencog/learn: Neuro-symbolic interpretation learning (mostly just language-learning, for now)}
+      \verb{urlraw}
+      \verb https://github.com/opencog/learn
+      \endverb
+      \verb{url}
+      \verb https://github.com/opencog/learn
+      \endverb
+    \endentry
+    \entry{kolonin_2018}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7f90e9b63a36062690855ea9468f7e4a}{%
+           family={Kolonin},
+           familyi={K\bibinitperiod},
+           given={Aigents\bibnamedelimb with\bibnamedelima Anton},
+           giveni={A\bibinitperiod\bibinitdelim w\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SingularityNET}%
+      }
+      \strng{namehash}{7f90e9b63a36062690855ea9468f7e4a}
+      \strng{fullhash}{7f90e9b63a36062690855ea9468f7e4a}
+      \strng{bibnamehash}{7f90e9b63a36062690855ea9468f7e4a}
+      \strng{authorbibnamehash}{7f90e9b63a36062690855ea9468f7e4a}
+      \strng{authornamehash}{7f90e9b63a36062690855ea9468f7e4a}
+      \strng{authorfullhash}{7f90e9b63a36062690855ea9468f7e4a}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Medium}
+      \field{month}{08}
+      \field{title}{Integrating OpenCog's Atomspace hypergraph to accelerate intelligence development}
+      \field{year}{2018}
+      \verb{urlraw}
+      \verb https://blog.singularitynet.io/singularitynet-integrates-opencog-s-atomspace-hypergraph-to-accelerate-intelligence-development-1301e736766d
+      \endverb
+      \verb{url}
+      \verb https://blog.singularitynet.io/singularitynet-integrates-opencog-s-atomspace-hypergraph-to-accelerate-intelligence-development-1301e736766d
+      \endverb
+    \endentry
+    \entry{DBLP:journals/corr/abs-2007-04499}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ac9aeeb82960b72c22a716fbc71ebd26}{%
+           family={Joshi},
+           familyi={J\bibinitperiod},
+           given={Shirin},
+           giveni={S\bibinitperiod}}}%
+        {{hash=e6488391110fa82ba0d1b5596796b5d9}{%
+           family={Kumra},
+           familyi={K\bibinitperiod},
+           given={Sulabh},
+           giveni={S\bibinitperiod}}}%
+        {{hash=29fe0a8675f19f1b0400e111ed6bb957}{%
+           family={Sahin},
+           familyi={S\bibinitperiod},
+           given={Ferat},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{bf801e9bfb765c32b17f910ef6134209}
+      \strng{fullhash}{bf801e9bfb765c32b17f910ef6134209}
+      \strng{bibnamehash}{bf801e9bfb765c32b17f910ef6134209}
+      \strng{authorbibnamehash}{bf801e9bfb765c32b17f910ef6134209}
+      \strng{authornamehash}{bf801e9bfb765c32b17f910ef6134209}
+      \strng{authorfullhash}{bf801e9bfb765c32b17f910ef6134209}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{journaltitle}{CoRR}
+      \field{title}{Robotic Grasping using Deep Reinforcement Learning}
+      \field{volume}{abs/2007.04499}
+      \field{year}{2020}
+      \verb{eprint}
+      \verb 2007.04499
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2007.04499
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2007.04499
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
