@@ -34,9 +34,10 @@ These differences immediately lead into much wider contexts than industry, as AG
 However, using an AGI system in an industrial setting can have many benefits, as explained in the next section.
 
 
-\section{Motivation and Challenges}\label{sec:motivation} %% TODO: Magari aggiungi un ref a opencog advantages
+\section{Motivation and Challenges}\label{sec:motivation}
 
 In order to design a general purpose planning system, a declarative language for formalizing the domain first needs to be selected, followed by the selection of a suitable solver which supports this language. Many different factors affect this selection process.
+For instance, not all languages support all types of reasoning, and a solver is also typically tied to a particular language, but may not support all features in it. Also, some domains may include many objects and their properties, which can be challenging to some planning systems. Finally, there can be many ways of formalizing the problem using the language.
 For this reason, careful consideration needs to be given to the selection of language and solver \cite{DBLP:journals/corr/abs-1804-08229}.
 However, in general, these considerations tend, either voluntarily or involuntarily, to restrict the possible domains or to force the description of the domain using only the features supported by the solver.
 In this project, it is proposed to use an AGI-Based system for Task Planning, to generalise as much as possible the domains and the problems to be solved.
@@ -111,7 +112,7 @@ Zaremba said: \enquote{There wasn't enough information (lack of training data) o
 
 \section{Contributions}\label{sec:contributions}
 
-Many tests and attempts have been made to achieve this goal. Together with some members of the OpenCog team, different strategies to solve the problem were analysed\footnotemark{}. The first development attempt was based on Backward Chaining inference strategy (see Section \ref{sec:ure}), but was abandoned due to conceptual and practical problems. Subsequently, the one proposed in this paper was implemented, while the first one was revisited and some solutions to its problems were sketched (Section \ref{sec:future_devel}).
+Many tests and attempts have been made to achieve this goal. Together with some members of the OpenCog team, different strategies to solve the problem were analysed\footnotemark{}. The first development attempt was based on Backward Chaining inference strategy (see Section \ref{sec:ure}), but was abandoned due to conceptual and practical problems. Subsequently, a new design was implemented, inspired by the functioning of Finite State Machines, which (as opposed to Backward Chaining) execute one step at a time, while the first one was revisited and some solutions to its problems were sketched (Section \ref{sec:future_devel}).
 \footnotetext{\url{https://groups.google.com/g/opencog/c/WUOIi1CHqos}}
-The main contributions, therefore, correspond to the search for the best way to describe these problems (any manipulation problem that has a domain with the four specific actions) within the AGI-based system and the implementation of a suprasystem using it, which through an algorithm (introduced in Section \ref{sec:bfs_search}) is able to solve these problems.
+The main contributions, therefore, correspond to the search for the best way to describe any manipulation problem that has a domain with the four specific actions within the AGI-based system and the implementation of a suprasystem using it, which, through an algorithm (introduced in Section \ref{sec:bfs_search}), is able to solve these problems.
 Since this is an unexplored area of research for the AGI-based system used, a few external modules (i.e., the vision system, for object recognition, and the manipulation system, for interaction with them) were simplified, without loss of generality, to focus on the main objective.  
