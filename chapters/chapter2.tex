@@ -307,4 +307,39 @@ This constraint is the EqualLink in line 62 and it is used to limit the paramete
 In practice, the QueryLink without argument performs the Pickup action on all objects that can actually be picked up, instead of the QueryLink with argument that does \textit{Pickup} only of the object passed as argument. That is, the first shows which objects are pickable, the second actually picks one of them. 
 The reason why these two possibilities (QueryLinks) are necessary will be better understood when the algorithm is discussed (Section \ref{sec:step_search}). 
 
+\begin{comment}
+\begin{python}
+  (QueryLink
+    (VariableList
+      # variable 1
+      # variable 2
+      # ....
+    )       
+    -----------------------------------------------------  
+    (AndLink
+      # precondition 1
+      # precondition 2
+      # ....   
+     )
+    -----------------------------------------------------
+    (ListLink
+    # effect 1
+    # effect 2
+    # ....
+    )
+  )
+\end{python}
+\end{comment}
+
+\begin{python}
+ (EvaluationLink
+	(PredicateNode "on")
+	(ListLink
+		(ConceptNode "SnapRing")
+		(ConceptNode "workbench")))
+
+ (InheritanceLink
+	(ConceptNode "SnapRing")
+	(ConceptNode "object"))
+\end{python}
  

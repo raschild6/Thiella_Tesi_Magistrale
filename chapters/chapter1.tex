@@ -434,3 +434,54 @@ Step 2 converts the LG output into a dependency grammar (DG) format that is more
 This converter is called RelEx, a Narrow-AI component of OpenCog. It is an English-language semantic dependency relationship extractor, built on the Carnegie-Mellon Link Grammar parser. It uses a series of graph rewriting rules to identify subject, object, indirect object and many other syntactic dependency relationships between words in a sentence. That is, it generates the dependency trees of a dependency grammar. 
 Unlike other dependency parsers, RelEx attempts a greater degree of semantic normalization: for questions, comparatives, entities, and for modifying clauses, and sub-ordinate clauses. \\
 Step 3 extracts the predicate-argument logical structure, as shown above.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% FOR PRESENTATION---- REMOVE BEFORE DOWNLOAD THESIS
+
+\begin{python}
+The English sentence: 
+"Workbench is a fixed-object. 
+BearingSleeve1 is on BearingSleeve2. 
+SnapRing1 is on SnapRing2."
+
+---------------- Result:
+(InheritanceLink
+    (ConceptNode "Workbench")
+    (ConceptNode "fixed-object")))
+
+(EvaluationLink
+  (PredicateNode "on")
+  (ListLink
+    (ConceptNode "BearingSleeve1")
+    (ConceptNode "BearingSleeve2")))
+
+(EvaluationLink
+  (PredicateNode "on")
+  (ListLink
+    (ConceptNode "SnapRing1")
+    (ConceptNode "SnapRing2")))
+\end{python}
+    
+
+\begin{python}
+# Objects Definition
+(ConceptNode "SnapRing1")       
+
+# Movable Object Definition  
+(InheritanceLink
+    (ConceptNode "SnapRing1")
+    (ConceptNode "object")))
+
+# In Hand State Definition  
+(EvaluationLink
+  (PredicateNode "in-hand")
+  (ListLink
+    (ConceptNode "BearingSleeve1")))
+
+# Stack State Definition  
+(EvaluationLink
+  (PredicateNode "on")
+  (ListLink
+    (ConceptNode "SnapRing1")
+    (ConceptNode "SnapRing2")))
+\end{python}

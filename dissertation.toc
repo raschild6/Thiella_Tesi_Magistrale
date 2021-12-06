@@ -37,54 +37,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.3.3}Relex2Logic}{24}{subsubsection.2.2.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Problem Formulation}{28}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Problem Formulation}{29}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Knowledge Base in Atomese}{31}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Knowledge Base in Atomese}{32}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Actions in Atomese}{33}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Actions in Atomese}{34}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}System Implementation}{41}{chapter.4}%
+\contentsline {chapter}{\numberline {4}System Implementation}{42}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Initial Phase}{41}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Initial Phase}{42}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Perception Phase}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Perception Phase}{43}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Learning Phase}{42}{section.4.3}%
+\contentsline {section}{\numberline {4.3}Learning Phase}{43}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Request Phase}{43}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Request Phase}{44}{section.4.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Search Phase}{44}{section.4.5}%
+\contentsline {section}{\numberline {4.5}Search Phase}{45}{section.4.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.5.1}BFS-Based Algorithm}{44}{subsection.4.5.1}%
+\contentsline {subsection}{\numberline {4.5.1}BFS-Based Algorithm}{45}{subsection.4.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.1.1}Termination Criteria of the BFS-Based Algorithm}{45}{subsubsection.4.5.1.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}Termination Criteria of the BFS-Based Algorithm}{46}{subsubsection.4.5.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.5.1.2}Steps of the BFS-Based Algorithm}{46}{subsubsection.4.5.1.2}%
+\contentsline {subsubsection}{\numberline {4.5.1.2}Steps of the BFS-Based Algorithm}{47}{subsubsection.4.5.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Results Execution Phase}{47}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Results Execution Phase}{48}{section.4.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.7}Practical Example}{48}{section.4.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Experiments and Results}{51}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Experiments and Results}{52}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Assembling Objects Test}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Assembling Objects Test}{52}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Performance Considerations}{63}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Performance Considerations}{64}{section.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{64}{chapter.6}%
+\contentsline {chapter}{\numberline {6}Conclusion}{65}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}OpenCog Advantages}{64}{section.6.1}%
+\contentsline {section}{\numberline {6.1}OpenCog Advantages}{65}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Future Developments}{65}{section.6.2}%
+\contentsline {section}{\numberline {6.2}Future Developments}{66}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Appendix A}{67}{chapter.7}%
+\contentsline {chapter}{\numberline {7}Appendix A}{68}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.1}Knowledge Base Examples}{67}{section.7.1}%
+\contentsline {section}{\numberline {7.1}Knowledge Base Examples}{68}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.2}PDDL Problem and Domain}{69}{section.7.2}%
+\contentsline {section}{\numberline {7.2}PDDL Problem and Domain}{70}{section.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.3}Action Rules}{71}{section.7.3}%
+\contentsline {section}{\numberline {7.3}Action Rules}{72}{section.7.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {7.4}NLP Rules}{83}{section.7.4}%
+\contentsline {section}{\numberline {7.4}NLP Rules}{84}{section.7.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliografia}{88}{section*.40}%
+\contentsline {chapter}{Bibliografia}{89}{section*.40}%
